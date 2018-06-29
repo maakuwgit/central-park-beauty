@@ -1,0 +1,138 @@
+/**
+ * Typography
+ */
+
+@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i|Montserrat:400,400i,500');
+
+// Sans serif classes
+%sans-serif {
+  font-family: 'Montserrat', sans-serif;
+}
+
+%serif {
+  font-family: 'Libre Baskerville', serif;
+}
+
+a {
+  color: $link-color;
+  text-decoration: $link-hover-decoration;
+  transition: all 0.10s ease-in-out;
+
+  &:hover {
+    color: $link-hover-color;
+    text-decoration: $link-hover-decoration;
+  }
+}
+
+body {
+  @extend %sans-serif;
+  line-height: 1.75;
+  color: $text-dark;
+}
+
+
+button {
+  transition: all 0.10s ease-in-out;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+code {
+  white-space: normal;
+}
+
+.hero {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 5.3125em;
+  font-weight: 500;
+  letter-spacing: 10.63px;
+  line-height: 1.21;
+  color: $black;
+}
+
+.large-text {
+  @extend %sans-serif;
+  font-size: 1.125em;
+  line-height: 1.66;
+  color: $text-dark;
+}
+
+.field-title {
+  @extend %sans-serif;
+  font-size: 0.875em;
+  line-height: 2;
+  color: $text-dark;
+}
+
+.quote {
+  @extend %serif;
+  font-size: 2em;
+  line-height: 1.718;
+}
+
+h1,.h1, h2, .h2, h3,.h3, h4, .h4, h5, .h5, h6, .h6 {
+  margin: 0.5em auto;
+  line-height: 1.2;
+}
+
+h1,
+.h1 {
+  @extend %sans-serif;
+  font-size: 1.125em;
+  font-weight: 500;
+  line-height: 1.38;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  font-weight: normal;
+  color: $black;
+}
+
+h2,
+.h2 {
+  @extend %serif;
+  font-size: 1.875em;
+  line-height: 1.33;
+  font-weight: normal;
+  color: $black;
+}
+
+h3,
+.h3 {
+  @extend %sans-serif;
+  font-size: 1.125em;
+  letter-spacing: 6px;
+  line-height: 1.22;
+  text-transform: uppercase;
+  font-weight: normal;
+  color: $black;
+}
+
+h4,
+.h4 {
+  @extend %serif;
+  font-size: 1.5625em;
+  line-height: 1.36;
+  font-weight: normal;
+  color: $black;
+}
+
+h5,
+.h5 {
+  @extend %serif;
+  font-size: 2.8125em;
+  line-height: 1.22;
+  font-weight: normal;
+  color: $black;
+}
+
+h6,
+.h6 {
+  @extend %serif;
+  font-size: 1.25em;
+  line-height: 1.7;
+  font-weight: normal;
+  color: $black;
+}
