@@ -10,7 +10,10 @@ function roots_setup() {
   // Register wp_nav_menu() menus
   // http://codex.wordpress.org/Function_Reference/register_nav_menus
   register_nav_menus(array(
-    'primary_navigation' => __('Primary Navigation', 'roots')
+    'primary_navigation' => __('Primary Navigation', 'roots'),
+    'main_nav_1' => __('Main Nav 1', 'roots'),
+    'main_nav_2' => __('Main Nav 2', 'roots'),
+    'main_nav_3' => __('Main Nav 3', 'roots')
   ));
 
   // Add post thumbnails

@@ -32,9 +32,9 @@ if ( ! function_exists('register_service_custom_post_type') ) {
       'public'              => true,
       'show_ui'             => true,
       'show_in_menu'        => true,
-      'show_in_nav_menus'   => false,
+      'show_in_nav_menus'   => true,
       'show_in_admin_bar'   => true,
-      'menu_position'       => 20,
+      'menu_category'       => 20,
       'menu_icon'           => 'dashicons-universal-access',
       'can_export'          => true,
       'has_archive'         => true,
@@ -60,17 +60,17 @@ if ( ! function_exists('register_service_taxonomies') ) {
 
     // Add new taxonomy, make it hierarchical (like categories)
     $labels = array(
-      'name'                => _x( 'Service Position', 'taxonomy general name' ),
-      'singular_name'       => _x( 'Service Position', 'taxonomy singular name' ),
-      'search_items'        => __( 'Search Service Positions' ),
-      'all_items'           => __( 'All Service Positions' ),
-      'parent_item'         => __( 'Parent Service Position' ),
-      'parent_item_colon'   => __( 'Parent Service Position:' ),
-      'edit_item'           => __( 'Edit Service Position' ),
-      'update_item'         => __( 'Update Service Position' ),
-      'add_new_item'        => __( 'Add New Service Position' ),
-      'new_item_name'       => __( 'New Service Position Name' ),
-      'menu_name'           => __( 'Service Positions' )
+      'name'                => _x( 'Service Category', 'taxonomy general name' ),
+      'singular_name'       => _x( 'Service Category', 'taxonomy singular name' ),
+      'search_items'        => __( 'Search Service Categories' ),
+      'all_items'           => __( 'All Service Categories' ),
+      'parent_item'         => __( 'Parent Service Category' ),
+      'parent_item_colon'   => __( 'Parent Service Category:' ),
+      'edit_item'           => __( 'Edit Service Category' ),
+      'update_item'         => __( 'Update Service Category' ),
+      'add_new_item'        => __( 'Add New Service Category' ),
+      'new_item_name'       => __( 'New Service Category Name' ),
+      'menu_name'           => __( 'Service Categories' )
     );
 
     $args = array(
@@ -79,10 +79,10 @@ if ( ! function_exists('register_service_taxonomies') ) {
       'show_ui'             => true,
       'show_admin_column'   => true,
       'query_var'           => true,
-      'rewrite'             => array( 'slug' => 'position' )
+      'rewrite'             => array( 'slug' => 'category' )
     );
 
-    register_taxonomy( 'service_position', array( 'service' ), $args ); // Must include custom post type name
+    register_taxonomy( 'service_category', array( 'service' ), $args ); // Must include custom post type name
 
     // Add new taxonomy, NOT hierarchical (like tags)
     $labels = array(

@@ -79,10 +79,10 @@ if ( ! function_exists('register_condition_taxonomies') ) {
       'show_ui'             => true,
       'show_admin_column'   => true,
       'query_var'           => true,
-      'rewrite'             => array( 'slug' => 'position' )
+      'rewrite'             => array( 'slug' => 'category' )
     );
 
-    register_taxonomy( 'condition_position', array( 'condition' ), $args ); // Must include custom post type name
+    register_taxonomy( 'condition_category', array( 'condition' ), $args ); // Must include custom post type name
 
     // Add new taxonomy, NOT hierarchical (like tags)
     $labels = array(

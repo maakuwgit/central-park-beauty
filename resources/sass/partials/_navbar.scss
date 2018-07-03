@@ -2,6 +2,176 @@
  * Navbar styles
  */
 
+.header__logo {
+  font-size: 2em;
+  vertical-align: middle;
+}
+
+.navbar-header {
+  position: fixed;
+  z-index: 3;
+  background-color: $white;
+  width: 100%;
+}
+
+.top-nav {
+  display: flex;
+  align-items: center;
+  height: 3em;
+  padding: 0 3em;
+
+  button {
+    @extend %sans-serif;
+    font-size: .8125em;
+    letter-spacing: 3px;
+    font-weight: 500;
+    text-transform: uppercase;
+    border-radius: 0;
+    border: none;
+  }
+
+  .header__top-left {
+    flex: 1 1 auto;
+    ul {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+
+      li:first-child {
+        margin-right: 1em;
+      }
+
+      li:nth-child(2) {
+        border-right: 1.5px solid #E2A187;
+
+        @include screen-sm {
+          display: none;
+        }
+      }
+
+      li:last-child {
+        @include screen-sm {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .header__top-right {
+    flex: 1 1 auto;
+    ul {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .icon {
+      vertical-align: middle;
+
+      @include screen-md {
+        font-size: 2em;
+      }
+    }
+
+    @include screen-sm {
+      display: none;
+    }
+  }
+
+  @include screen-sm {
+    padding: 0 1em;
+  }
+}
+
+.header__top-right-text {
+  display: inline-block;
+
+  @include screen-md {
+    display: none;
+  }
+}
+
+.side-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 3em;
+  background-color: $white;
+  z-index: 3;
+
+  button {
+    transform: rotate(-90deg);
+     @extend %sans-serif;
+    font-size: .8125em;
+    letter-spacing: 3px;
+    font-weight: 500;
+    text-transform: uppercase;
+    border-top: 3px solid #e2a187;
+    border-bottom: 3px solid #e2a187;
+    border-radius: 0;
+    padding: 7px 15px;
+
+    &.active {
+        border-top: 3px solid $black;
+        border-bottom: 3px solid $black;
+    }
+  }
+
+
+  @include screen-sm {
+    display: block;
+    position: fixed;
+    left: unset;
+    top: .5em;
+    right: 2em;
+    background: none;
+    height: auto;
+
+    button {
+      transform: none;
+      padding: 4px;
+    }
+  }
+}
+
+.header__right {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  width: 3em;
+  background-color: $white;
+  z-index: 3;
+
+  span {
+    transform: rotate(-90deg);
+    padding: .2em;
+    @extend %sans-serif;
+    font-size: .8125em;
+    letter-spacing: 3px;
+    font-weight: 500;
+    text-transform: uppercase;
+    border-radius: 0;
+    white-space: nowrap;
+    position: absolute;
+  }
+
+  ul {
+    align-self: flex-end;
+  }
+
+  @include screen-sm {
+    display: none;
+  }
+}
+
 // Top nav
 .navbar {
   margin: 0;
@@ -14,20 +184,100 @@
 
     li {
       @extend %sans-serif;
-      font-size: .8125em;
       line-height: 1.23;
-      letter-spacing: 4px;
-      color: $black;
+      letter-spacing: 3px;
     }
   }
 }
 
-.primary-nav {
-  display: block;
+// Drop down nav
 
+.primary-nav {
+    background-color: $black;
+    width: 100%;
+    height: 100vh;
+    padding: 5em 10em;
+    overflow: scroll;
+
+    @include screen-md {
+      padding: 5em;
+    }
+
+    @include screen-sm {
+      padding: 2em;
+    }
+
+    ul li a {
+      color: $white;
+    }
+
+    h3 {
+      color: $white;
+    }
+}
+
+.header__hours li {
+  color: $white;
+}
+
+.header__menu-box {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.header__menu-section {
+  width: calc(100%/3);
+  flex: 1 1 auto;
+  padding-bottom: 2em;
+
+  @include screen-sm {
+    width: 50%;
+  }
+
+  @include screen-xs {
+    width: 100%;
+    padding-bottom: 0;
+  }
+
+  .icon {
+    color: $white;
+    font-size: 7em;
+  }
+
+  ul {
+    margin-top: 0;
+
+    li {
+      letter-spacing: 0;
+      line-height: 2;
+
+      @include screen-sm {
+        line-height: 1.5;
+      }
+    }
+  }
+
+
+  p {
+    margin-top: 0;
+    color: $white;
+  }
+}
+
+#logo {
   @include screen-sm {
     display: none;
   }
+}
+
+.header__menu-heading {
+  color: $white;
+}
+
+
+.primary-nav {
+  display: none;
+  position: absolute;
 }
 
 .dropdown-menu.collapsed {
@@ -35,17 +285,27 @@
 }
 
 .navbar-toggle {
-  display: none;
+
   background-color: transparent;
   border-color: #000;
 
-  .icon-bar {
-    background-color: #000;
+  &.active {
+    color: $white;
+    background-color: $black;
+
+    span {
+      display: none;
+    }
+
+    .icon {
+      display: none;
+    }
+
+    &:after {
+      content: 'close';
+    }
   }
 
-  @include screen-sm {
-    display: block;
-  }
 }
 
 .dropdown-menu {
@@ -60,7 +320,6 @@
 // ==================================================
 .navbar-toggle {
   padding: 15px 15px;
-  display: none;
   cursor: pointer;
 
   transition-property: opacity, filter;
