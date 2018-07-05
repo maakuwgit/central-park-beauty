@@ -30,6 +30,17 @@
     border: none;
   }
 
+  a {
+    @extend %sans-serif;
+    font-size: .8125em;
+    letter-spacing: 3px;
+    font-weight: 500;
+    text-transform: uppercase;
+    border-radius: 0;
+    border: none;
+    line-height: 3;
+  }
+
   .header__top-left {
     flex: 1 1 auto;
     ul {
@@ -184,7 +195,7 @@
 
     li {
       @extend %sans-serif;
-      line-height: 1.23;
+      // line-height: 1.23;
       letter-spacing: 3px;
     }
   }
@@ -262,6 +273,14 @@
     margin-top: 0;
     color: $white;
   }
+
+  a {
+    color: $white;
+  }
+}
+
+.gmap {
+  padding-top: 50%;
 }
 
 #logo {
@@ -273,6 +292,46 @@
 .header__menu-heading {
   color: $white;
 }
+
+.header__tab-title {
+  font-size: 4em;
+  @include screen-md {
+    font-size: 3em;
+  }
+  @include screen-sm {
+    font-size: 2em;
+    letter-spacing: 1px;
+  }
+}
+
+.header__tab-btn-area {
+  display: flex;
+
+  @include screen-sm {
+    flex-wrap: wrap;
+  }
+}
+
+.header__tab-btn {
+  color: $white;
+  padding: 1em;
+  border: 1px solid $white;
+  flex: 1 1 100%;
+  margin: 2em;
+}
+
+.header__map-info {
+  padding-top: 3em;
+  color: $white;
+
+  .icon {
+    font-size: 6em;
+  }
+  a {
+    color: $white;
+  }
+}
+
 
 
 .primary-nav {
@@ -288,6 +347,7 @@
 
   background-color: transparent;
   border-color: #000;
+  min-width: 6em;
 
   &.active {
     color: $white;
@@ -319,7 +379,7 @@
 // navbar-toggle
 // ==================================================
 .navbar-toggle {
-  padding: 15px 15px;
+  padding: 9px;
   cursor: pointer;
 
   transition-property: opacity, filter;
@@ -412,3 +472,4 @@
     transform 0.1s 0s cubic-bezier(0.55, 0.055, 0.675, 0.19);
   }
 }
+

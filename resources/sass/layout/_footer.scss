@@ -3,7 +3,104 @@
  */
 .footer {
 
+
 }
+
+.footer__box {
+  background-color: $black;
+
+}
+
+.footer__content {
+  color: $white;
+  text-align: center;
+  padding-top: 3em;
+
+  .icon {
+    font-size: 5em;
+  }
+
+  h2 {
+    color: $white;
+  }
+
+  .footer__big-title {
+    @extend %serif;
+    color: $white;
+    font-size: 2.8125em;
+    line-height: 2;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: .5em;
+
+    @include screen-sm {
+      font-size: 2em;
+    }
+  }
+
+  .footer__small-title {
+    color: $white;
+    @extend %sans-serif;
+    font-size: 1em;
+    letter-spacing: 6px;
+    line-height: 1.22;
+    text-transform: uppercase;
+    font-weight: 400;
+  }
+}
+
+.footer__menu {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2em;
+}
+
+.footer__menu-section {
+  width: calc(100%/4);
+  flex: 1 1 auto;
+  padding: 0 .5em 2em;
+
+  @include screen-sm {
+    width: 50%;
+  }
+
+  @include screen-xs {
+    width: 100%;
+    padding-bottom: 0;
+  }
+
+  .icon {
+    color: $white;
+    font-size: 7em;
+  }
+
+  ul {
+    margin-top: 0;
+    list-style-type: none;
+
+    li {
+      letter-spacing: 0;
+      padding-top: 1em;
+      line-height: 1.2;
+
+      @include screen-sm {
+        line-height: 1.5;
+      }
+    }
+  }
+
+  p {
+    margin-top: 0;
+    color: $white;
+  }
+
+  a {
+    color: $white;
+  }
+}
+
+
+
 
 .footer__bottom {
 
@@ -26,4 +123,8 @@
     flex: 1 1 100%;
     text-align: center;
   }
+}
+
+.footer__footer {
+  padding: 0 3.5em;
 }

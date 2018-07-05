@@ -244,6 +244,22 @@
 
       } // --end Address Autocomplete
 
+      $('.js-init-video').magnificPopup({
+        type: 'iframe',
+        mainClass: 'mfp-fade',
+        removalDelay: 160,
+        preloader: false,
+        fixedContentPos: false,
+        callbacks: {
+          open: function() {
+            $('video').trigger('pause');
+          },
+          close: function() {
+            $('video').trigger('play');
+          }
+        }
+      });
+
     },
 
 
