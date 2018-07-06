@@ -73,6 +73,15 @@ code {
   line-height: 1.718;
 }
 
+.cp__title-underline::after {
+  display: inline-block;
+  content: "";
+  border-top: .3rem solid black;
+  width: 4rem;
+  margin: 0 1rem;
+  transform: translateY(-1rem);
+}
+
 h1,.h1, h2, .h2, h3,.h3, h4, .h4, h5, .h5, h6, .h6 {
   margin: 0.5em auto;
   line-height: 1.2;

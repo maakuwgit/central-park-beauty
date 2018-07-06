@@ -30,7 +30,7 @@ Template Name: Home
     );
   ?>
 
-  <?php get_template_part('templates/contents/content', 'home'); ?>
+  <?php get_template_part('templates/partials/flex', 'default'); ?>
 
 <?php endwhile; ?>
 

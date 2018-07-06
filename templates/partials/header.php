@@ -209,14 +209,15 @@
 
       <div class="primary-nav location-nav text-center" id="location" data-component="gmap">
         <h3 class="hero header__tab-title">Find Us</h3>
-
-        <div id="map" class="gmap"></div>
-        <div class="header__map-info">
-          <svg class="icon icon-CP-Logo"><use xlink:href="#icon-CP-Logo"></use></svg>
-          <div class="header__map-address">
-            <p><?php echo $street_address; ?><br>
-            <?php echo $city; ?>, <?php echo $state; ?> <?php echo $zip ?><br>
-            <a href="tel:<?php echo strip_phone($phone_number); ?>"><?php echo $phone_number; ?></a></p>
+        <div class="header__map-container">
+          <div id="map" class="gmap"></div>
+          <div class="header__map-info">
+            <svg class="icon icon-CP-Logo"><use xlink:href="#icon-CP-Logo"></use></svg>
+            <div class="header__map-address">
+              <p><?php echo $street_address; ?><br>
+              <?php echo $city; ?>, <?php echo $state; ?> <?php echo $zip ?><br>
+              <a href="tel:<?php echo strip_phone($phone_number); ?>"><?php echo $phone_number; ?></a></p>
+            </div>
           </div>
         </div>
       </div>

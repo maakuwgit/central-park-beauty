@@ -279,8 +279,46 @@
   }
 }
 
-.gmap {
+.header__map-container {
+  position: relative;
   padding-top: 50%;
+
+  @include screen-sm{
+    padding-top: 0;
+  }
+}
+
+.gmap {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  left: 0;
+  width: 100%;
+
+  @include screen-sm {
+    position: relative;
+    height: 20em;
+  }
+}
+
+.header__map-info {
+  color: $white;
+  position: absolute;
+  top: 1em;
+  left: 1em;
+  background-color: $black;
+  padding: 4vh;
+
+  @include screen-sm {
+    position: relative;
+  }
+
+  .icon {
+    font-size: 6em;
+  }
+  a {
+    color: $white;
+  }
 }
 
 #logo {
@@ -320,17 +358,6 @@
   margin: 2em;
 }
 
-.header__map-info {
-  padding-top: 3em;
-  color: $white;
-
-  .icon {
-    font-size: 6em;
-  }
-  a {
-    color: $white;
-  }
-}
 
 
 
