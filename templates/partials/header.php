@@ -87,7 +87,7 @@
             <a href="tel:<?php echo strip_phone($phone_number); ?>"><?php echo $phone_number; ?></a></p>
           </div>
 
-          <div class="header__menu-section">
+          <div class="header__menu-section p-b-2">
             <h6 class="header__menu-heading">Hours</h6>
 
                 <?php if ( $openings ) : ?>

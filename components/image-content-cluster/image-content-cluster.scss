@@ -1,0 +1,234 @@
+/**
+ * image content cluster Styles
+ * ----------------------------------------------------------------------------
+ *
+ * About the module
+ *
+ */
+
+.cp-image-content-cluster {
+  padding-bottom: 5em;
+}
+
+
+.cp-icc__container {
+  @supports (display: grid) {
+    display: grid;
+    grid-template-columns: 30% 40% 20% 10%;
+    grid-template-rows: 25% 25% 20% 30%;
+    height: 100vh;
+    min-height: 50em;
+
+    @include screen-sm {
+      grid-template-rows: 10% 25% 40% 25%;
+    }
+  }
+
+  /* Fallback for browsers that don't support display:grid */
+  @supports not (display: grid) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.cp-icc__title-section {
+  @supports (display: grid) {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    margin: .5em;
+
+    @include screen-sm {
+      grid-column-end: 5;
+    }
+  }
+
+  /* Fallback for browsers that don't support display:grid */
+  @supports not (display: grid) {
+    flex: 0 0 auto;
+    width: calc(100%/3);
+
+    @include screen-sm {
+      width: 100%;
+    }
+  }
+}
+
+.cp-icc__title {
+  color: #000000;
+  font-family: Montserrat;
+  font-size: 1.125em;
+  font-weight: 500;
+  letter-spacing: 4px;
+  line-height: 1.38;
+  text-transform: uppercase;
+  z-index: 1;
+}
+
+.cp-icc__sm-img-1 {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  z-index: 1;
+
+  @supports (display: grid) {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    margin: .5em;
+  }
+
+  /* Fallback for browsers that don't support display:grid */
+  @supports not (display: grid) {
+    display: none;
+  }
+}
+
+.cp-icc__bg-img-1 {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  z-index: 1;
+
+  @supports (display: grid) {
+    grid-column-start: 2;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    margin: .5em;
+
+    @include screen-sm {
+      grid-row-start: 2;
+    }
+  }
+
+  /* Fallback for browsers that don't support display:grid */
+  @supports not(display: grid) {
+    flex: 0 0 auto;
+    width: calc(100%/3 * 2);
+
+    @include screen-sm {
+      width: 100%;
+      padding-top: 10em;
+    }
+  }
+}
+
+.cp-icc__content-section {
+  z-index: 1;
+
+  @supports (display: grid) {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    margin: .5em;
+
+    @include screen-lg {
+      grid-row-start: 3;
+    }
+
+    @include screen-sm {
+      grid-column-end: 5;
+      grid-row-end: 4;
+      align-self: center;
+    }
+  }
+
+  /* Fallback for browsers that don't support display:grid */
+  @supports not (display: grid) {
+    flex: 0 0 auto;
+    width: calc(100%/3);
+
+    @include screen-sm {
+      width: 100%;
+    }
+  }
+}
+
+.cp-icc__content {
+  color: #000000;
+  font-family: "Libre Baskerville";
+  font-size: 1.875em;
+  line-height: 1.13;
+  z-index: 1;
+}
+
+.cp-icc__bg-img-2 {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  z-index: 1;
+
+  @supports (display: grid) {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 5;
+    margin: .5em;
+
+    @include screen-sm {
+      grid-column-start: 1;
+      grid-column-end: 3;
+      grid-row-start: 4;
+    }
+  }
+
+  /* Fallback for browsers that don't support display:grid */
+  @supports not (display: grid) {
+    flex: 0 0 auto;
+    width: calc(100%/3 * 2);
+
+    @include screen-sm {
+      width: 100%;
+      padding-top: 10em;
+    }
+  }
+}
+
+.cp-icc__sm-img-2 {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  z-index: 1;
+
+  @supports (display: grid) {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    margin: .5em;
+
+    @include screen-lg {
+      grid-column-end: 5;
+    }
+
+    @include screen-sm {
+      grid-row-start: 4;
+      grid-row-end: 5;
+    }
+  }
+
+  /* Fallback for browsers that don't support display:grid */
+  @supports not (display: grid) {
+    display: none;
+  }
+}
+
+.cp-icc__bg-shape {
+  background-color: #E2A187;
+  opacity: .5;
+  height: 50%;
+  width: 85%;
+  z-index: 0;
+  position: absolute;
+  top: 21em;
+  left: 0;
+
+  @include screen-sm {
+    top: 15em;
+    width: 100%;
+  }
+}

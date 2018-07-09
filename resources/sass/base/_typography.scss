@@ -73,13 +73,18 @@ code {
   line-height: 1.718;
 }
 
-.cp__title-underline::after {
-  display: inline-block;
-  content: "";
-  border-top: .3rem solid black;
-  width: 4rem;
-  margin: 0 1rem;
-  transform: translateY(-1rem);
+.cp__title-underline {
+  position: relative;
+  &::after {
+    display: inline-block;
+    content: "";
+    border-top: .2em solid black;
+    width: 10em;
+    position: absolute;
+    top: calc(100% + .5em);
+    left: 0;
+    max-width: 100%;
+  }
 }
 
 h1,.h1, h2, .h2, h3,.h3, h4, .h4, h5, .h5, h6, .h6 {
@@ -111,10 +116,10 @@ h2,
 h3,
 .h3 {
   @extend %sans-serif;
-  font-size: 1.125em;
-  letter-spacing: 6px;
-  line-height: 1.22;
-  text-transform: uppercase;
+  // font-size: 1.125em;
+  // letter-spacing: 6px;
+  // line-height: 1.22;
+  // text-transform: uppercase;
   font-weight: normal;
   color: $black;
 }

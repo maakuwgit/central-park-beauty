@@ -1,0 +1,42 @@
+/**
+ * quote block Styles
+ * ----------------------------------------------------------------------------
+ *
+ * About the module
+ *
+ */
+
+.cp-quote-block {
+  margin: 2em 0;
+}
+
+.cp-quote__content {
+  padding: 15em 0;
+
+  @include screen-sm {
+    padding: 8em 0;
+  }
+
+  .icon {
+    font-size: 2em;
+  }
+
+  .cp-quote__quote {
+    padding-top: 1em;
+    color: $black;
+    font-size: 2em;
+
+    @include screen-sm {
+      font-size: 1.3em;
+    }
+  }
+
+  .cp-quote__source {
+    padding-top: 3em;
+    font-family: Montserrat;
+    font-size: .875em;
+    letter-spacing: 4.67px;
+    line-height: 18px;
+    text-align: center;
+  }
+}

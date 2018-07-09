@@ -1,0 +1,115 @@
+/**
+ * split heading Styles
+ * ----------------------------------------------------------------------------
+ *
+ * About the module
+ *
+ */
+
+.cp-split-heading {
+
+}
+
+.cp-sh__top-title {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 5em;
+
+  @include screen-md {
+    justify-content: left;
+    padding-bottom: 3em;
+  }
+
+  @include screen-sm {
+    padding-bottom: 2em;
+  }
+}
+
+.cp-sh__top {
+  position: relative;
+  color: #000000;
+  font-family: Montserrat;
+  font-size: 5.3125em;
+  font-weight: 500;
+  letter-spacing: 10.63px;
+  line-height: 1.211;
+  text-align: center;
+  text-transform: uppercase;
+
+  &::after {
+    display: inline-block;
+    content: "";
+    border-top: .08em solid black;
+    width: 2em;
+    position: absolute;
+    top: calc(50%);
+    left: calc(100% + 1em);
+    max-width: 100%;
+  }
+
+  @include screen-sm {
+    font-size: 3em;
+
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.cp-sh__bottom {
+  color: #000000;
+  font-family: Montserrat;
+  font-size: 5.3125em;
+  font-weight: 500;
+  letter-spacing: 10.63px;
+  line-height: 1.211;
+  text-align: center;
+  text-transform: uppercase;
+
+  @include screen-sm {
+    font-size: 3em;
+  }
+}
+
+.cp-sh__row {
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 5em;
+  flex-wrap: wrap;
+}
+
+.cp-sh__bottom-title {
+  flex: 1 1 50%;
+  text-align: center;
+
+  @include screen-md {
+    flex: 1 1 100%;
+    order: 2;
+    text-align: right;
+    padding-top: 3em;
+  }
+
+  @include screen-sm {
+    text-align: left;
+    padding-top: 2em;
+  }
+}
+
+.cp-sh__content {
+  flex: 1 1 50%;
+  padding: 0 5em;
+
+  @include screen-md {
+    order: 1;
+    padding: 0;
+  }
+}
+
+
+.cp-sh__title {
+  color: #000000;
+  font-family: "Libre Baskerville";
+  font-size: 1.5625em;
+  line-height: 1.36;
+}
+

@@ -12,6 +12,7 @@
   z-index: 3;
   background-color: $white;
   width: 100%;
+  left: 0;
 }
 
 .top-nav {
@@ -19,6 +20,10 @@
   align-items: center;
   height: 3em;
   padding: 0 3em;
+
+  @include screen-sm {
+    padding: 0;
+  }
 
   button {
     @extend %sans-serif;
@@ -123,7 +128,7 @@
     border-top: 3px solid #e2a187;
     border-bottom: 3px solid #e2a187;
     border-radius: 0;
-    padding: 7px 15px;
+    padding: 7px 13px;
 
     &.active {
         border-top: 3px solid $black;

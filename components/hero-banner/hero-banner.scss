@@ -1,0 +1,95 @@
+/**
+ * hero banner Styles
+ * ----------------------------------------------------------------------------
+ *
+ * About the module
+ *
+ */
+
+.cp-hero-banner {
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+.hero-banner__content {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hero-banner__info-box {
+
+  padding: 3em;
+  border: 2px solid $white;
+  background-color: rgba(0,0,0,0.3);
+  z-index: 2;
+
+  @include screen-sm {
+    padding: 1em .5em;
+  }
+
+  .hero-banner__logo {
+    color: $white;
+    font-size: 2em;
+  }
+
+  .hero-banner__title {
+    padding-bottom: 3em;
+    font-size: 1em;
+  }
+
+  .hero-banner__big-title {
+    color: $white;
+    font-size: 2.8125em;
+    line-height: 2;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: .5em;
+
+    @include screen-sm {
+      font-size: 2em;
+    }
+  }
+
+  .hero-banner__small-title {
+    color: $white;
+    @extend %sans-serif;
+    font-size: 1em;
+    letter-spacing: 6px;
+    line-height: 1.22;
+    text-transform: uppercase;
+    font-weight: 400;
+  }
+
+  .hero-banner__subtitle {
+    @extend %sans-serif;
+    text-transform: uppercase;
+    color: $white;
+    font-size: 1em;
+    letter-spacing: 2px;
+  }
+}
+
+.hero-banner__play-btn {
+  padding-top: 3em;
+  text-align: center;
+
+  .icon {
+    font-size: 2em;
+  }
+}
+
+.hero-banner__subtitle {
+    @extend %sans-serif;
+    text-transform: uppercase;
+    color: $white;
+    font-size: 1em;
+    letter-spacing: 2px;
+    margin-top: 0;
+  }
