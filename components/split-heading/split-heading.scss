@@ -76,6 +76,10 @@
   align-items: flex-end;
   padding-bottom: 5em;
   flex-wrap: wrap;
+
+  @include screen-sm {
+    padding-bottom: 2em;
+  }
 }
 
 .cp-sh__bottom-title {

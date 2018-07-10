@@ -215,6 +215,106 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "5b44efa9b0c57": {
+                    "key": "5b44efa9b0c57",
+                    "name": "heading_and_text",
+                    "label": "Heading and Text",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5b44efb7b0c58",
+                            "label": "Group Label",
+                            "name": "group_label",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "ll-group-label",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_5b44efc8b0c59",
+                            "label": "Heading and Text",
+                            "name": "heading_and_text",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_5b44ee9109357"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "5b44f996d7b4e": {
+                    "key": "5b44f996d7b4e",
+                    "name": "link_list",
+                    "label": "Link List",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5b44f99dd7b4f",
+                            "label": "Group Label",
+                            "name": "group_label",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "ll-group-label",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_5b44f9abd7b50",
+                            "label": "Link List",
+                            "name": "link_list",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_5b44f8f5115f4"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "button_label": "Add Row",
@@ -239,5 +339,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1531170378
+    "modified": 1531247042
 }

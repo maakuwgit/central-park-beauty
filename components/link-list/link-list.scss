@@ -1,0 +1,81 @@
+/**
+ * link list Styles
+ * ----------------------------------------------------------------------------
+ *
+ * About the module
+ *
+ */
+
+.cp-link-list {
+
+}
+
+.cp-ll__container {
+  position: relative;
+  height: 40em;
+  margin: 10em auto;
+}
+
+.cp-ll__ul {
+  padding-top: 7em;
+  padding-left: 4em;
+}
+
+.cp-ll__li {
+    color: #FFFFFF;
+    font-family: "Libre Baskerville";
+    font-size: 1.5em;
+    font-weight: normal;
+    line-height: 1.24;
+    padding-bottom: 1em;
+    list-style-type: none;
+
+  a {
+    color: rgba(255,255,255,.65);
+  }
+
+  &.active {
+    a {
+      color: rgba(255,255,255,1);
+      font-weight: bold;
+    }
+  }
+}
+
+.cp-ll__img {
+  display: none;
+  height: 30em;
+  width: 83%;
+  background-size: cover;
+  background-position: center center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+
+  &.active {
+    display: block;
+  }
+}
+
+.cp-ll__box1 {
+    background-color: $black;
+    position: absolute;
+    top: -6em;
+    left: 2em;
+    height: 45em;
+    width: 60%;
+    z-index: -2;
+}
+
+.cp-ll__box2 {
+    background-color: #F0D0C3;
+    position: absolute;
+    top: -4em;
+    right: -4em;
+    height: 40em;
+    width: 33%;
+    z-index: -2;
+}
+
+

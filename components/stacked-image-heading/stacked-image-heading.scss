@@ -7,5 +7,93 @@
  */
 
 .cp-stacked-image-heading {
+  padding-top: 10em;
 
+  @include screen-sm {
+    padding-top: 0;
+  }
+}
+
+.cp-sh__row {
+  align-items: flex-start;
+}
+
+.cp-sh__box1 {
+  padding: 10em 0 8em 0;
+  position: relative;
+  &::before {
+    position: absolute;
+    content: "";
+    top: -4em;
+    left: 4em;
+    height: 100%;
+    width: 100%;
+    background-color: currentColor;
+    z-index: -1;
+
+    @include screen-sm {
+      top: 3em;
+      left: -2em;
+    }
+  }
+
+    @include screen-sm {
+      padding: 5em 0 8em;
+    }
+}
+
+.cp-sh__img1 {
+  display: block;
+
+  @include screen-sm {
+    display: none;
+  }
+}
+
+.cp-sh__box2 {
+  padding: 4em;
+
+  @include screen-sm {
+    padding: 2em;
+  }
+}
+
+.cp-sh__img2 {
+  width: 70%;
+  margin-top: -15em;
+  padding-bottom: 3em;
+
+  @include screen-sm {
+    margin-top: -6em;
+    padding-bottom: 1em;
+  }
+}
+
+.cp-sh__heading {
+  color: #FFFFFF;
+  font-family: Montserrat;
+  font-size: 5.3125em;
+  font-weight: 500;
+  letter-spacing: 10.63px;
+  line-height: 1.211;
+  text-transform: uppercase;
+  position: relative;
+
+  &::after {
+    display: inline-block;
+    content: "";
+    border-top: .08em solid white;
+    width: 2em;
+    position: absolute;
+    top: calc(100% - .6em);
+    left: calc(100% + .2em);
+    max-width: 100%;
+  }
+
+  @include screen-lg {
+    font-size: 4em;
+  }
+  @include screen-sm {
+    font-size: 2em;
+  }
 }

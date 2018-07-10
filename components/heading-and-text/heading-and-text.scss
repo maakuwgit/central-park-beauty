@@ -1,0 +1,42 @@
+/**
+ * heading and text Styles
+ * ----------------------------------------------------------------------------
+ *
+ * About the module
+ *
+ */
+
+.cp-heading-and-text {
+
+}
+
+
+.cp-ht__left-heading {
+  color: #000000;
+  font-family: Montserrat;
+  font-size: 5.3125em;
+  font-weight: 500;
+  letter-spacing: 10.63px;
+  line-height: 1.211;
+  text-transform: uppercase;
+  position: relative;
+  margin-left: 1.5em;
+
+  &::before {
+    display: inline-block;
+    content: "";
+    border-top: .08em solid black;
+    width: 2em;
+    position: absolute;
+    top: calc(100% - .6em);
+    right: calc(100% + .25em);
+    max-width: 100%;
+  }
+
+  @include screen-lg {
+    font-size: 4em;
+  }
+  @include screen-sm {
+    font-size: 2em;
+  }
+}

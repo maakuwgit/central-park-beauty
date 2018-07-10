@@ -65,19 +65,53 @@ if( have_rows( 'flex_default' ) ) :
           $heading = get_sub_field('heading');
           $image_1 = get_sub_field('image_1');
           $image_2 = get_sub_field('image_2');
+          $box_1_color = get_sub_field('box_1_color');
+          $box_2_color = get_sub_field('box_2_color');
 
           ll_include_component(
             'stacked-image-heading',
             array(
               'heading' => $heading,
               'image_1' => $image_1,
-              'image_2' => $image_2
-            ),
-            array(
-              'classes' => array('')
+              'image_2' => $image_2,
+              'box_1_color' => $box_1_color,
+              'box_2_color' => $box_2_color
             )
           );
         ?>
+
+      <?php elseif ( get_row_layout() == 'heading_and_text' ) : ?>
+
+        <?php
+
+          $heading = get_sub_field('heading');
+          $content = get_sub_field('content');
+          $left_heading = get_sub_field('left_heading');
+
+            ll_include_component(
+              'heading-and-text',
+              array(
+                'heading' => $heading,
+                'content' => $content,
+                'left_heading' => $left_heading
+              )
+            );
+
+         ?>
+
+      <?php elseif ( get_row_layout() == 'link_list' ) : ?>
+
+        <?php
+
+            ll_include_component(
+              'link-list',
+              array(
+                'list_items' => get_sub_field('list_items')
+              )
+            );
+
+         ?>
+
 
 
       <?php endif;
