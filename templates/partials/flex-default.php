@@ -154,6 +154,26 @@ if( have_rows( 'flex_default' ) ) :
             );
           ?>
 
+        <?php elseif ( get_row_layout() == 'cta' ) : ?>
+
+          <?php
+
+            $layout = get_sub_field('layout');
+            $text_color = get_sub_field('text_color');
+            $heading = get_sub_field('heading');
+            $bg_image_id = get_sub_field('bg_image');
+
+            ll_include_component(
+              'cta',
+              array(
+                'layout' => $layout,
+                'text_color' => $text_color,
+                'heading' => $heading,
+                'bg_image' => $bg_image_id
+              )
+            );
+          ?>
+
 
 
 

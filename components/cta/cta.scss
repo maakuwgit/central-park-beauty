@@ -1,0 +1,58 @@
+/**
+ * cta Styles
+ * ----------------------------------------------------------------------------
+ *
+ * About the module
+ *
+ */
+
+.cp-cta {
+  padding: 3em 0;
+
+}
+
+.cp-cta__container-bg {
+  height: 40em;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  padding: 3em;
+
+  @include screen-sm {
+    padding: 1em;
+    height: 30em;
+  }
+
+  @include screen-xs {
+    height: auto;
+  }
+}
+
+.cp-cta__heading {
+  font-family: "Libre Baskerville";
+  font-size: 2.8125em;
+  line-height: 1.57;
+
+  @include screen-sm {
+    font-size: 2em;
+  }
+}
+
+.cp-cta__single {
+  width: 42%;
+
+  @include screen-md {
+    width: 60%;
+  }
+
+  @include screen-sm {
+    width: 100%;
+    margin: auto;
+  }
+}
+
+.cp-cta__two-column {
+  .cp-cta__heading {
+    margin-top: 0;
+  }
+}

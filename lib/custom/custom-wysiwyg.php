@@ -22,13 +22,163 @@ add_filter( 'mce_buttons_2', 'll_new_mce_button' );
  */
 function ll_format_tinymce( $data ) {
     $style_formats = array(
-
-      // array(
-      //   'title'    => 'Button',
-      //   'classes'  => 'btn',
-      //   'selector' => 'a',
-      //   'wrapper'  => false
-      // ),
+      array(
+        'title'     => 'Fonts',
+        'items'     => [
+          array(
+            'title'    => 'Montserrat',
+            'classes'  => 'sans-serif',
+            'selector' => 'h1, h2, h3, h4, h5, h6, a, p, span, li',
+            'wrapper'  => false
+          ),
+          array(
+            'title'    => 'Libre Baskerville',
+            'classes'  => 'serif',
+            'selector' => 'h1, h2, h3, h4, h5, h6, a, p, span, li',
+            'wrapper'  => false
+          ),
+          array(
+            'title'    => 'Gilroy Bold',
+            'classes'  => 'sans-serif-bold',
+            'selector' => 'h1, h2, h3, h4, h5, h6, a, p, span, li',
+            'wrapper'  => false
+          ),
+        ]
+      ),
+      array(
+        'title'     => 'Headings',
+        'items'     => [
+          array(
+            'title'    => 'Heading 1',
+            'classes'  => 'h1',
+            'selector' => 'h1, h2, h3, h4, h5, h6, a, p, span, li',
+            'wrapper'  => false
+          ),
+          array(
+            'title'    => 'Heading 2',
+            'classes'  => 'h2',
+            'selector' => 'h1, h2, h3, h4, h5, h6, a, p, span, li',
+            'wrapper'  => false
+          ),
+          array(
+            'title'    => 'Heading 3',
+            'classes'  => 'h3',
+            'selector' => 'h1, h2, h3, h4, h5, h6, a, p, span, li',
+            'wrapper'  => false
+          ),
+          array(
+            'title'    => 'Heading 4',
+            'classes'  => 'h4',
+            'selector' => 'h1, h2, h3, h4, h5, h6, a, p, span, li',
+            'wrapper'  => false
+          ),
+          array(
+            'title'    => 'Heading 5',
+            'classes'  => 'h5',
+            'selector' => 'h1, h2, h3, h4, h5, h6, a, p, span, li',
+            'wrapper'  => false
+          ),
+          array(
+            'title'    => 'Heading 6',
+            'classes'  => 'h6',
+            'selector' => 'h1, h2, h3, h4, h5, h6, a, p, span, li',
+            'wrapper'  => false
+          ),
+        ]
+      ),
+      array(
+        'title'     => 'Format',
+        'items'     => [
+          array(
+            'title'    => 'Text Transform: Uppercase',
+            'classes'  => 'text-transform-uppercase',
+            'selector' => 'h1, h2, h3, h4, h5, h6, a, p, span, li',
+            'wrapper'  => false
+          ),
+          array(
+            'title'    => 'Text Transform: Lowercase',
+            'classes'  => 'text-transform-lowercase',
+            'selector' => 'h1, h2, h3, h4, h5, h6, a, p, span, li',
+            'wrapper'  => false
+          ),
+          array(
+            'title'    => 'Text Transform: None',
+            'classes'  => 'text-transform-none',
+            'selector' => 'h1, h2, h3, h4, h5, h6, a, p, span, li',
+            'wrapper'  => false
+          ),
+          array(
+            'title'    => 'Text Size: Large',
+            'classes'  => 'text-size-large',
+            'selector' => 'h1, h2, h3, h4, h5, h6, a, p, span, li',
+            'wrapper'  => false
+          ),
+          array(
+            'title'    => 'Text Size: Default',
+            'classes'  => 'text-size-default',
+            'selector' => 'h1, h2, h3, h4, h5, h6, a, p, span, li',
+            'wrapper'  => false
+          ),
+          array(
+            'title'    => 'Text Size: Small',
+            'classes'  => 'text-size-small',
+            'selector' => 'h1, h2, h3, h4, h5, h6, a, p, span, li',
+            'wrapper'  => false
+          ),
+          array(
+            'title'    => 'Letter Spacing',
+            'classes'  => 'text-letter-spacing',
+            'selector' => 'h1, h2, h3, h4, h5, h6, a, p, span, li',
+            'wrapper'  => false
+          ),
+        ],
+      ),
+      array(
+        'title'     => 'Color',
+        'items'     => [
+          array(
+            'title'    => 'Default',
+            'classes'  => 'text-dark',
+            'selector' => 'h1, h2, h3, h4, h5, h6, a, p, span, li',
+            'wrapper'  => false
+          ),
+          array(
+            'title'    => 'White',
+            'classes'  => 'text-color-white',
+            'selector' => 'h1, h2, h3, h4, h5, h6, a, p, span, li',
+            'wrapper'  => false
+          ),
+          array(
+            'title'    => 'Black',
+            'classes'  => 'primary-color',
+            'selector' => 'h1, h2, h3, h4, h5, h6, a, p, span, li',
+            'wrapper'  => false
+          ),
+        ],
+      ),
+      array(
+        'title'     => 'Buttons',
+        'items'     => [
+          array(
+            'title'    => 'Button',
+            'classes'  => 'btn',
+            'selector' => 'a',
+            'wrapper'  => false
+          ),
+          array(
+            'title'    => 'Button (Dark)',
+            'classes'  => 'btn btn__dark',
+            'selector' => 'a',
+            'wrapper'  => false
+          ),
+          array(
+            'title'    => 'Button (Light)',
+            'classes'  => 'btn btn__light',
+            'selector' => 'a',
+            'wrapper'  => false
+          )
+        ]
+      )
     );
 
   $data['style_formats'] = json_encode( $style_formats );

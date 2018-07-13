@@ -44,8 +44,10 @@ $component_id = $component_args['id'];
     <div class="container-full cp-testimonial-slider__container">
 
       <div class="container cp-testimonial-slider__bg-img" style="background-image: url('<?php echo $image[0]; ?>');">
-
-        <h2 class="cp-testimonial-slider__title">Client</h2>
+        <div class="cp-testimonial-slider__title-container">
+          <h2 class="cp-testimonial-slider__title">Client</h2>
+          <span class="cp-testimonial-slider__heart-svg"><svg class="icon icon-Heart"><use xlink:href="#icon-Heart"></use></svg></span>
+        </div>
 
         <?php if ($testimonials): ?>
 
@@ -105,8 +107,7 @@ $component_id = $component_args['id'];
 
       <div class="cp-testimonial-slider__box1"></div>
       <div class="cp-testimonial-slider__box2"></div>
+      <div class="cp-testimonial-slider__box3"></div>
     </div>
-
-  </div>
 
 </div>

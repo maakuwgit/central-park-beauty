@@ -72,7 +72,7 @@ $component_id   = $component_args['id'];
               <div class="cp-link-list_slide-title"><?php echo $list_item['link']['title']; ?></div>
               <div class="cp-link-list__img" style="background-image: url('<?php echo $image[0]; ?>');">
                 <div class="cp-link-list__overlay">
-                  <svg class="icon icon-TREAT-MENTS cp-link-list__svg"><use xlink:href="#icon-TREAT-MENTS"></use></svg>
+                  <svg class="icon icon-Treatments-Horizontal cp-link-list__svg"><use xlink:href="#icon-Treatments-Horizontal"></use></svg>
                 </div>
               </div>
             </div>

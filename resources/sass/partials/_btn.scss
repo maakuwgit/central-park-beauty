@@ -3,8 +3,37 @@
  */
 
 .btn {
+  border-radius: 0;
+  padding: 1em;
+  @extend %sans-serif;
+  font-size: .875em;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  line-height: 1.28;
 
   &:hover, &:active, &:focus {
 
+  }
+}
+
+.btn__dark {
+  background-color: $black;
+  color: $white;
+
+  &:hover, &:active, &:focus {
+    background-color: $white;
+    color: $black;
+    border: 1px solid $black;
+  }
+}
+
+.btn__light {
+  background-color: $white;
+  color: $black;
+
+  &:hover, &:active, &:focus {
+    background-color: $black;
+    color: $white;
+    border: 1px solid $white;
   }
 }

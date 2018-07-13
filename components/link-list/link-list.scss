@@ -119,15 +119,31 @@
   background-color: rgba(0,0,0,.3);
   width: 100%;
   height: 100%;
+  position: relative;
 }
 
 .cp-link-list__svg {
   position: absolute;
-  top: 20%;
-  left: 50%;
-  font-size: 20em;
+  top: 50%;
+  right: 0;
+  font-size: 9em;
   color: white;
-  transform: rotate(90deg);
+  transform: translate(-50%, -50%);
+  opacity: .5;
+
+  @include screen-lg {
+    transform: translate(0, -50%);
+  }
+
+  @include screen-md {
+    top: .1em;
+    right: .1em;
+    transform: translateY(0)
+  }
+
+  @include screen-sm {
+
+  }
 }
 
 .cp-link-list__box1 {

@@ -26,13 +26,14 @@
         dots: false,
         arrows: false,
         fade: true,
-        speed: 100,
+        cssEase: 'easeInOutSine',
+        speed: 0,
         infinite: false,
         draggable: true,
         slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: true,
-        autoplaySpeed: 5000,
+        autoplaySpeed: 4000,
         responsive: [
           {
             breakpoint: 768,
@@ -42,8 +43,8 @@
               slidesToScroll: 1,
               arrows: true,
               dots: true,
-              prevArrow: '<button class="slider-button slider-chev-left"><svg class="icon icon-chevron-left"><use xlink:href="#icon-chevron-left"></use></svg></button>',
-        nextArrow: '<button class="slider-button slider-chev-right"><svg class="icon icon-chevron-right"><use xlink:href="#icon-chevron-right"></use></svg></button>'
+              prevArrow: '<button class="slider-button cp-testimonial-slider__chev-left"><svg class="icon icon-chevron-left"><use xlink:href="#icon-chevron-left"></use></svg></button>',
+        nextArrow: '<button class="slider-button cp-testimonial-slider__chev-right"><svg class="icon icon-chevron-right"><use xlink:href="#icon-chevron-right"></use></svg></button>'
             }
           }
         ]
