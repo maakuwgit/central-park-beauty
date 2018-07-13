@@ -60,6 +60,7 @@ module.exports = function(grunt) {
   // Comment out unused JS files
   var jsFileList = [
     'resources/vendor/magnific-popup/dist/jquery.magnific-popup.min.js',
+    'resources/vendor/slick-carousel/slick/slick.min.js',
     'resources/js/plugins/*.js',
     'resources/js/app.js',
     'resources/js/_*.js',

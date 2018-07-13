@@ -1,0 +1,124 @@
+/**
+ * content with staggered images Styles
+ * ----------------------------------------------------------------------------
+ *
+ * About the module
+ *
+ */
+
+.cp-content-with-staggered-images {
+  overflow: hidden;
+}
+
+.cp-content-with-staggered-images__top-content {
+  width: 50%;
+  padding-left: 2em;
+  margin-bottom: -10em;
+
+  @include screen-md {
+    width: 100%;
+    margin-bottom: 0;
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+
+}
+
+.cp-content-with-staggered-images__img-row {
+  height: 57em;
+  position: relative;
+
+  @include screen-md {
+    height: 40em;
+  }
+
+  @include screen-sm {
+    height: 27em;
+  }
+
+  @include screen-xs {
+    height: 22em;
+  }
+}
+
+.cp-content-with-staggered-images__img {
+  flex: 1 1 auto;
+  margin: 1em;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 27em;
+
+  @include screen-md {
+    height: 20em;
+    margin: .5em;
+  }
+
+  @include screen-sm {
+    height: 15em;
+  }
+
+  @include screen-xs {
+    height: 20em;
+  }
+}
+
+.cp-content-with-staggered-images__img1 {
+  align-self: flex-end;
+}
+
+.cp-content-with-staggered-images__img2 {
+  align-self: center;
+
+  @include screen-xs {
+    display: none;
+  }
+}
+
+.cp-content-with-staggered-images__img3 {
+  align-self: flex-start;
+
+  @include screen-xs {
+    display: none;
+  }
+}
+
+.cp-content-with-staggered-images__bg {
+  background-color: #E2A187;
+  position: absolute;
+  top: 40%;
+  left: 10%;
+  width: 100%;
+  height: 24em;
+  z-index: -1;
+
+  @include screen-md {
+    height: 17em;
+  }
+
+  @include screen-sm {
+    top: 33%;
+    height: 14em;
+  }
+
+  @include screen-xs {
+    top: 28%;
+    height: 16.5em;
+    left: 0;
+    width: 105%;
+  }
+}
+
+.cp-content-with-staggered-images__bottom-content {
+  width: 50%;
+  margin-left: 42%;
+  margin-top: -5em;
+
+  @include screen-md {
+    width: 100%;
+    margin-left: 2em;
+    margin-top: 0;
+  }
+}

@@ -1,14 +1,14 @@
 /**
-* link list JS
+* testimonial slider JS
 * -----------------------------------------------------------------------------
 *
-* All the JS for the link list component.
+* All the JS for the testimonial slider component.
 */
 ( function( app ) {
 
   var COMPONENT = {
 
-    className: 'cp-link-list',
+    className: 'cp-testimonial-slider',
 
 
     selector : function() {
@@ -21,16 +21,18 @@
 
       var _this = this;
 
-      $('.cp-link-list__slick-container').slick({
-        centerMode: true,
+      $('.cp-testimonial-slider__slider').slick({
+        centerMode: false,
         dots: false,
         arrows: false,
         fade: true,
         speed: 100,
         infinite: false,
-        draggable: false,
+        draggable: true,
         slidesToShow: 1,
         slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 5000,
         responsive: [
           {
             breakpoint: 768,
@@ -39,26 +41,23 @@
               slidesToShow: 1,
               slidesToScroll: 1,
               arrows: true,
+              dots: true,
               prevArrow: '<button class="slider-button slider-chev-left"><svg class="icon icon-chevron-left"><use xlink:href="#icon-chevron-left"></use></svg></button>',
         nextArrow: '<button class="slider-button slider-chev-right"><svg class="icon icon-chevron-right"><use xlink:href="#icon-chevron-right"></use></svg></button>'
             }
           }
         ]
       }).on('afterChange', function(event, slick, currentSlide){
-        $('.cp-link-list__link').removeClass('active');
-        $('.cp-link-list__link[data-index="'+currentSlide+'"]').addClass('active');
+        $('.cp-testimonial-slider__number').removeClass('active');
+        $('.cp-testimonial-slider__number[data-index="'+currentSlide+'"]').addClass('active');
       })
 
-      $('.cp-link-list__link').mouseover(function() {
+      $('.cp-testimonial-slider__number').mouseover(function() {
         var target = $(this).data('index');
-        $('.cp-link-list__slick-container').slick("goTo", target);
+        $('.cp-testimonial-slider__slider').slick("goTo", target);
       });
 
-
-
-
     },
-
 
     finalize: function() {
 
@@ -67,5 +66,5 @@
   };
 
   // Hooks the component into the app
-  app.registerComponent( 'link-list', COMPONENT );
+  app.registerComponent( 'testimonial-slider', COMPONENT );
 } )( app );

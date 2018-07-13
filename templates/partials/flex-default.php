@@ -112,6 +112,49 @@ if( have_rows( 'flex_default' ) ) :
 
          ?>
 
+        <?php elseif ( get_row_layout() == 'content_with_staggered_images' ) : ?>
+
+          <?php
+
+            $top_heading = get_sub_field('top_heading');
+            $top_content = get_sub_field('top_content');
+            $bottom_heading = get_sub_field('bottom_heading');
+            $bottom_content = get_sub_field('bottom_content');
+            $image_1 = get_sub_field('image_1');
+            $image_2 = get_sub_field('image_2');
+            $image_3 = get_sub_field('image_3');
+
+            ll_include_component(
+              'content-with-staggered-images',
+              array(
+                'top_heading' => $top_heading,
+                'top_content' => $top_content,
+                'bottom_heading' => $bottom_heading,
+                'bottom_content' => $bottom_content,
+                'image_1' => $image_1,
+                'image_2' => $image_2,
+                'image_3' => $image_3
+              )
+            );
+          ?>
+
+        <?php elseif ( get_row_layout() == 'testimonial_slider' ) : ?>
+
+          <?php
+
+            $image_id = get_sub_field('background_image');
+            $testimonials = get_sub_field('testimonials');
+
+            ll_include_component(
+              'testimonial-slider',
+              array(
+                'image_id' => $image_id,
+                'testimonials' => $testimonials
+              )
+            );
+          ?>
+
+
 
 
       <?php endif;

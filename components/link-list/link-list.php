@@ -37,54 +37,56 @@ $component_id   = $component_args['id'];
 <?php if ( ll_empty( $component_data ) ) return; ?>
 <div class="cp-link-list <?php echo implode( " ", $classes ); ?>" <?php echo ( $component_id ? 'id="'.$component_id.'"' : '' ) ?> data-component="link-list">
 
-  <div class="container-full cp-ll__container">
+  <div class="container-full cp-link-list__container">
 
-    <div class="container">
+    <div class="container cp-link-list__container-2">
 
-    <?php if ($list_items) : ?>
+      <div class="cp-link-list__list">
 
-      <ul class="cp-ll__ul">
-        <?php foreach ($list_items as $index => $list_item): ?>
+        <?php if ($list_items) : ?>
 
-        <?php
-          if ( $index == 0 ) {
-            $active_state = 'active';
-          } else {
-            $active_state = '';
-          }
-        ?>
+          <?php foreach ($list_items as $index => $list_item): ?>
 
-          <li class="cp-ll__li <?php echo $active_state; ?>"><a href="<?php echo $list_item['link']['url']; ?>" class="cp-ll__link <?php echo $active_state; ?>" data-target="#img-<?php echo $index; ?>"><?php echo $list_item['link']['title']; ?></a></li>
+          <?php
+            if ( $index == 0 ) {
+              $active_state = 'active';
+            } else {
+              $active_state = '';
+            }
+          ?>
+
+          <a href="<?php echo $list_item['link']['url']; ?>" class="cp-link-list__link <?php echo $active_state; ?>" data-index="<?php echo $index; ?>"><?php echo $list_item['link']['title']; ?></a>
+
+          <?php endforeach ?>
+      </div>
+
+      <div class="cp-link-list__slick-container">
+        <?php foreach ($list_items as $index => $list_item) : ?>
+
+          <?php
+            $image_id = $list_item['image'];
+            $image = wp_get_attachment_image_src($image_id, 'medium_large');
+           ?>
+
+            <div class="cp-link-list_slide">
+              <div class="cp-link-list_slide-title"><?php echo $list_item['link']['title']; ?></div>
+              <div class="cp-link-list__img" style="background-image: url('<?php echo $image[0]; ?>');">
+                <div class="cp-link-list__overlay">
+                  <svg class="icon icon-TREAT-MENTS cp-link-list__svg"><use xlink:href="#icon-TREAT-MENTS"></use></svg>
+                </div>
+              </div>
+            </div>
 
         <?php endforeach ?>
-
-      </ul>
-
-      <?php foreach ($list_items as $index => $list_item) : ?>
-
-        <?php
-          $image_id = $list_item['image'];
-          $image = wp_get_attachment_image_src($image_id, 'medium_large');
-         ?>
-
-         <?php
-          if ( $index == 0 ) {
-            $active_state = 'active';
-          } else {
-            $active_state = '';
-          }
-        ?>
-
-        <div id="img-<?php echo $index; ?>" class="cp-ll__img <?php echo $active_state; ?>" style="background-image: url('<?php echo $image[0]; ?>');"><svg class="icon icon-REJUVE-NATE"><use xlink:href="#icon-REJUVE-NATE"></use></svg></div>
-
-      <?php endforeach ?>
+      </div>
 
 
-    <?php endif ?>
+      <?php endif ?>
+    </div>
+    <div class="cp-link-list__box1"></div>
+    <div class="cp-link-list__box2"></div>
   </div>
 
-    <div class="cp-ll__box1"></div>
-    <div class="cp-ll__box2"></div>
   </div>
 
 

@@ -16,6 +16,7 @@
     "modernizr": "~3.2.0",
     "jquery": "~2.1.4",
     "respond": "~1.4.2",
-    "magnific-popup": "~1.0.0"
+    "magnific-popup": "~1.0.0",
+    "slick-carousel": "^1.8.1"
   }
 }
