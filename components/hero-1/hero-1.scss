@@ -1,0 +1,94 @@
+/**
+ * Hero 1 Styles
+ * ----------------------------------------------------------------------------
+ *
+ * About the module
+ *
+ */
+
+.cp-hero-1 {
+  background-color: #F0D0C3;
+  height: calc( 100vh - 6em );
+  margin-bottom: 3em;
+  position: relative;
+
+}
+
+.cp-hero-1__icon-col {
+  width: 33%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-ABOUT-CPB {
+  font-size: 50vmin;
+  color: $black;
+}
+
+.cp-hero-1__main-text {
+  color: #000000;
+  font-family: "Libre Baskerville";
+  font-size: 2.8125em;
+  line-height: 1.22;
+
+  @include screen-sm {
+    font-size: 2em;
+  }
+}
+
+
+.cp-hero-1__img-1 {
+  width: 25%;
+  height: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: translateY(75%);
+
+  @include screen-sm {
+    display: none;
+  }
+}
+
+.cp-hero-1__img-2 {
+  width: 25%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  position: absolute;
+  top: 0;
+  right: 43%;
+  height: 50%;
+
+  @include screen-sm {
+    right: 7%;
+    width: 60%;
+  }
+}
+
+.cp-hero-1__text-box {
+  margin-left: 32%;
+  margin-top: -14em;
+  position: relative;
+  z-index: 2;
+}
+
+.cp-hero-1__img-3 {
+  width: 41.66%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+
+    @include screen-sm {
+    display: none;
+  }
+}

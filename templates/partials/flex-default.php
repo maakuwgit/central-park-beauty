@@ -174,6 +174,14 @@ if( have_rows( 'flex_default' ) ) :
             );
           ?>
 
+        <?php elseif ( get_row_layout() == 'instagram_feed' ) : ?>
+
+          <?php
+            ll_include_component(
+              'instagram-feed'
+            );
+          ?>
+
 
 
 

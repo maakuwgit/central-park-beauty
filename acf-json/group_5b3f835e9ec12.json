@@ -465,6 +465,35 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "5b4ca1b143cd3": {
+                    "key": "5b4ca1b143cd3",
+                    "name": "instagram_feed",
+                    "label": "Instagram Feed",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5b4ca1b143cd4",
+                            "label": "Group Label",
+                            "name": "group_label",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "ll-group-label",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "button_label": "Add Row",
@@ -489,5 +518,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1531499137
+    "modified": 1531749236
 }

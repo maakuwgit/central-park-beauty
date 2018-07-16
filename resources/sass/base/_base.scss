@@ -41,6 +41,10 @@ body {
   }
 }
 
+.main {
+  padding-top: 3em;
+}
+
 ::selection {
   text-shadow: none;
   color: $selection;

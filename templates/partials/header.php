@@ -11,6 +11,14 @@
   $service_categories = get_terms('service_category') ?: [];
   $condition_categories = get_terms('condition_category') ?: [];
 
+  //social links
+  $instagram = get_field( 'social_instagram', 'option' );
+  $twitter = get_field( 'social_twitter', 'option' );
+  $facebook = get_field( 'social_facebook', 'option' );
+  $snapchat = get_field( 'social_snapchat', 'option' );
+  $tumblr = get_field( 'social_tumblr', 'option' );
+
+
  ?>
 
 <header class="navbar" role="banner">
@@ -44,11 +52,11 @@
       <div class="header__right">
         <span class="header__right-text">Central Park Beauty</span>
         <ul>
-          <li><a href="#" target="_blank"><svg class="icon icon-cp-twitter"><use xlink:href="#icon-cp-twitter"></use></svg></a></li>
-          <li><a href="#" target="_blank"><svg class="icon icon-cp-facebook"><use xlink:href="#icon-cp-facebook"></use></svg></a></li>
-          <li><a href="#" target="_blank"><svg class="icon icon-cp-instagram"><use xlink:href="#icon-cp-instagram"></use></svg></a></li>
-          <li><a href="#" target="_blank"><svg class="icon icon-cp-snapchat"><use xlink:href="#icon-cp-snapchat"></use></svg></a></li>
-          <li><a href="#" target="_blank"><svg class="icon icon-cp-tumblr"><use xlink:href="#icon-cp-tumblr"></use></svg></a></li>
+          <li><a href="<?php echo $twitter; ?>" target="_blank"><svg class="icon icon-cp-twitter"><use xlink:href="#icon-cp-twitter"></use></svg></a></li>
+          <li><a href="<?php echo $facebook; ?>" target="_blank"><svg class="icon icon-cp-facebook"><use xlink:href="#icon-cp-facebook"></use></svg></a></li>
+          <li><a href="<?php echo $instagram; ?>" target="_blank"><svg class="icon icon-cp-instagram"><use xlink:href="#icon-cp-instagram"></use></svg></a></li>
+          <li><a href="<?php echo $snapchat; ?>" target="_blank"><svg class="icon icon-cp-snapchat"><use xlink:href="#icon-cp-snapchat"></use></svg></a></li>
+          <li><a href="<?php echo $tumblr; ?>" target="_blank"><svg class="icon icon-cp-tumblr"><use xlink:href="#icon-cp-tumblr"></use></svg></a></li>
         </ul>
       </div>
 

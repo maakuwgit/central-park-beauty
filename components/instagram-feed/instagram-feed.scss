@@ -1,0 +1,131 @@
+/**
+ * Instagram Feed Styles
+ * ----------------------------------------------------------------------------
+ *
+ * About the module
+ *
+ */
+
+.ll-instagram-feed {
+  position: relative;
+  padding: 3em 0;
+
+
+}
+
+.ll-instagram-feed--full {
+  .row {
+    margin-left: $grid-gutter-width/2;
+    margin-right: $grid-gutter-width/2;
+  }
+}
+
+.ll-instagram-feed--gutter {
+  .row {
+    margin-top: calc( #{$grid-gutter-width} * -1 );
+    margin-bottom: calc( #{$grid-gutter-width} * -1 );
+  }
+
+  &.ll-instagram-feed--first {
+
+    .row {
+      margin-top: calc( #{$grid-gutter-width}/2 * -1 );
+    }
+  }
+
+  &.ll-instagram-feed--last {
+    .row {
+      margin-bottom: calc( #{$grid-gutter-width}/2 * -1 );
+    }
+  }
+
+  [class*="col"] {
+    margin-top: $grid-gutter-width/2;
+    margin-bottom: $grid-gutter-width/2;
+  }
+}
+
+.ll-instagram-feed--no-gutter {
+  .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  [class*="col"] {
+    margin-left: 0;
+    margin-right: 0;
+    width: 25%;
+  }
+}
+
+.ll-instagram-feed__img-container {
+  position: relative;
+  overflow: hidden;
+  margin: 0 1em;
+
+  //square
+  &::before {
+    content: '';
+    display: block;
+    padding-top: 100%;
+  }
+
+}
+
+.ll-instagram-feed__img {
+  @extend %cover;
+  max-width: 100%;
+  z-index: -1;
+}
+
+.ll-instagram-feed__overlay {
+  background-color: rgba(0,0,0,.5);
+  width: 100%;
+  height: 100%;
+  color: $white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: Montserrat;
+  font-size: 1.125em;
+
+  a {
+    color: $white;
+  }
+}
+
+.ll-instagram-feed__title {
+  text-transform: uppercase;
+   font-weight: 500;
+  letter-spacing: 4px;
+  line-height: 1.38;
+  padding-bottom: 2em;
+}
+
+.ll-instagram-feed__icon {
+  font-size: 2em;
+}
+
+.ll-instagram-feed__box1 {
+  background-color: #E2A187;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80%;
+  height: 80%;
+  z-index: -3;
+}
+
+.ll-instagram-feed__box2 {
+  background-color: $black;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 80%;
+  height: 80%;
+  z-index: -2;
+}
