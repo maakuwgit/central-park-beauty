@@ -1,12 +1,12 @@
 /**
- * Hero 2 Styles
+ * Blog Hero Styles
  * ----------------------------------------------------------------------------
  *
  * About the module
  *
  */
 
-.cp-hero-2 {
+.cp-blog-hero {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -15,50 +15,50 @@
   position: relative;
 
   @include screen-sm {
-    height: calc( 100vh - 3em );
+    height: auto;
   }
 }
 
-.cp-hero-2__overlay {
+.cp-blog-hero__overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  // background-color: rgba(0,0,0,.5);
 }
 
-.cp-hero-2__icon-col {
-  width: 33%;
-  height: 100%;
+.cp-blog-hero__icon-col {
+  // width: 33%;
+  height: 90vh;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
 
   @include screen-sm {
-    height: 50%;
+    display: none;
   }
 }
 
-.cp-hero-2__svg {
-  font-size: 50vmin;
+.cp-blog-hero__svg {
+  font-size: 37vmin;
   color: $white;
   z-index: 2;
+  margin-bottom: 10vmin;
 }
 
-.cp-hero-2__main-text {
-  color: $white;
+.cp-blog-hero__main-text {
   font-family: "Libre Baskerville";
   font-size: 2.8125em;
   line-height: 1.22;
+  margin: 2em 0;
 
   @include screen-sm {
     font-size: 2em;
   }
 }
 
-.cp-hero-2__sub-text {
-  color: $white;
-  color: #FFFFFF;
+.cp-blog-hero__sub-text {
   font-family: Montserrat;
   font-size: 1.215em;
   font-weight: 500;
@@ -72,32 +72,39 @@
 }
 
 
-.cp-hero-2__img-1 {
-  width: 25%;
-  height: 50%;
+.cp-blog-hero__img-1 {
+  width: 33%;
+  height: 80%;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
   position: absolute;
-  bottom: 0;
   left: 0;
-  transform: translateY(75%);
+  top: 0;
 
   @include screen-sm {
-    bottom: unset;
-    left: unset;
-    top: 1em;
-    transform: translateY(0);
-    right: 7%;
-    height: 50%;
-    width: 60%;
+    display: none;
   }
 }
 
-.cp-hero-2__text-box {
-  margin-left: 32%;
-  margin-top: -14em;
-  position: relative;
+.cp-blog-hero__img-2 {
+  padding-top: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  // margin-top: 10em;
+}
+
+.cp-blog-hero__right-col {
+  margin-top: 5em;
+  margin-left: 5em;
+
+  @include screen-sm {
+    margin: 2em 0;
+  }
+}
+
+.cp-blog-hero__text-box {
   z-index: 2;
 
   @include screen-sm {
@@ -105,5 +112,3 @@
     margin-left: .5em;
   }
 }
-
-

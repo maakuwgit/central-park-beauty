@@ -4,6 +4,12 @@
  */
 if ( ! function_exists('register_service_custom_post_type') ) {
 
+  $id = get_field( 'services_archive_page', 'option' );
+  $slug = ll_get_the_slug( $id );
+  $title = get_the_title( $id );
+  if ( !$title ) {
+    $title = 'Services';
+  }
   // Register Custom Post Type
   function register_service_custom_post_type() {
 
@@ -42,6 +48,9 @@ if ( ! function_exists('register_service_custom_post_type') ) {
       'publicly_queryable'  => true,
       'capability_type'     => 'post',
     );
+    if ( $slug ) {
+      $args['rewrite'] = [ 'slug' => $slug ];
+    }
     register_post_type( 'service', $args );
 
   }
@@ -128,10 +137,10 @@ if ( ! function_exists('register_service_taxonomies') ) {
  * Create ACF setting page under CPT menu
  */
 
-// if ( function_exists( 'acf_add_options_sub_page' ) ){
-//   acf_add_options_sub_page(array(
-//     'title'      => 'Service Settings',
-//     'parent'     => 'edit.php?post_type=service',
-//     'capability' => 'manage_options'
-//   ));
-// }
+if ( function_exists( 'acf_add_options_sub_page' ) ){
+  acf_add_options_sub_page(array(
+    'title'      => 'Service Settings',
+    'parent'     => 'edit.php?post_type=service',
+    'capability' => 'edit_posts'
+  ));
+}

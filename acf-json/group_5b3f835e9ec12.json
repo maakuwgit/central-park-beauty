@@ -508,6 +508,20 @@
                 "operator": "==",
                 "value": "templates\/template-home.php"
             }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "service"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "condition"
+            }
         ]
     ],
     "menu_order": 0,
@@ -518,5 +532,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1531749236
+    "modified": 1531841130
 }

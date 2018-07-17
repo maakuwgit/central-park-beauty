@@ -3,6 +3,32 @@
     "title": "Hero 2",
     "fields": [
         {
+            "key": "field_5b4e051739469",
+            "label": "Side Text",
+            "name": "side_text",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "TREAT-MENTS": "Treatments",
+                "BODY-_-FACE": "Body - Face",
+                "REJUVE-NATE": "Rejuvenate"
+            },
+            "default_value": [],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "ajax": 0,
+            "return_format": "value",
+            "placeholder": ""
+        },
+        {
             "key": "field_5b4d034c07b2f",
             "label": "Main Text",
             "name": "main_text",
@@ -194,6 +220,13 @@
                 "operator": "==",
                 "value": "service"
             }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "condition"
+            }
         ]
     ],
     "menu_order": 0,
@@ -204,5 +237,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1531774096
+    "modified": 1531840766
 }

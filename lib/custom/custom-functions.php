@@ -300,3 +300,4 @@ function ll_generate_schema_json() {
   echo '<script type="application/ld+json">' . json_encode($schema) . '</script>';
 }
 add_action( 'wp_head', 'll_generate_schema_json'  );
+

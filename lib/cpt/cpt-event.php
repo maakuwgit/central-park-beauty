@@ -4,6 +4,13 @@
  */
 if ( ! function_exists('register_event_custom_post_type') ) {
 
+  $id = get_field( 'events_archive_page', 'option' );
+  $slug = ll_get_the_slug( $id );
+  $title = get_the_title( $id );
+  if ( !$title ) {
+    $title = 'Events';
+  }
+
   // Register Custom Post Type
   function register_event_custom_post_type() {
 
@@ -42,6 +49,9 @@ if ( ! function_exists('register_event_custom_post_type') ) {
       'publicly_queryable'  => true,
       'capability_type'     => 'post',
     );
+    if ( $slug ) {
+      $args['rewrite'] = [ 'slug' => $slug ];
+    }
     register_post_type( 'event', $args );
 
   }
@@ -130,10 +140,10 @@ if ( ! function_exists('register_event_taxonomies') ) {
  * Create ACF setting page under CPT menu
  */
 
-// if ( function_exists( 'acf_add_options_sub_page' ) ){
-//   acf_add_options_sub_page(array(
-//     'title'      => 'Event Settings',
-//     'parent'     => 'edit.php?post_type=event',
-//     'capability' => 'manage_options'
-//   ));
-// }
+if ( function_exists( 'acf_add_options_sub_page' ) ){
+  acf_add_options_sub_page(array(
+    'title'      => 'Event Settings',
+    'parent'     => 'edit.php?post_type=event',
+    'capability' => 'edit_posts'
+  ));
+}

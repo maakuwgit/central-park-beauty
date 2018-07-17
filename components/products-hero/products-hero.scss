@@ -1,0 +1,73 @@
+/**
+ * Products Hero Styles
+ * ----------------------------------------------------------------------------
+ *
+ * About the module
+ *
+ */
+
+.cp-products-hero {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: calc( 100vh - 6em );
+  margin-bottom: 3em;
+  position: relative;
+
+  @include screen-sm {
+    height: auto;
+  }
+}
+
+.cp-products-hero__icon-col {
+  // width: 33%;
+  height: 90vh;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+
+  @include screen-sm {
+    display: none;
+  }
+}
+
+.cp-products-hero__svg {
+  font-size: 50vmin;
+  color: $white;
+  z-index: 2;
+  margin-bottom: 5vmin;
+}
+
+.cp-products-hero__img-1 {
+  width: 33%;
+  height: 80%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  @include screen-sm {
+    display: none;
+  }
+}
+
+.cp-products-hero__img-2 {
+  padding-top: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  // margin-top: 10em;
+}
+
+.cp-products-hero__right-col {
+
+}
+
+.cp-products-hero__img-3 {
+  padding-top: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}

@@ -11,9 +11,14 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  min-height: calc( 100vh - 2em );
+  height: calc( 100vh - 6em );
   width: 100%;
   position: relative;
+  margin-bottom: 3em;
+
+  @include screen-sm {
+    height: calc( 100vh - 3em );
+  }
 }
 
 .hero-banner__content {
