@@ -4,17 +4,18 @@
  */
 if ( ! function_exists('register_service_custom_post_type') ) {
 
-  $id = get_field( 'services_archive_page', 'option' );
-  $slug = ll_get_the_slug( $id );
-  $title = get_the_title( $id );
-  if ( !$title ) {
-    $title = 'Services';
-  }
   // Register Custom Post Type
   function register_service_custom_post_type() {
 
+    $id = get_field( 'services_archive_page', 'option' );
+    $slug = ll_get_the_slug( $id );
+    $title = get_the_title( $id );
+    if ( !$title ) {
+      $title = 'Services';
+    }
+
     $labels = array(
-      'name'                => 'Service',
+      'name'                => $title,
       'singular_name'       => 'Service',
       'menu_name'           => 'Services',
       'parent_item_colon'   => 'Parent Service',
@@ -28,6 +29,7 @@ if ( ! function_exists('register_service_custom_post_type') ) {
       'not_found'           => 'No service found',
       'not_found_in_trash'  => 'No service found in Trash',
     );
+
     $args = array(
       'label'               => 'service',
       'description'         => 'Service description',
@@ -48,6 +50,7 @@ if ( ! function_exists('register_service_custom_post_type') ) {
       'publicly_queryable'  => true,
       'capability_type'     => 'post',
     );
+
     if ( $slug ) {
       $args['rewrite'] = [ 'slug' => $slug ];
     }

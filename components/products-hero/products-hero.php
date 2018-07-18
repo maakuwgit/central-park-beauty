@@ -7,22 +7,11 @@
 */
 
 $defaults = [
-  'main_text' => array(
-    'text' => null,
-    'tag' => null
-  ),
-  'sub_text' => array(
-    'text' => null,
-    'tag' => null
-  ),
   'image_one' => null,
   'image_two' => null,
+  'image_three' => null,
   'side_text' => null,
-  'background' => null,
-  'background_color' => null,
-  'background_image' => null,
-  'overlay_opacity' => null,
-  'text_color' => null
+  'background_color' => null
 ];
 
 $component_data = ll_parse_args( $component_data, $defaults );
@@ -62,9 +51,9 @@ $component_id   = $component_args['id'];
 
 
 
-  <div class="container-full">
+  <div class="container-full cp-products-hero__container">
     <div class="row">
-      <div class="col-sm-1of2">
+      <div class="col-sm-1of2 cp-products-hero__left-col">
 
         <div class="cp-products-hero__img-1" style="background-image: url(<?php echo $image1[0]; ?>);"></div>
 

@@ -494,6 +494,106 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "5b4f52cad570e": {
+                    "key": "5b4f52cad570e",
+                    "name": "staggered_content",
+                    "label": "Staggered Content",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5b4f52cad570f",
+                            "label": "Group Label",
+                            "name": "group_label",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "ll-group-label",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_5b4f52dbd5710",
+                            "label": "Staggered Content",
+                            "name": "staggered_content",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_5b4f5234df558"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "5b4f891fb9e8a": {
+                    "key": "5b4f891fb9e8a",
+                    "name": "image_with_button",
+                    "label": "Image with Button",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5b4f891fb9e8b",
+                            "label": "Group Label",
+                            "name": "group_label",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "ll-group-label",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_5b4f891fb9e8c",
+                            "label": "Image with button",
+                            "name": "image_with_button",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_5b4f85c56bd4b"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "button_label": "Add Row",
@@ -522,6 +622,13 @@
                 "operator": "==",
                 "value": "condition"
             }
+        ],
+        [
+            {
+                "param": "page",
+                "operator": "==",
+                "value": "74"
+            }
         ]
     ],
     "menu_order": 0,
@@ -532,5 +639,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1531841130
+    "modified": 1531939177
 }

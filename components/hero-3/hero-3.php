@@ -42,7 +42,6 @@ $image1 = wp_get_attachment_image_src($image_one, 'large');
 $image2 = wp_get_attachment_image_src($image_two, 'large');
 $bg_image = wp_get_attachment_image_src($background_image, 'large');
 
-
 if ($background == 'image') {
   $background_image = 'background-image';
 } else {

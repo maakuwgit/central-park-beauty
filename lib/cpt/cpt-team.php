@@ -4,15 +4,16 @@
  */
 if ( ! function_exists('register_team_custom_post_type') ) {
 
-  $id = get_field( 'team_archive_page', 'option' );
-  $slug = ll_get_the_slug( $id );
-  $title = get_the_title( $id );
-  if ( !$title ) {
-    $title = 'Team';
-  }
 
   // Register Custom Post Type
   function register_team_custom_post_type() {
+
+    $id = get_field( 'team_archive_page', 'option' );
+    $slug = ll_get_the_slug( $id );
+    $title = get_the_title( $id );
+    if ( !$title ) {
+      $title = 'Team';
+    }
 
     $labels = array(
       'name'                => 'Team',

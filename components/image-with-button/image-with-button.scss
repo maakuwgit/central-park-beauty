@@ -1,0 +1,38 @@
+/**
+ * Image With Button Styles
+ * ----------------------------------------------------------------------------
+ *
+ * About the module
+ *
+ */
+
+.cp-image-with-button {
+  height: 40em;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  padding: 3em;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3em;
+
+  @include screen-sm {
+    padding: 1em;
+    height: 30em;
+  }
+}
+
+.cp-image-with-button__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.cp-image-with-button__btn {
+  z-index: 2;
+  padding: 1em 3em;
+}

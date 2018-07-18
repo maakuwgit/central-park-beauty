@@ -17,6 +17,7 @@
   background-repeat: no-repeat;
   background-position: center center;
   padding: 3em;
+  position: relative;
 
   @include screen-sm {
     padding: 1em;
@@ -26,6 +27,14 @@
   @include screen-xs {
     height: auto;
   }
+}
+
+.cp-cta__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .cp-cta__heading {

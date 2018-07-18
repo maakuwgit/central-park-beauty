@@ -279,6 +279,32 @@
             "max_height": "",
             "max_size": "",
             "mime_types": ""
+        },
+        {
+            "key": "field_5b4f83a3c155e",
+            "label": "Box Color",
+            "name": "box_color",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "#f7e7e1": "Pink",
+                "#F0D0C3": "Dark Pink",
+                "#000000": "Black",
+                "#ffffff": "White"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "save_other_choice": 0,
+            "default_value": "#f7e7e1",
+            "layout": "horizontal",
+            "return_format": "value"
         }
     ],
     "location": [
@@ -298,5 +324,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1531337320
+    "modified": 1531937761
 }

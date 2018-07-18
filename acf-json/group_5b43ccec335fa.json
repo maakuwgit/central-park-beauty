@@ -46,7 +46,7 @@
                     "key": "field_5b43cd60a2300",
                     "label": "Text",
                     "name": "text",
-                    "type": "text",
+                    "type": "textarea",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -57,9 +57,33 @@
                     },
                     "default_value": "",
                     "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
+                    "maxlength": "",
+                    "rows": 3,
+                    "new_lines": "br"
+                },
+                {
+                    "key": "field_5b4f6503c3df0",
+                    "label": "Text Color",
+                    "name": "text_color",
+                    "type": "radio",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "#000000": "Black",
+                        "#ffffff": "White"
+                    },
+                    "allow_null": 0,
+                    "other_choice": 0,
+                    "save_other_choice": 0,
+                    "default_value": "#000000",
+                    "layout": "horizontal",
+                    "return_format": "value"
                 }
             ]
         },
@@ -125,13 +149,15 @@
                 "id": ""
             },
             "choices": {
-                "pink": "Pink",
-                "black": "Black"
+                "#f7e7e1": "Pink",
+                "#F0D0C3": "Dark Pink",
+                "#000000": "Black",
+                "#ffffff": "White"
             },
             "allow_null": 0,
             "other_choice": 0,
             "save_other_choice": 0,
-            "default_value": "pink",
+            "default_value": "#f7e7e1",
             "layout": "horizontal",
             "return_format": "value"
         },
@@ -149,13 +175,15 @@
                 "id": ""
             },
             "choices": {
-                "pink": "Pink",
-                "black": "Black"
+                "#f7e7e1": "Pink",
+                "#F0D0C3": "Dark Pink",
+                "#000000": "Black",
+                "#ffffff": "White"
             },
             "allow_null": 0,
             "other_choice": 0,
             "save_other_choice": 0,
-            "default_value": "black",
+            "default_value": "#f7e7e1",
             "layout": "horizontal",
             "return_format": "value"
         }
@@ -177,5 +205,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1531170289
+    "modified": 1531931661
 }

@@ -6,7 +6,7 @@
             "key": "field_5b4e12b1b5cd7",
             "label": "Archive Page",
             "name": "event_archive_page",
-            "type": "page_link",
+            "type": "post_object",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -20,8 +20,9 @@
             ],
             "taxonomy": [],
             "allow_null": 0,
-            "allow_archives": 1,
-            "multiple": 0
+            "multiple": 0,
+            "return_format": "id",
+            "ui": 1
         }
     ],
     "location": [
@@ -41,5 +42,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1531843287
+    "modified": 1531944452
 }

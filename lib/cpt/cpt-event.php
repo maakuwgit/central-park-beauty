@@ -4,15 +4,16 @@
  */
 if ( ! function_exists('register_event_custom_post_type') ) {
 
-  $id = get_field( 'events_archive_page', 'option' );
-  $slug = ll_get_the_slug( $id );
-  $title = get_the_title( $id );
-  if ( !$title ) {
-    $title = 'Events';
-  }
 
   // Register Custom Post Type
   function register_event_custom_post_type() {
+
+    $id = get_field( 'event_archive_page', 'option' );
+    $slug = ll_get_the_slug( $id );
+    $title = get_the_title( $id );
+    if ( !$title ) {
+      $title = 'Events';
+    }
 
     $labels = array(
       'name'                => 'Event',

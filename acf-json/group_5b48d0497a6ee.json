@@ -124,6 +124,26 @@
             "max_height": "",
             "max_size": "",
             "mime_types": ""
+        },
+        {
+            "key": "field_5b4f8010be636",
+            "label": "Overlay Opacity",
+            "name": "overlay_opacity",
+            "type": "range",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 0,
+            "min": "",
+            "max": 1,
+            "step": ".1",
+            "prepend": "",
+            "append": ""
         }
     ],
     "location": [
@@ -143,5 +163,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1531499281
+    "modified": 1531936829
 }

@@ -123,6 +123,7 @@ if( have_rows( 'flex_default' ) ) :
             $image_1 = get_sub_field('image_1');
             $image_2 = get_sub_field('image_2');
             $image_3 = get_sub_field('image_3');
+            $box_color = get_sub_field('box_color');
 
             ll_include_component(
               'content-with-staggered-images',
@@ -133,7 +134,8 @@ if( have_rows( 'flex_default' ) ) :
                 'bottom_content' => $bottom_content,
                 'image_1' => $image_1,
                 'image_2' => $image_2,
-                'image_3' => $image_3
+                'image_3' => $image_3,
+                'box_color' => $box_color
               )
             );
           ?>
@@ -162,6 +164,7 @@ if( have_rows( 'flex_default' ) ) :
             $text_color = get_sub_field('text_color');
             $heading = get_sub_field('heading');
             $bg_image_id = get_sub_field('bg_image');
+            $overlay_opacity = get_sub_field('overlay_opacity');
 
             ll_include_component(
               'cta',
@@ -169,7 +172,8 @@ if( have_rows( 'flex_default' ) ) :
                 'layout' => $layout,
                 'text_color' => $text_color,
                 'heading' => $heading,
-                'bg_image' => $bg_image_id
+                'bg_image' => $bg_image_id,
+                'overlay_opacity' => $overlay_opacity
               )
             );
           ?>
@@ -179,6 +183,47 @@ if( have_rows( 'flex_default' ) ) :
           <?php
             ll_include_component(
               'instagram-feed'
+            );
+          ?>
+
+        <?php elseif ( get_row_layout() == 'staggered_content' ) : ?>
+
+          <?php
+
+            $content_one = get_sub_field('content_one');
+            $content_two = get_sub_field('content_two');
+            $title = get_sub_field('title');
+            $image = get_sub_field('image');
+
+            ll_include_component(
+              'staggered-content',
+              array(
+                'content_one' => $content_one,
+                'content_two' => $content_two,
+                'title' => $title,
+                'image' => $image
+              )
+            );
+          ?>
+
+        <?php elseif ( get_row_layout() == 'image_with_button' ) : ?>
+
+          <?php
+
+            $image = get_sub_field('image');
+            $button = get_sub_field('button');
+            $overlay = get_sub_field('overlay_opacity');
+
+            ll_include_component(
+              'image-with-button',
+              array(
+                'image' => $image,
+                'button' => $button,
+                'overlay' => $overlay
+              ),
+              array(
+                'classes' => array('')
+              )
             );
           ?>
 

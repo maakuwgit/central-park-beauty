@@ -10,7 +10,8 @@ $defaults = [
   'layout' => null,
   'text_color' => null,
   'heading' => null,
-  'bg_image' => null
+  'bg_image' => null,
+  'overlay_opacity' => null
 ];
 
 $component_data = ll_parse_args( $component_data, $defaults );
@@ -19,6 +20,7 @@ $layout = $component_data['layout'];
 $text_color = $component_data['text_color'];
 $heading = $component_data['heading'];
 $bg_image_id = $component_data['bg_image'];
+$overlay_opacity = $component_data['overlay_opacity'];
 
 $bg_image = wp_get_attachment_image_src($bg_image_id, 'full');
 
@@ -46,6 +48,7 @@ $component_id   = $component_args['id'];
 <div class="cp-cta <?php echo implode( " ", $classes ); ?>" <?php echo ( $component_id ? 'id="'.$component_id.'"' : '' ) ?> data-component="cta">
 
   <div class="cp-cta__container-bg" style="background-image: url(<?php echo $bg_image[0]; ?>); color: <?php echo $text_color; ?>">
+  <div class="cp-cta__overlay" style="background-color: rgba(0,0,0,<?php echo $overlay_opacity; ?>)"></div>
 
     <div class="container">
 

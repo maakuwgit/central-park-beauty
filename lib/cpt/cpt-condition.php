@@ -4,15 +4,16 @@
  */
 if ( ! function_exists('register_condition_custom_post_type') ) {
 
-  $id = get_field( 'conditions_archive_page', 'option' );
-  $slug = ll_get_the_slug( $id );
-  $title = get_the_title( $id );
-  if ( !$title ) {
-    $title = 'Conditions';
-  }
 
   // Register Custom Post Type
   function register_condition_custom_post_type() {
+
+    $id = get_field( 'conditions_archive_page', 'option' );
+    $slug = ll_get_the_slug( $id );
+    $title = get_the_title( $id );
+    if ( !$title ) {
+      $title = 'Conditions';
+    }
 
     $labels = array(
       'name'                => 'Condition',

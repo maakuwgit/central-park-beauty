@@ -27,17 +27,6 @@ $box_2_color = $component_data['box_2_color'];
 $image1 = wp_get_attachment_image_src($image_1, 'large');
 $image2 = wp_get_attachment_image_src($image_2, 'large');
 
-if ($box_1_color == 'pink') {
-  $background_color1 = '#EABEAE';
-} else {
-  $background_color1 = '#000000';
-}
-
-if ($box_2_color == 'pink') {
-  $background_color2 = '#EABEAE';
-} else {
-  $background_color2 = '#000000';
-}
 
 ?>
 
@@ -64,15 +53,20 @@ $component_id   = $component_args['id'];
 
   <div class="container">
 
-    <div class="row cp-sh__row">
+    <div class="row cp-stacked-image-heading__row">
 
-      <div class="col-sm-5of12 cp-sh__box1" style="color: <?php echo $background_color1; ?>">
-        <img class="cp-sh__img1" src="<?php echo $image1[0]; ?>">
+      <div class="col-sm-5of12 cp-stacked-image-heading__box1" style="color: <?php echo $box_1_color; ?>">
+
+        <div class="cp-stacked-image-heading__img1" style="background-image: url(<?php echo $image1[0]; ?>)"></div>
+
       </div>
 
-      <div class="col-sm-7of12 cp-sh__box2" style="background-color: <?php echo $background_color2; ?>">
-        <img class="cp-sh__img2" src="<?php echo $image2[0]; ?>"><br>
-        <<?php echo $heading['tag']; ?> class="cp-sh__heading"><?php echo $heading['text']; ?></<?php echo $heading['tag']; ?>>
+      <div class="col-sm-7of12 cp-stacked-image-heading__box2" style="background-color: <?php echo $box_2_color; ?>">
+
+        <div class="cp-stacked-image-heading__img2" style="background-image: url(<?php echo $image2[0]; ?>)"></div>
+
+        <h2 class="cp-stacked-image-heading__heading" style="color: <?php echo $heading['text_color']; ?>"><?php echo $heading['text']; ?></h2>
+
       </div>
 
     </div>
