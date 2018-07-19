@@ -594,6 +594,56 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "5b50a15969e06": {
+                    "key": "5b50a15969e06",
+                    "name": "two_columns",
+                    "label": "Two Columns",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5b50a15969e07",
+                            "label": "Group Label",
+                            "name": "group_label",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "ll-group-label",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_5b50a15969e08",
+                            "label": "Two Columns",
+                            "name": "two_columns",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_5b509dede9429"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "button_label": "Add Row",
@@ -607,13 +657,6 @@
                 "param": "page_template",
                 "operator": "==",
                 "value": "templates\/template-home.php"
-            }
-        ],
-        [
-            {
-                "param": "post_type",
-                "operator": "==",
-                "value": "service"
             }
         ],
         [
@@ -639,5 +682,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1531939177
+    "modified": 1532023777
 }

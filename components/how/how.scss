@@ -1,0 +1,91 @@
+/**
+ * How Styles
+ * ----------------------------------------------------------------------------
+ *
+ * About the module
+ *
+ */
+
+.cp-how {
+  padding: 5em 0;
+  position: relative;
+}
+
+.cp-how__col {
+  width: 80%;
+
+  @include screen-sm {
+    width: 100%;
+  }
+}
+
+.cp-how__h {
+  color: #000000;
+  font-family: Montserrat;
+  font-size: 5.3125em;
+  font-weight: 500;
+  letter-spacing: 10.63px;
+  line-height: 1.211;
+  text-transform: uppercase;
+  position: relative;
+  display: block;
+
+
+  &::before {
+    display: inline-block;
+    content: "";
+    border-top: .08em solid currentColor;
+    width: 2em;
+    position: absolute;
+    top: calc(100% - .6em);
+    left: 1.5em;
+    max-width: 100%;
+  }
+
+  @include screen-md {
+    font-size: 4em;
+  }
+}
+
+.cp-how__ow {
+  color: #000000;
+  font-family: Montserrat;
+  font-size: 5.3125em;
+  font-weight: 500;
+  letter-spacing: 10.63px;
+  line-height: 1.211;
+  text-transform: uppercase;
+  position: relative;
+  display: block;
+  text-align: right;
+
+
+  &::before {
+    display: inline-block;
+    content: "";
+    border-top: .08em solid currentColor;
+    width: 2em;
+    position: absolute;
+    top: calc(100% - .6em);
+    right: 2.5em;
+    max-width: 100%;
+  }
+
+  @include screen-md {
+    font-size: 4em;
+  }
+}
+
+.cp-how__box {
+  background-color: rgba(240, 208, 195, 0.5);
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 42%;
+  z-index: -1;
+
+  @include screen-sm {
+    display: none;
+  }
+}

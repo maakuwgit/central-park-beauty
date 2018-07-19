@@ -227,6 +227,25 @@ if( have_rows( 'flex_default' ) ) :
             );
           ?>
 
+        <?php elseif ( get_row_layout() == 'two_columns' ) : ?>
+
+          <?php
+
+            $left_content = get_sub_field('left_content');
+            $right_content = get_sub_field('right_content');
+            $background = get_sub_field('background');
+
+              ll_include_component(
+                'two-columns',
+                array(
+                  'left_content' => $left_content,
+                  'right_content' => $right_content,
+                  'background' => $background
+                )
+              );
+
+           ?>
+
 
 
 

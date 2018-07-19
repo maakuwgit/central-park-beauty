@@ -70,11 +70,11 @@
             {
                 "param": "post_type",
                 "operator": "==",
-                "value": "post"
+                "value": "service"
             }
         ]
     ],
-    "menu_order": 0,
+    "menu_order": 2,
     "position": "normal",
     "style": "default",
     "label_placement": "top",
@@ -82,5 +82,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1530891119
+    "modified": 1532023983
 }

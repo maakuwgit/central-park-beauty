@@ -23,6 +23,16 @@
     ll_include_component(
       'flex-default'
     );
+
+    ll_include_component(
+      'staggered-content',
+      array(
+        'content_one' => $content_one,
+        'content_two' => $content_two,
+        'title' => $title,
+        'image' => $image
+      )
+    );
   ?>
 
 <?php endwhile; ?>

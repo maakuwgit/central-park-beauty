@@ -58,7 +58,7 @@ $component_id   = $component_args['id'];
 
         </div>
 
-        <h2 class="cp-staggered-content__title"><?php echo $title; ?></h2>
+        <h2 class="cp-staggered-content__title" style="color: <?php echo $title['color']; ?>"><?php echo $title['text']; ?></h2>
 
       </div>
       <div class="col-md-1of3">

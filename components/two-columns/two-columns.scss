@@ -1,17 +1,16 @@
 /**
- * heading and text Styles
+ * Two Columns Styles
  * ----------------------------------------------------------------------------
  *
  * About the module
  *
  */
 
-.cp-heading-and-text {
-
+.cp-two-columns {
+  padding: 4em 0 20em;
 }
 
-
-.cp-heading-and-text__left-heading {
+.cp-two-columns__left-heading {
   color: #000000;
   font-family: Montserrat;
   font-size: 5.3125em;
@@ -20,12 +19,13 @@
   line-height: 1.211;
   text-transform: uppercase;
   position: relative;
-  margin-left: 1.5em;
+  display: block;
+  margin: 1em 0 2em 1.5em;
 
   &::before {
     display: inline-block;
     content: "";
-    border-top: .08em solid black;
+    border-top: .08em solid currentColor;
     width: 2em;
     position: absolute;
     top: calc(100% - .6em);
@@ -38,5 +38,32 @@
   }
   @include screen-sm {
     font-size: 2em;
+  }
+}
+
+.cp-two-columns__left-text {
+  width: 85%;
+  margin-left: auto;
+  padding-right: 1em;
+
+  @include screen-md {
+    width: 100%;
+  }
+
+  @include screen-sm {
+    padding-right: 0;
+  }
+}
+
+.cp-two-columns__right-text {
+  width: 85%;
+  padding-left: 1em;
+
+  @include screen-md {
+    width: 100%;
+  }
+
+  @include screen-sm {
+    padding-left: 0;
   }
 }

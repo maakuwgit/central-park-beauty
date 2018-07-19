@@ -7,9 +7,9 @@
 */
 
 $defaults = [
-  'heading' => null,
-  'content' => null,
-  'left_heading' => null
+  'background' => null,
+  'left_content' => null,
+  'right_content' => null
 ];
 
 $component_data = ll_parse_args( $component_data, $defaults );
@@ -46,7 +46,7 @@ $component_id   = $component_args['id'];
   <div class="row">
 
     <div class="col-sm-5of12">
-      <span class="cp-ht__left-heading"><?php echo $left_heading; ?></span>
+      <span class="cp-heading-and-text__left-heading"><?php echo $left_heading; ?></span>
     </div>
 
     <div class="col-sm-7of12">

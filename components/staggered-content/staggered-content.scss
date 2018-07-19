@@ -21,6 +21,7 @@
 
   @include screen-sm {
     width: 100%;
+    padding-right: 0;
   }
 }
 
@@ -40,7 +41,7 @@
   &::before {
     display: inline-block;
     content: "";
-    border-top: .08em solid black;
+    border-top: .08em solid currentColor;
     width: 1.7em;
     position: absolute;
     left: 0;
@@ -63,6 +64,10 @@
   @include screen-md {
     margin-top: 0;
   }
+
+  @include screen-sm {
+    width: 100%;
+  }
 }
 
 .cp-staggered-content__logo {
@@ -75,14 +80,19 @@
 }
 
 .cp-staggered-content__image {
-  width: 4em;
+  width: 10em;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
+  margin: 0 auto 7em;
 
   &::before {
     content: '';
     display: block;
     padding-top: 100%;
+  }
+
+  @include screen-sm {
+    display: none;
   }
 }
