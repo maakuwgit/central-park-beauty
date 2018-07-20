@@ -38,6 +38,10 @@ $component_id   = $component_args['id'];
 <div class="cp-before-and-afters <?php echo implode( " ", $classes ); ?>" <?php echo ( $component_id ? 'id="'.$component_id.'"' : '' ) ?> data-component="before-and-afters">
 
   <div class="container cp-before-and-afters__container">
+      <div class="cp-before-and-afters__heading">
+        <h3>Before</h3>
+        <h3>After</h3>
+      </div>
     <div class="cp-before-and-afters__slick">
       <?php if (condition): ?>
 
@@ -51,7 +55,7 @@ $component_id   = $component_args['id'];
           ?>
 
             <div class="cp-before-and-afters__image-container">
-              <img src="<?php echo $img[0]; ?>">
+              <img class="cp-before-and-afters__img" src="<?php echo $img[0]; ?>">
             </div>
 
         <?php endforeach ?>

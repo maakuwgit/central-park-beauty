@@ -60,6 +60,11 @@ code {
   color: $text-dark;
 }
 
+.text-size-large {
+  font-size: 1.25em;
+  line-height: 1.7;
+}
+
 .field-title {
   @extend %sans-serif;
   font-size: 0.875em;

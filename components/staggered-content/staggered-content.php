@@ -23,8 +23,6 @@ $image_id = $component_data['image'];
 $image = wp_get_attachment_image_src($image_id, 'medium');
 
 
-
-
 ?>
 
 <?php
@@ -68,7 +66,7 @@ $component_id   = $component_args['id'];
             if ($image == false) { ?>
               <svg class="icon icon-CP-Logo cp-staggered-content__logo"><use xlink:href="#icon-CP-Logo"></use></svg>
             <?php } else { ?>
-              <div class="cp-staggered-content__image" style="background-image: url(<?php echo $image[0]; ?>"></div>
+              <div class="cp-staggered-content__image" style="background-image: url(<?php echo $image[0]; ?>);"></div>
             <?php }
            ?>
 

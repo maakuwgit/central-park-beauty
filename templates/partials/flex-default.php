@@ -120,9 +120,9 @@ if( have_rows( 'flex_default' ) ) :
             $top_content = get_sub_field('top_content');
             $bottom_heading = get_sub_field('bottom_heading');
             $bottom_content = get_sub_field('bottom_content');
-            $image_1 = get_sub_field('image_1');
-            $image_2 = get_sub_field('image_2');
-            $image_3 = get_sub_field('image_3');
+            $staggered_image_1 = get_sub_field('staggered_image_1');
+            $staggered_image_2 = get_sub_field('staggered_image_2');
+            $staggered_image_3 = get_sub_field('staggered_image_3');
             $box_color = get_sub_field('box_color');
 
             ll_include_component(
@@ -132,9 +132,9 @@ if( have_rows( 'flex_default' ) ) :
                 'top_content' => $top_content,
                 'bottom_heading' => $bottom_heading,
                 'bottom_content' => $bottom_content,
-                'image_1' => $image_1,
-                'image_2' => $image_2,
-                'image_3' => $image_3,
+                'staggered_image_1' => $staggered_image_1,
+                'staggered_image_2' => $staggered_image_2,
+                'staggered_image_3' => $staggered_image_3,
                 'box_color' => $box_color
               )
             );

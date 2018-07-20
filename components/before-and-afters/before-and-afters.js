@@ -26,7 +26,19 @@
         dots: true,
         arrows: true,
         infinite: false,
-        adaptiveHeight: true
+        adaptiveHeight: true,
+        prevArrow: '<button class="slider-button cp-before-and-afters__prev">Previous</button>',
+        nextArrow: '<button class="slider-button cp-before-and-afters__next">Next</button>',
+        dotsClass: 'cp-before-and-afters__dots',
+        responsive: [
+          {
+            breakpoint: 768,
+            settings: {
+              draggable: true,
+              arrows: false
+            }
+          }
+        ]
       })
 
     },

@@ -102,6 +102,13 @@
       )
     );
 
+    ll_include_component(
+      'before-and-afters',
+      array(
+        'images' => get_field('images')
+      )
+    );
+
     $layout = get_field('layout');
     $text_color = get_field('text_color');
     $heading = get_field('heading');
@@ -119,12 +126,6 @@
       )
     );
 
-    ll_include_component(
-      'before-and-afters',
-      array(
-        'images' => get_field('images')
-      )
-    );
 
   ?>
 

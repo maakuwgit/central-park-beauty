@@ -661,13 +661,6 @@
         ],
         [
             {
-                "param": "post_type",
-                "operator": "==",
-                "value": "condition"
-            }
-        ],
-        [
-            {
                 "param": "page",
                 "operator": "==",
                 "value": "74"
@@ -682,5 +675,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1532023777
+    "modified": 1532104304
 }

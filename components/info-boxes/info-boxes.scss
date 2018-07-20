@@ -1,0 +1,29 @@
+/**
+ * Info Boxes Styles
+ * ----------------------------------------------------------------------------
+ *
+ * About the module
+ *
+ */
+
+.cp-info-boxes {
+  margin: 5em 0;
+
+  @include screen-sm {
+    margin: 0;
+  }
+}
+
+.cp-info-boxes__col {
+  padding: 1em;
+
+  @include screen-sm {
+    padding: 1em 0 0;
+  }
+}
+
+.cp-info-boxes__title {
+  font-family: "Libre Baskerville";
+  font-size: 1.5625;
+  line-height: 1.36;
+}

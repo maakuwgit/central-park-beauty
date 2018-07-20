@@ -153,6 +153,13 @@
                 "operator": "==",
                 "value": "service"
             }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "condition"
+            }
         ]
     ],
     "menu_order": 7,
@@ -163,5 +170,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1532028590
+    "modified": 1532114876
 }

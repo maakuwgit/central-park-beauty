@@ -11,8 +11,6 @@
   $overlay_opacity = get_field('overlay_opacity', $page_for_conditions);
   $text_color = get_field('text_color', $page_for_conditions);
 
-  var_dump($page_for_conditions);
-
 
   ll_include_component(
     'hero-3',

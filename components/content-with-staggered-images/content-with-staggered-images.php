@@ -17,9 +17,9 @@ $defaults = [
     'text' => null
   ),
   'bottom_content' => null,
-  'image_1' => null,
-  'image_2' => null,
-  'image_3' => null,
+  'staggered_image_1' => null,
+  'staggered_image_2' => null,
+  'staggered_image_3' => null,
   'box_color' => null
 ];
 
@@ -29,9 +29,9 @@ $top_heading = $component_data['top_heading'];
 $top_content = $component_data['top_content'];
 $bottom_heading = $component_data['bottom_heading'];
 $bottom_content = $component_data['bottom_content'];
-$image_1_id = $component_data['image_1'];
-$image_2_id = $component_data['image_2'];
-$image_3_id = $component_data['image_3'];
+$image_1_id = $component_data['staggered_image_1'];
+$image_2_id = $component_data['staggered_image_2'];
+$image_3_id = $component_data['staggered_image_3'];
 $box_color = $component_data['box_color'];
 
 $image_1 = wp_get_attachment_image_src($image_1_id, 'medium-large');
@@ -73,7 +73,7 @@ $component_id   = $component_args['id'];
       </div>
     </div>
 
-    <div class="row">
+    <div class="row cp-content-with-staggered-images__row-bg" style="color: <?php echo $box_color; ?>">
 
       <div class="col-xs-1of3">
 
@@ -92,8 +92,6 @@ $component_id   = $component_args['id'];
         <div class="cp-content-with-staggered-images__img cp-content-with-staggered-images__img3" style="background-image: url(<?php echo $image_3[0]; ?>)"></div>
 
       </div>
-
-      <div class="cp-content-with-staggered-images__bg" style="background-color: <?php echo $box_color; ?>"></div>
 
     </div>
 

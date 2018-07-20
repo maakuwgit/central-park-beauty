@@ -8,9 +8,79 @@
 
 .cp-before-and-afters {
   // background-color: $black;
+  button {
+    background-color: $white;
+    border: none;
+    text-transform: uppercase;
+  }
+
+  .cp-before-and-afters__prev {
+    position: absolute;
+    bottom: -9px;
+    right: 4em;
+    padding-right: 1em;
+    border-right: 1px solid $black;
+    background-color: none;
+  }
+
+  .cp-before-and-afters__next {
+    position: absolute;
+    bottom: -9px;
+    right: 0;
+  }
+}
+
+.cp-before-and-afters__heading {
+  display: flex;
+  background-color: $black;
+
+  h3 {
+    color: $white;
+    text-transform: uppercase;
+
+    @include screen-sm {
+      font-size: 1em;
+    }
+  }
+}
+
+.cp-before-and-afters__img {
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
 }
 
 .cp-before-and-afters__image-container {
   text-align: center;
 }
+
+.cp-before-and-afters__dots {
+  list-style-type: none;
+  display: flex;
+
+  li {
+    flex: 0 0 auto;
+    padding-right: .5em;
+    line-height: 1;
+
+    &.slick-active {
+      button {
+        background-color: $black;
+      }
+    }
+  }
+
+  @include screen-sm {
+    justify-content: center;
+  }
+
+  button {
+    width: 17px;
+    height: 17px;
+    font-size: 0;
+    background-color: $white;
+    border: 1px solid $black;
+  }
+}
+
 

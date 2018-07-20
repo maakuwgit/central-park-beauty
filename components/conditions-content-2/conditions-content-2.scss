@@ -1,0 +1,66 @@
+/**
+ * Conditions Content 2 Styles
+ * ----------------------------------------------------------------------------
+ *
+ * About the module
+ *
+ */
+
+.cp-conditions-content-2 {
+
+}
+
+.cp-conditions-content-2 {
+  padding: 4em 0 20em;
+}
+
+.cp-conditions-content-2__left-heading {
+  color: #000000;
+  font-family: Montserrat;
+  font-size: 5.3125em;
+  font-weight: 500;
+  letter-spacing: 10.63px;
+  line-height: 1.211;
+  text-transform: uppercase;
+  position: relative;
+  display: block;
+  width: 85%;
+  margin-left: auto;
+  margin-bottom: 1em;
+
+  @include screen-md {
+    width: 100%;
+  }
+
+  @include screen-sm {
+    font-size: 4em;
+  }
+}
+
+.cp-conditions-content-2__left-text {
+  width: 85%;
+  margin-left: auto;
+  padding-right: 1em;
+
+  @include screen-md {
+    width: 100%;
+  }
+
+  @include screen-sm {
+    padding-right: 0;
+  }
+}
+
+.cp-conditions-content-2__right-text {
+  width: 66%;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include screen-md {
+    width: 80%;
+  }
+
+  @include screen-sm {
+    width: 100%;
+  }
+}

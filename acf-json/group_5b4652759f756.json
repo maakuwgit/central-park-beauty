@@ -210,8 +210,8 @@
         },
         {
             "key": "field_5b465512c988d",
-            "label": "Image 1",
-            "name": "image_1",
+            "label": "Staggered_Image 1",
+            "name": "staggered_image_1",
             "type": "image",
             "instructions": "",
             "required": 0,
@@ -234,8 +234,8 @@
         },
         {
             "key": "field_5b465528c988e",
-            "label": "Image 2",
-            "name": "image_2",
+            "label": "Staggered Image 2",
+            "name": "staggered_image_2",
             "type": "image",
             "instructions": "",
             "required": 0,
@@ -258,8 +258,8 @@
         },
         {
             "key": "field_5b46553dc988f",
-            "label": "Image 3",
-            "name": "image_3",
+            "label": "Staggered Image 3",
+            "name": "staggered_image_3",
             "type": "image",
             "instructions": "",
             "required": 0,
@@ -314,9 +314,16 @@
                 "operator": "==",
                 "value": "post"
             }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "condition"
+            }
         ]
     ],
-    "menu_order": 0,
+    "menu_order": 5,
     "position": "normal",
     "style": "default",
     "label_placement": "top",
@@ -324,5 +331,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1531937761
+    "modified": 1532111847
 }
