@@ -7,6 +7,7 @@
 */
 
 $defaults = [
+  'background' => false,
   'content_one' => null,
   'content_two' => null,
   'title' => null,
@@ -41,14 +42,17 @@ $classes        = $component_args['classes'] ?: array();
  * @see args['id']
  */
 $component_id   = $component_args['id'];
+$bg = $component_data['background'];
+
+if( $bg ) $bg = ' ' . $bg;
 ?>
 
 <?php if ( ll_empty( $component_data ) ) return; ?>
-<div class="cp-staggered-content <?php echo implode( " ", $classes ); ?>" <?php echo ( $component_id ? 'id="'.$component_id.'"' : '' ) ?> data-component="staggered-content">
+<div class="cp-staggered-content<?php echo $bg . implode( " ", $classes ); ?>" <?php echo ( $component_id ? 'id="'.$component_id.'"' : '' ) ?> data-component="staggered-content">
 
   <div class="container">
     <div class="row">
-      <div class="col-md-2of3">
+      <div class="col-2of3">
 
         <div class="cp-staggered-content__box1">
 
@@ -59,7 +63,7 @@ $component_id   = $component_args['id'];
         <h2 class="cp-staggered-content__title" style="color: <?php echo $title['color']; ?>"><?php echo $title['text']; ?></h2>
 
       </div>
-      <div class="col-md-1of3">
+      <div class="col-1of3">
         <div class="cp-staggered-content__box2">
 
           <?php

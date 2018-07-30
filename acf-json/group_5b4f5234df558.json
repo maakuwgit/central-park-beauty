@@ -3,6 +3,30 @@
     "title": "Staggered Content",
     "fields": [
         {
+            "key": "field_5b5f4f637ea3f",
+            "label": "Background Color",
+            "name": "background",
+            "type": "button_group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "transparent": "None",
+                "white": "White",
+                "black": "Black",
+                "peach": "Dark Pink"
+            },
+            "allow_null": 0,
+            "default_value": "",
+            "layout": "horizontal",
+            "return_format": "value"
+        },
+        {
             "key": "field_5b4f523c8c7f6",
             "label": "Content One",
             "name": "content_one",
@@ -141,5 +165,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1532023963
+    "modified": 1532973177
 }

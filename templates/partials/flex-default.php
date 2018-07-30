@@ -161,6 +161,7 @@ if( have_rows( 'flex_default' ) ) {
         break;
         case 'staggered_content' :
 
+          $background = get_sub_field('background');
           $content_one = get_sub_field('content_one');
           $content_two = get_sub_field('content_two');
           $title = get_sub_field('title');
@@ -169,6 +170,7 @@ if( have_rows( 'flex_default' ) ) {
           ll_include_component(
             'staggered-content',
             array(
+              'background'  => $background,
               'content_one' => $content_one,
               'content_two' => $content_two,
               'title' => $title,
