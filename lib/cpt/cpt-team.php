@@ -34,8 +34,7 @@ if ( ! function_exists('register_team_custom_post_type') ) {
       'label'               => 'team',
       'description'         => 'Team description',
       'labels'              => $labels,
-      'supports'            => array( 'title', 'page-attributes' ),
-      // 'taxonomies'          => array( 'category', 'post_tag' ),
+      'supports'            => array( 'title', 'editor', 'thumbnail', 'page-attributes' ),
       'hierarchical'        => true,
       'public'              => true,
       'show_ui'             => true,
@@ -71,17 +70,17 @@ if ( ! function_exists('register_team_taxonomies') ) {
 
     // Add new taxonomy, make it hierarchical (like categories)
     $labels = array(
-      'name'                => _x( 'Team Position', 'taxonomy general name' ),
-      'singular_name'       => _x( 'Team Position', 'taxonomy singular name' ),
-      'search_items'        => __( 'Search Team Positions' ),
-      'all_items'           => __( 'All Team Positions' ),
-      'parent_item'         => __( 'Parent Team Position' ),
-      'parent_item_colon'   => __( 'Parent Team Position:' ),
-      'edit_item'           => __( 'Edit Team Position' ),
-      'update_item'         => __( 'Update Team Position' ),
-      'add_new_item'        => __( 'Add New Team Position' ),
-      'new_item_name'       => __( 'New Team Position Name' ),
-      'menu_name'           => __( 'Team Positions' )
+      'name'                => _x( 'Position', 'taxonomy general name' ),
+      'singular_name'       => _x( 'Position', 'taxonomy singular name' ),
+      'search_items'        => __( 'Search Positions' ),
+      'all_items'           => __( 'All Positions' ),
+      'parent_item'         => __( 'Parent Position' ),
+      'parent_item_colon'   => __( 'Parent Position:' ),
+      'edit_item'           => __( 'Edit Position' ),
+      'update_item'         => __( 'Update Position' ),
+      'add_new_item'        => __( 'Add New Position' ),
+      'new_item_name'       => __( 'New Position Name' ),
+      'menu_name'           => __( 'Positions' )
     );
 
     $args = array(
@@ -97,22 +96,22 @@ if ( ! function_exists('register_team_taxonomies') ) {
 
     // Add new taxonomy, NOT hierarchical (like tags)
     $labels = array(
-      'name'                         => _x( 'Team Tags', 'taxonomy general name' ),
-      'singular_name'                => _x( 'Team Tag', 'taxonomy singular name' ),
-      'search_items'                 => __( 'Search Team' ),
-      'popular_items'                => __( 'Popular Team' ),
-      'all_items'                    => __( 'All Team' ),
+      'name'                         => _x( 'Specialties', 'taxonomy general name' ),
+      'singular_name'                => _x( 'Specialty', 'taxonomy singular name' ),
+      'search_items'                 => __( 'Search Specialties' ),
+      'popular_items'                => __( 'Popular Specialties' ),
+      'all_items'                    => __( 'All Specialties' ),
       'parent_item'                  => null,
       'parent_item_colon'            => null,
-      'edit_item'                    => __( 'Edit Team' ),
-      'update_item'                  => __( 'Update Team' ),
-      'add_new_item'                 => __( 'Add New Team' ),
-      'new_item_name'                => __( 'New Team Name' ),
-      'separate_items_with_commas'   => __( 'Separate Team with commas' ),
+      'edit_item'                    => __( 'Edit Specialty' ),
+      'update_item'                  => __( 'Update Specialty' ),
+      'add_new_item'                 => __( 'Add New Specialty' ),
+      'new_item_name'                => __( 'New Specialty' ),
+      'separate_items_with_commas'   => __( 'Separate Specialties with commas' ),
       'add_or_remove_items'          => __( 'Add or remove Team' ),
       'choose_from_most_used'        => __( 'Choose from the most used Team' ),
-      'not_found'                    => __( 'No Team found.' ),
-      'menu_name'                    => __( 'Team Tags' )
+      'not_found'                    => __( 'No Specialties found.' ),
+      'menu_name'                    => __( 'Specialties' )
     );
 
     $args = array(
@@ -122,7 +121,7 @@ if ( ! function_exists('register_team_taxonomies') ) {
       'show_admin_column'       => true,
       'update_count_callback'   => '_update_post_term_count',
       'query_var'               => true,
-      'rewrite'                 => array( 'slug' => 'team_tag' )
+      'rewrite'                 => array( 'slug' => 'specialties' )
     );
 
     register_taxonomy( 'team_tag', 'team', $args ); // Must include custom post type name

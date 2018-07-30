@@ -11,14 +11,16 @@
  * _________________________________*/
 
  // Base colors
-$selection: #000;
-$selection-bg: #ccc;
 $white: white;
-$peach: #E2A187;
-$grey: #646464;
 $silver: #979797;
+$peach: #E2A187;
+$pink: lighten($peach, 12.5%);
+$grey: #646464;
+$med-grey: #4A4A4A;
 $smoke: #646464;
 $black: black;
+$selection: $white;
+$selection-bg: $peach;
 
 // Official social colors
 $facebook: #3461a1;
