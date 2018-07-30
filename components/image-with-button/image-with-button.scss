@@ -34,5 +34,7 @@
 
 .cp-image-with-button__btn {
   z-index: 2;
-  padding: 1em 3em;
+  width: calc( 100% - #{$grid-gutter-width} );
+  max-width: 375px;
+  justify-content: center;
 }

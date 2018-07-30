@@ -78,7 +78,14 @@ $component_id   = $component_args['id'];
 
   <div class="container">
 
-    <div class="row cp-content-with-staggered-images__row-bg" style="color: <?php echo $box_color; ?>">
+    <style>
+
+      .cp-content-with-staggered-images .cp-content-with-staggered-images__row-bg:before {
+        background-color: <?php echo $box_color; ?>;
+      }
+
+    </style>
+    <div class="row cp-content-with-staggered-images__row-bg">
 
       <div class="cp-content-with-staggered-images__wrapper col col-md-4of12 col-lg-4of12 col-xl-4of12">
 

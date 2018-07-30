@@ -45,10 +45,21 @@ $component_id   = $component_args['id'];
 ?>
 
 <?php if ( ll_empty( $component_data ) ) return; ?>
+<style>
+  .cp-cta__container-bg {
+    color: <?php echo $text_color; ?>;
+    background-image: url(<?php echo $bg_image[0]; ?>);
+    background-color: rgba(226, 161, 135, <?php echo $overlay_opacity; ?>);
+  }
+
+  .cp-cta__container-bg:before {
+    opacity: <?php echo $overlay_opacity; ?>;
+  }
+</style>
 <div class="cp-cta <?php echo implode( " ", $classes ); ?>" <?php echo ( $component_id ? 'id="'.$component_id.'"' : '' ) ?> data-component="cta">
 
-  <div class="cp-cta__container-bg" style="background-image: url(<?php echo $bg_image[0]; ?>); color: <?php echo $text_color; ?>">
-  <div class="cp-cta__overlay" style="background-color: rgba(0,0,0,<?php echo $overlay_opacity; ?>)"></div>
+  <div class="cp-cta__container-bg">
+  <div class="cp-cta__overlay"></div>
 
     <div class="container relative">
 

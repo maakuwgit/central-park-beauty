@@ -10,11 +10,24 @@
   padding: 3em 0;
 
   .cp-cta__container-bg {
+    position: relative;
+    padding: 10em 6.85714285714286em 13.35714285714286em 6.85714285714286em;
+    background-color: $peach;
+    background-blend-mode: multiply;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    padding: 10em 6.85714285714286em 13.35714285714286em 6.85714285714286em;
-    position: relative;
+
+    &:before {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      content: '';
+      background-color: $peach;
+      z-index: 1;
+    }
 
     @include screen-md {
       padding: 5em 2.857143em;
@@ -23,14 +36,10 @@
     @include screen-sm {
       padding: 2em 1em;
     }
-  }
 
-  .cp-cta__overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    .container {
+      z-index: 1;
+    }
   }
 
   .cp-cta__heading {

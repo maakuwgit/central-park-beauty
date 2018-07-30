@@ -55,6 +55,7 @@ if( have_rows( 'flex_default' ) ) {
         break;
         case 'stacked_image_heading' :
 
+          $background = get_sub_field('background');
           $heading = get_sub_field('heading');
           $image_1 = get_sub_field('image_1');
           $image_2 = get_sub_field('image_2');
@@ -64,6 +65,7 @@ if( have_rows( 'flex_default' ) ) {
           ll_include_component(
             'stacked-image-heading',
             array(
+              'background' => $background,
               'heading' => $heading,
               'image_1' => $image_1,
               'image_2' => $image_2,
