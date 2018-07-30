@@ -43,13 +43,13 @@ $component_id   = $component_args['id'];
 <span class="cp-how__h">H</span>
     <div class="row">
 
-      <div class="col-sm-1of2">
+      <div class="col-1of2">
         <div class="cp-how__col">
 
           <?php echo $column_1; ?>
         </div>
       </div>
-      <div class="col-sm-1of2 ">
+      <div class="col-1of2 ">
         <div class="cp-how__col">
           <?php echo $column_2; ?>
           <span class="cp-how__ow">OW</span>

@@ -49,13 +49,20 @@
     font-size: 1em;
   }
 
+  .hero-banner__small-title,
   .hero-banner__big-title {
+    display: block;
+    text-transform: uppercase;
     color: $white;
+  }
+
+  .hero-banner__big-title {
+    @extend %serif;
     font-size: 2.8125em;
     line-height: 2;
-    font-weight: 400;
+    font-weight: $text-bold;
     text-transform: uppercase;
-    letter-spacing: .5em;
+    letter-spacing: 18px;
 
     @include screen-sm {
       font-size: 2em;
@@ -63,13 +70,9 @@
   }
 
   .hero-banner__small-title {
-    color: $white;
-    @extend %sans-serif;
+    @extend %h0;
     font-size: 1em;
-    letter-spacing: 6px;
-    line-height: 1.22;
-    text-transform: uppercase;
-    font-weight: 400;
+    font-weight: $text-normal;
   }
 
   .hero-banner__subtitle {
@@ -91,10 +94,9 @@
 }
 
 .hero-banner__subtitle {
-    @extend %sans-serif;
-    text-transform: uppercase;
-    color: $white;
-    font-size: 1em;
-    letter-spacing: 2px;
-    margin-top: 0;
-  }
+  @extend %p;
+  text-transform: uppercase;
+  color: $white;
+  letter-spacing: 4.67px;
+  margin-top: 0;
+}

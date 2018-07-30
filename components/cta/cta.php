@@ -50,24 +50,24 @@ $component_id   = $component_args['id'];
   <div class="cp-cta__container-bg" style="background-image: url(<?php echo $bg_image[0]; ?>); color: <?php echo $text_color; ?>">
   <div class="cp-cta__overlay" style="background-color: rgba(0,0,0,<?php echo $overlay_opacity; ?>)"></div>
 
-    <div class="container">
+    <div class="container relative">
 
       <?php if ($layout == 'single'): ?>
 
         <div class="cp-cta__single">
           <h2 class="cp-cta__heading" style="color: <?php echo $text_color; ?>"><?php echo $heading['text']; ?></h2>
-          <?php echo $heading['content']; ?>
+          <div class="cp-cta__caption"><?php echo format_text($heading['content']); ?></div>
         </div>
 
       <?php else: ?>
 
         <div class="row cp-cta__two-column">
 
-          <div class="col-md-5of12">
+          <div class="col col-md-5of12 col-lg-5of12 col-xl-5of12">
             <h2 class="cp-cta__heading" style="color: <?php echo $text_color; ?>"><?php echo $heading['text']; ?></h2>
           </div>
 
-          <div class="col-md-7of12">
+          <div class="col col-md-7of12 col-lg-7of12 col-xl-7of12">
             <?php echo $heading['content']; ?>
           </div>
 

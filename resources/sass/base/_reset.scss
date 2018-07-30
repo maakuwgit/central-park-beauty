@@ -17,6 +17,9 @@ html {
  */
 
 body {
+  @extend %sans-serif;
+  line-height: 1.75;
+  color: $text-dark;
   margin: 0;
 }
 
@@ -138,6 +141,16 @@ h1 {
   margin: 0.67em 0;
 }
 
+
+h1,.h1, h2, .h2, h3,.h3, h4, .h4, h5, .h5, h6, .h6 {
+  margin: 0.5em auto;
+  color: $black;
+}
+
+code {
+  white-space: normal;
+}
+
 /**
  * Address styling not present in IE 8/9.
  */
@@ -183,6 +196,8 @@ sub {
  */
 
 img {
+  max-width: 100%;
+  height: auto;
   border: 0;
 }
 
@@ -202,7 +217,7 @@ svg:not(:root) {
  */
 
 figure {
-  margin: 1em 40px;
+  margin: 0 auto;
 }
 
 /**
@@ -265,6 +280,7 @@ textarea {
 
 button {
   overflow: visible;
+  transition: all 0.10s ease-in-out;
 }
 
 /**

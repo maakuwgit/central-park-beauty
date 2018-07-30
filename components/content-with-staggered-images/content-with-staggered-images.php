@@ -61,43 +61,66 @@ $component_id   = $component_args['id'];
 <?php if ( ll_empty( $component_data ) ) return; ?>
 <div class="cp-content-with-staggered-images <?php echo implode( " ", $classes ); ?>" <?php echo ( $component_id ? 'id="'.$component_id.'"' : '' ) ?> data-component="content-with-staggered-images">
 
-  <div class="container">
+  <div class="container-full">
 
-    <div class="row ">
+    <div class="row start">
 
-      <div class="col-sm-1of2 cp-content-with-staggered-images__top-text">
+      <div class="col col-offset-xl-1of12 col-offset-md-1of12 col-md-10of12 col-offset-lg-1of12 col-lg-5of12 col-xl-5of12 cp-content-with-staggered-images__top-text">
 
         <<?php echo $top_heading['tag']; ?> class="cp-content-with-staggered-images__heading"><?php echo $top_heading['text']; ?></<?php echo $top_heading['tag']; ?>>
         <?php echo $top_content; ?>
+        <!-- .cp-content-with-staggered-images__heading -->
 
       </div>
     </div>
 
+  </div>
+
+  <div class="container">
+
     <div class="row cp-content-with-staggered-images__row-bg" style="color: <?php echo $box_color; ?>">
 
-      <div class="col-xs-1of3">
+      <div class="cp-content-with-staggered-images__wrapper col col-md-4of12 col-lg-4of12 col-xl-4of12">
 
-        <div class="cp-content-with-staggered-images__img cp-content-with-staggered-images__img1" style="background-image: url(<?php echo $image_1[0]; ?>)"></div>
+        <div class="cp-content-with-staggered-images__img cp-content-with-staggered-images__img1" data-backgrounder>
 
+          <div class="cp-content-with-staggered-images__feature feature">
+            <img src="<?php echo $image_1[0]; ?>">
+          </div>
+
+        </div>
       </div>
+      <!-- .cp-content-with-staggered-images__wrapper col.col-md-4of12.col-lg-4of12.col-xl-4of12 -->
 
-      <div class="col-xs-1of3">
+      <div class="cp-content-with-staggered-images__wrapper col col-md-4of12 col-lg-4of12 col-xl-4of12">
 
-        <div class="cp-content-with-staggered-images__img cp-content-with-staggered-images__img2" style="background-image: url(<?php echo $image_2[0]; ?>)"></div>
+        <div class="cp-content-with-staggered-images__img cp-content-with-staggered-images__img2" data-backgrounder>
 
+          <div class="cp-content-with-staggered-images__feature feature">
+            <img src="<?php echo $image_2[0]; ?>">
+          </div>
+
+        </div>
       </div>
+      <!-- .cp-content-with-staggered-images__wrapper col.col-md-4of12.col-lg-4of12.col-xl-4of12 -->
 
-      <div class="col-xs-1of3">
+      <div class="cp-content-with-staggered-images__wrapper col col-md-4of12 col-lg-4of12 col-xl-4of12">
 
-        <div class="cp-content-with-staggered-images__img cp-content-with-staggered-images__img3" style="background-image: url(<?php echo $image_3[0]; ?>)"></div>
+        <div class="cp-content-with-staggered-images__img cp-content-with-staggered-images__img3" data-backgrounder>
 
+          <div class="cp-content-with-staggered-images__feature feature">
+            <img src="<?php echo $image_3[0]; ?>">
+          </div>
+
+        </div>
       </div>
+      <!-- .cp-content-with-staggered-images__wrapper col.col-md-4of12.col-lg-4of12.col-xl-4of12 -->
 
     </div>
 
     <div class="row">
 
-      <div class="col-sm-1of2 cp-content-with-staggered-images__bottom-text">
+      <div class="col-offset-lg-3of12 col-offset-md-5of12 col-md-6of12 col-lg-5of12 col-offset-xl-4of12 col-xl-6of12 cp-content-with-staggered-images__bottom-text">
 
         <<?php echo $bottom_heading['tag']; ?> class="cp-content-with-staggered-images__heading"><?php echo $bottom_heading['text']; ?></<?php echo $bottom_heading['tag']; ?>>
         <?php echo $bottom_content; ?>

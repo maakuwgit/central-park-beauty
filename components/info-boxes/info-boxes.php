@@ -45,7 +45,7 @@ $component_id   = $component_args['id'];
 
         <?php foreach ($info_boxes as $key => $info_box): ?>
 
-          <div class="col-sm-1of3 cp-info-boxes__col">
+          <div class="col-1of3 cp-info-boxes__col">
 
             <h3 class="cp-info-boxes__title"><?php echo $info_box['title'] ?></h3>
             <?php echo $info_box['content']; ?>

@@ -81,7 +81,7 @@ $component_id   = $component_args['id'];
 
   <div class="container">
     <div class="row">
-      <div class="col-sm-1of3">
+      <div class="col-1of3">
 
         <div class="cp-blog-hero__icon-col">
           <svg class="icon icon-<?php echo $side_text[text]; ?> cp-blog-hero__svg" style="color: <?php echo $side_text['color']; ?>"><use xlink:href="#icon-<?php echo $side_text[text]; ?>"></use></svg>
@@ -89,7 +89,7 @@ $component_id   = $component_args['id'];
 
       </div>
 
-      <div class="col-sm-1of2 cp-blog-hero__right-col">
+      <div class="col-1of2 cp-blog-hero__right-col">
 
         <div class="cp-blog-hero__text-box">
 

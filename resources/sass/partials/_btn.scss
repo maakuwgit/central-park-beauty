@@ -3,13 +3,15 @@
  */
 
 .btn {
+  display: inline-flex;
   border-radius: 0;
-  padding: 1em;
+  padding: 1.35714285714286em 3.57142857142857em;
   @extend %sans-serif;
-  font-size: .875em;
-  letter-spacing: 1px;
+  font-size: 0.875em;
+  letter-spacing: 4.67px;
   text-transform: uppercase;
-  line-height: 1.28;
+  line-height: 18px;
+  line-height: 1.125;
 
   &:hover, &:active, &:focus {
 

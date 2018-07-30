@@ -3,10 +3,12 @@
  * Note:
  * -- Must include bootstrap variable overrides before main bootstrap include
  */
+// Variables (used by all other sass files)
+@import "helpers/_variables";
 
+//Base
 @import "base/_reset";
 // Helpers
-@import "helpers/_variables";
 @import "helpers/_maps";
 @import "helpers/_functions";
 @import "helpers/_mixins";
@@ -31,6 +33,7 @@
 // Partials
 @import "partials/_block-table";
 @import "partials/_btn";
+@import "partials/_card";
 @import "partials/_comments";
 @import "partials/_entry";
 @import "partials/_flag";
@@ -43,6 +46,7 @@
 @import "partials/_media";
 @import "partials/_navbar";
 @import "partials/_post";
+@import "partials/_side-nav";
 @import "partials/_widgets";
 
 // Pages

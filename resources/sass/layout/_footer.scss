@@ -3,129 +3,170 @@
  */
 .footer {
 
-
-}
-
-.footer__box {
-  background-color: $black;
-
-}
-
-.footer__content {
-  color: $white;
-  text-align: center;
-  padding-top: 3em;
-
-  .icon {
-    font-size: 5em;
-  }
-
-  h2 {
-    color: $white;
-  }
-
-  .footer__big-title {
-    @extend %serif;
-    color: $white;
-    font-size: 2.8125em;
-    line-height: 2;
-    font-weight: 400;
-    text-transform: uppercase;
-    letter-spacing: .5em;
-
-    @include screen-sm {
-      font-size: 1.5em;
-    }
-  }
-
-  .footer__small-title {
-    color: $white;
-    @extend %sans-serif;
-    font-size: 1em;
-    letter-spacing: 6px;
-    line-height: 1.22;
-    text-transform: uppercase;
-    font-weight: 400;
-  }
-}
-
-.footer__menu {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 2em;
-}
-
-.footer__menu-section {
-  width: calc(100%/4);
-  flex: 1 1 auto;
-  padding: 0 .5em 2em;
-
-  @include screen-sm {
-    width: 50%;
-  }
-
-  @include screen-xs {
-    width: 100%;
-    padding-bottom: 0;
-  }
-
-  .icon {
-    color: $white;
-    font-size: 7em;
-  }
-
-  ul {
+  .gform_title,
+  .gform_not_found,
+  .gform_confirmation_message {
     margin-top: 0;
-    list-style-type: none;
+    margin-bottom: 16px;
+    @extend %serif;
+    @include font-size(20);
+    color: $white;
+    font-weight: $text-bold;
+    line-height: 34px;
+    line-height: 1.7;
+  }
 
-    li {
-      letter-spacing: 0;
+  .form-skin {
+
+    input[type=email],
+    input[type=tel],
+    input[type=text],
+    select,
+    textarea {
       padding-top: 1em;
-      line-height: 1.2;
+      border-color: $white;
+      @include font-size(15);
+      font-weight: $text-normal;
+      line-height: 19px;
+      line-height: 1.26666666666667;
+      background-color: $black;
 
-      @include screen-sm {
-        line-height: 1.5;
-        padding-top: .5em;
+      @include placeholder-text {
+        color: $white;
+        font-weight: $text-normal;
       }
     }
+
+    .gform_footer {
+      display: none;
+    }
+
   }
 
-  p {
-    margin-top: 0;
+  .footer__box {
+    background-color: $black;
+
+  }
+
+  .footer__content {
     color: $white;
-  }
-
-  a {
-    color: $white;
-  }
-}
-
-
-
-
-.footer__bottom {
-
-  .row {
-    align-items: center;
-    justify-content: space-between;
-  }
-}
-
-.footer__credits {
-  text-align: right;
-}
-
-.footer__credits,
-.footer__copyright,
-.footer__social {
-  flex: 0 0 auto;
-
-  @include screen-sm {
-    flex: 1 1 100%;
     text-align: center;
-  }
-}
+    padding-top: 3em;
 
-.footer__footer {
-  padding: 0 3.5em;
+    .icon {
+      font-size: 2em;
+    }
+
+    h2 {
+      color: $white;
+    }
+
+    .footer__big-title,
+    .footer__small-title {
+      color: $white;
+      text-transform: uppercase;
+      font-weight: $text-semi;
+    }
+
+    .footer__big-title {
+      @extend %serif;
+      color: $white;
+      font-size: 1.8125em;
+      line-height: 2;
+      letter-spacing: .25em;
+
+      @include screen-sm {
+        font-size: 0.75em;
+      }
+    }
+
+    .footer__small-title {
+      font-size: 0.875em;
+      @extend %sans-serif;
+      letter-spacing: 6px;
+      line-height: 1.22;
+    }
+  }
+
+  .footer__menu {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2em;
+  }
+
+  .footer__menu-section {
+    width: calc(100%/4);
+    flex: 1 1 auto;
+    padding: 0 .5em 2em;
+
+    @include screen-sm {
+      width: 50%;
+    }
+
+    @include screen-xs {
+      width: 100%;
+      padding-bottom: 0;
+    }
+
+    .icon {
+      color: $white;
+      font-size: 7em;
+    }
+
+    ul {
+      margin-top: 0;
+      list-style-type: none;
+
+      li {
+
+        a {
+          display: block;
+          letter-spacing: 0;
+          padding: 0.25em 0;
+          @include screen-sm {
+            padding: 0.125em 0;
+          }
+        }
+      }
+    }
+
+    p {
+      margin-top: 0;
+      color: $white;
+    }
+
+    a {
+      color: $white;
+    }
+  }
+
+
+
+
+  .footer__bottom {
+
+    .row {
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  .footer__credits {
+    text-align: right;
+  }
+
+  .footer__credits,
+  .footer__copyright,
+  .footer__social {
+    flex: 0 0 auto;
+
+    @include screen-sm {
+      flex: 1 1 100%;
+      text-align: center;
+    }
+  }
+
+  .footer__footer {
+    padding: 0 3.5em;
+  }
 }

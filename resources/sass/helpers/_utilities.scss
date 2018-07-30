@@ -17,6 +17,67 @@
   margin: 0 0 20px 15px;
 }
 
+.bullet {
+  list-style: disc;
+}
+
+/* Grid Styles */
+.relative {
+  position: relative;
+}
+
+.block {
+  &.button {
+    display: block;
+  }
+  display: block;
+}
+
+.iblock {
+  &.button {
+    display: inline-block;
+  }
+  display: inline-block;
+}
+
+.flex {
+  &.button {
+    display: flex;
+  }
+  display: flex;
+}
+
+/* Font Weights */
+.text-bold,
+.h1.text-bold,
+.h2.text-bold,
+.h3.text-bold,
+.h4.text-bold,
+.h5.text-bold,
+.h6.text-bold {
+  font-weight: $text-bold;
+}
+
+.text-semi,
+.h1.text-semi,
+.h2.text-semi,
+.h3.text-semi,
+.h4.text-semi,
+.h5.text-semi,
+.h6.text-semi {
+  font-weight: $text-semi;
+}
+
+.text-normal,
+.h1.text-normal,
+.h2.text-normal,
+.h3.text-normal,
+.h4.text-normal,
+.h5.text-normal,
+.h6.text-normal {
+  font-weight: $text-normal;
+}
+
 .row--full {
   margin: 0;
 }
@@ -296,6 +357,18 @@
   text-transform: uppercase !important;
 }
 
+.large-text {
+  @extend %sans-serif;
+  font-size: 1.125em;
+  line-height: 1.66;
+  color: $text-dark;
+}
+
+.text-size-large {
+  font-size: 1.25em;
+  line-height: 1.7;
+}
+
 .text-large {
   font-size: 175% !important;
 }
@@ -318,8 +391,56 @@
 }
 
 //theme specific colors
-//
-//
-//.text-primary {
-// color: $primary-color;
-//}
+a, address, dt, dd, h1, h2, h3, h4, h5, h6, li, p, span, small, td, th, time, ul,
+.thumbnail h3, .thumbnail h4, .thumbnail h5 {
+  &.black {
+    color: $black;
+  }
+  &.white {
+    color: $white;
+  }
+  &.peach {
+    color: $peach;
+  }
+  &.smoke {
+    color: $smoke;
+  }
+}
+
+aside, article, main, div, header, footer, section, nav, main, menu, code, hr {
+  &.black {
+    background-color: $black;
+  }
+  &.white {
+    background-color: $white;
+  }
+  &.peach {
+    background-color: $peach;
+  }
+  &.smoke {
+    background-color: $smoke;
+  }
+}
+
+[data-clickthrough] {
+  cursor: pointer;
+}
+
+[data-backgrounder] {
+  background-position: center;
+  background-size: cover;
+
+  .feature {
+    max-height: 66.66667vh;
+    overflow: hidden;
+
+    img {
+      opacity: 0;
+      height: 0;
+      display: inline;
+      width: 0;
+    }
+
+  }
+
+}

@@ -129,7 +129,6 @@
   font-size: 9em;
   color: white;
   transform: translate(-50%, -50%);
-  opacity: .5;
 
   @include screen-lg {
     transform: translate(0, -50%);

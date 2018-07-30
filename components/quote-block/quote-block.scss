@@ -18,14 +18,16 @@
   }
 
   .icon {
-    font-size: 2em;
+    @include font-size(39);
+    fill: $black;
   }
 
   .cp-quote__quote {
-    padding-top: 1em;
+    padding-top: 51px;
     color: $black;
-    font-size: 2em;
-    max-width: 20em;
+    @include font-size(32);
+    line-height: 55px;
+    line-height: 1.71875;
 
     @include screen-sm {
       font-size: 1.3em;
@@ -33,11 +35,14 @@
   }
 
   .cp-quote__source {
-    padding-top: 3em;
-    font-family: Montserrat;
-    font-size: .875em;
+    padding-top: 50px;
+    @extend %sans-serif;
+    @include font-size(14);
+    color: $black;
     letter-spacing: 4.67px;
     line-height: 18px;
+    line-height: 1.28571428571429;
     text-align: center;
+    text-transform: uppercase;
   }
 }

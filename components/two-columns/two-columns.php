@@ -53,14 +53,14 @@ $component_id   = $component_args['id'];
 
     <div class="row">
 
-      <div class="col-sm-1of2">
+      <div class="col-1of2">
         <span class="cp-two-columns__left-heading" style="color: <?php echo $color; ?>"><?php echo $title; ?></span>
         <div class="cp-two-columns__left-text">
           <?php echo $left_text; ?>
         </div>
       </div>
 
-      <div class="col-sm-1of2">
+      <div class="col-1of2">
         <div class="cp-two-columns__right-text">
           <?php echo $right_content; ?>
         </div>

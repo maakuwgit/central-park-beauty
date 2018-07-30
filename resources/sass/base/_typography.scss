@@ -2,7 +2,7 @@
  * Typography
  */
 
-@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i|Montserrat:400,400i,500');
+@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i|Montserrat:300,300i,400,400i,500');
 
 // Sans serif classes
 %sans-serif {
@@ -22,47 +22,6 @@ a {
     color: $link-hover-color;
     text-decoration: $link-hover-decoration;
   }
-}
-
-body {
-  @extend %sans-serif;
-  line-height: 1.75;
-  color: $text-dark;
-}
-
-
-button {
-  transition: all 0.10s ease-in-out;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-code {
-  white-space: normal;
-}
-
-.hero {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 5.3125em;
-  font-weight: 500;
-  letter-spacing: 10.63px;
-  line-height: 1.21;
-  color: $black;
-}
-
-.large-text {
-  @extend %sans-serif;
-  font-size: 1.125em;
-  line-height: 1.66;
-  color: $text-dark;
-}
-
-.text-size-large {
-  font-size: 1.25em;
-  line-height: 1.7;
 }
 
 .field-title {
@@ -92,16 +51,35 @@ code {
   }
 }
 
-h1,.h1, h2, .h2, h3,.h3, h4, .h4, h5, .h5, h6, .h6 {
-  margin: 0.5em auto;
-  line-height: 1.2;
+.h0, h1, .h1, h3, .h3, p, .p, button, .button, .menu-item {
+  @extend %sans-serif;
 }
 
-h1,
-.h1 {
-  @extend %sans-serif;
+%h0 {
+  @include font-size(85);
+  font-weight: $text-bold;
+  letter-spacing: 10.63px;
+  line-height: 103px;
+  line-height: 1.21176470588235;
+  text-transform: uppercase;
+
+  @include screen-md {
+    font-size: 3em;
+  }
+  @include screen-sm {
+    font-size: 2em;
+    letter-spacing: 1px;
+  }
+}
+
+.hero {
+  @extend %h0;
+  color: $black;
+}
+
+%h1 {
   font-size: 1.125em;
-  font-weight: 500;
+  font-weight: $text-bold;
   line-height: 1.38;
   letter-spacing: 4px;
   text-transform: uppercase;
@@ -109,49 +87,84 @@ h1,
   color: $black;
 }
 
+h1,
+.h1 {
+  @extend %h1;
+}
+
+%h2 {
+  font-size: 1.875em;
+  font-weight: $text-normal;
+  line-height: 1.33;
+}
+
 h2,
 .h2 {
-  @extend %serif;
-  font-size: 1.875em;
-  line-height: 1.33;
-  font-weight: normal;
-  color: $black;
+  @extend %h2;
+}
+
+%h3 {
+  font-weight: $text-normal;
 }
 
 h3,
 .h3 {
-  @extend %sans-serif;
-  // font-size: 1.125em;
-  // letter-spacing: 6px;
-  // line-height: 1.22;
-  // text-transform: uppercase;
-  font-weight: normal;
-  color: $black;
+  @extend %h3;
+}
+
+%h4 {
+  font-size: 1.5625em;
+  font-weight: $text-normal;
+  line-height: 1.36;
 }
 
 h4,
 .h4 {
-  @extend %serif;
-  font-size: 1.5625em;
-  line-height: 1.36;
-  font-weight: normal;
-  color: $black;
+  @extend %h4;
+}
+
+%h5 {
+  @include font-size(45);
+  font-weight: $text-normal;
+  line-height: 55px;
+  line-height: 1.22222222222222;
+
+  @include screen-sm {
+    font-size: 2em;//Pulled this from cta.scss
+  }
 }
 
 h5,
 .h5 {
-  @extend %serif;
-  font-size: 2.8125em;
-  line-height: 1.22;
-  font-weight: normal;
-  color: $black;
+  @extend %h5;
+}
+
+%h6 {
+  font-size: 1.25em;
+  font-weight: $text-normal;
+  line-height: 1.7;
 }
 
 h6,
 .h6 {
-  @extend %serif;
-  font-size: 1.25em;
-  line-height: 1.7;
-  font-weight: normal;
-  color: $black;
+  @extend %h6;
+}
+
+%p {
+  @include font-size(16);
+  font-weight: $text-semi;
+  color: $grey;
+  line-height: 28px;
+  line-height: 1.75;
+}
+
+p, .p {
+  @extend %p;
+}
+
+small, .small {
+  @include font-size(14);
+  font-weight: $text-normal;
+  line-height: 28px;
+  line-height: 2;
 }

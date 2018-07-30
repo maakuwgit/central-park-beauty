@@ -59,7 +59,7 @@ $component_id   = $component_args['id'];
 
 <?php if ( ll_empty( $component_data ) ) return; ?>
 <div class="cp-image-content-cluster <?php echo implode( " ", $classes ); ?>" <?php echo ( $component_id ? 'id="'.$component_id.'"' : '' ) ?> data-component="image-content-cluster">
-<div class="container">
+<div class="container relative">
   <div class="cp-icc__bg-shape"></div>
   <div class="cp-icc__container">
 

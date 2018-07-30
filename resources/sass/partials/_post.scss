@@ -30,3 +30,7 @@
 .posts__comments {
 
 }
+
+.post__meta {
+  @extend %card__nav;
+}

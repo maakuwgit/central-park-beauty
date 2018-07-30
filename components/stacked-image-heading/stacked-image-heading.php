@@ -55,13 +55,13 @@ $component_id   = $component_args['id'];
 
     <div class="row cp-stacked-image-heading__row">
 
-      <div class="col-sm-5of12 cp-stacked-image-heading__box1" style="color: <?php echo $box_1_color; ?>">
+      <div class="col-5of12 cp-stacked-image-heading__box1" style="color: <?php echo $box_1_color; ?>">
 
         <div class="cp-stacked-image-heading__img1" style="background-image: url(<?php echo $image1[0]; ?>)"></div>
 
       </div>
 
-      <div class="col-sm-7of12 cp-stacked-image-heading__box2" style="background-color: <?php echo $box_2_color; ?>">
+      <div class="col-7of12 cp-stacked-image-heading__box2" style="background-color: <?php echo $box_2_color; ?>">
 
         <div class="cp-stacked-image-heading__img2" style="background-image: url(<?php echo $image2[0]; ?>)"></div>
 

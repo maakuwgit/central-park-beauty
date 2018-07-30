@@ -9,59 +9,63 @@
 .cp-cta {
   padding: 3em 0;
 
-}
+  .cp-cta__container-bg {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding: 10em 6.85714285714286em 13.35714285714286em 6.85714285714286em;
+    position: relative;
 
-.cp-cta__container-bg {
-  height: 40em;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  padding: 3em;
-  position: relative;
+    @include screen-md {
+      padding: 5em 2.857143em;
+    }
 
-  @include screen-sm {
-    padding: 1em;
-    height: 30em;
+    @include screen-sm {
+      padding: 2em 1em;
+    }
   }
 
-  @include screen-xs {
-    height: auto;
-  }
-}
-
-.cp-cta__overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.cp-cta__heading {
-  font-family: "Libre Baskerville";
-  font-size: 2.8125em;
-  line-height: 1.57;
-
-  @include screen-sm {
-    font-size: 2em;
-  }
-}
-
-.cp-cta__single {
-  width: 42%;
-
-  @include screen-md {
-    width: 60%;
-  }
-
-  @include screen-sm {
+  .cp-cta__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    margin: auto;
+    height: 100%;
   }
-}
 
-.cp-cta__two-column {
   .cp-cta__heading {
-    margin-top: 0;
+    @extend %h5;
+    @extend %serif;
   }
+
+  .cp-cta__caption {
+
+    p {
+      color: $white;
+    }
+
+    button, .btn, .button {
+      margin-top: 3.14285714285714em;
+    }
+  }
+
+  .cp-cta__single {
+    width: 42%;
+
+    @include screen-md {
+      width: 60%;
+    }
+
+    @include screen-sm {
+      width: 100%;
+      margin: auto;
+    }
+  }
+
+  .cp-cta__two-column {
+    .cp-cta__heading {
+      margin-top: 0;
+    }
+  }
+
 }

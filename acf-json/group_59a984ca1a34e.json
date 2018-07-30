@@ -970,6 +970,27 @@
                     "return_format": "array"
                 }
             ]
+        },
+        {
+            "key": "field_5b5f42758bdf9",
+            "label": "Newsletter Form ID",
+            "name": "newsletter_form_id",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 1,
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": 0,
+            "max": "",
+            "step": ""
         }
     ],
     "location": [
@@ -989,5 +1010,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1530797827
+    "modified": 1532969644
 }

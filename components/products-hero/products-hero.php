@@ -53,7 +53,7 @@ $component_id   = $component_args['id'];
 
   <div class="container-full cp-products-hero__container">
     <div class="row">
-      <div class="col-sm-1of2 cp-products-hero__left-col">
+      <div class="col-1of2 cp-products-hero__left-col">
 
         <div class="cp-products-hero__img-1" style="background-image: url(<?php echo $image1[0]; ?>);"></div>
 
@@ -65,7 +65,7 @@ $component_id   = $component_args['id'];
 
       </div>
 
-      <div class="col-sm-1of2 cp-products-hero__right-col">
+      <div class="col-1of2 cp-products-hero__right-col">
 
         <div class="cp-products-hero__img-3" style="background-image: url(<?php echo $image3[0]; ?>);"></div>
 

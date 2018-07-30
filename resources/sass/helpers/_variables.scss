@@ -14,6 +14,10 @@
 $selection: #000;
 $selection-bg: #ccc;
 $white: white;
+$peach: #E2A187;
+$grey: #646464;
+$silver: #979797;
+$smoke: #646464;
 $black: black;
 
 // Official social colors
@@ -27,9 +31,13 @@ $danger-background: #f2dede;
 $danger-border: #ebccd1;
 
 // Theme colors
-$text-dark: #646464;
-$text-gray: gray;
-$primary-color: black;
+$text-normal: 300;
+$text-semi: 400;
+$text-bold: 500;
+$text-black: 600;
+$text-dark: $smoke;
+$text-gray: $grey;
+$primary-color: $black;
 
 
 /**
@@ -84,7 +92,7 @@ $grid-float-breakpoint: $screen-nav-mobile + 1;
 
 // Grid
 $grid-columns:      12;
-$grid-gutter-width: 30px;
+$grid-gutter-width: 25px;
 
 // Container widths
 $container-sm:    ($screen-sm - $grid-gutter-width);

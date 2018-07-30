@@ -58,11 +58,23 @@ $component_id   = $component_args['id'];
 
 
   <div class="hero-banner__content">
+
     <div class="hero-banner__info-box text-center">
       <svg class="icon icon-CP-Logo hero-banner__logo"><use xlink:href="#icon-CP-Logo"></use></svg>
-      <<?php echo $title['tag']; ?> class="hero-banner__title"><span class="hero-banner__big-title"><?php echo $title['big_text']; ?></span><br><span class="hero-banner__small-title"><?php echo $title['small_text']; ?></span></<?php echo $title['tag']; ?>>
-      <<?php echo $subtitle['tag']; ?> class="hero-banner__subtitle"><?php echo $subtitle['text']; ?></<?php echo $subtitle['tag']; ?>>
+
+      <<?php echo $title['tag']; ?> class="hero-banner__title">
+        <span class="hero-banner__big-title"><?php echo $title['big_text']; ?></span>
+        <span class="hero-banner__small-title"><?php echo $title['small_text']; ?></span>
+      </<?php echo $title['tag']; ?>>
+      <!-- .hero-banner__title -->
+
+      <<?php echo $subtitle['tag']; ?> class="hero-banner__subtitle">
+        <?php echo $subtitle['text']; ?>
+      </<?php echo $subtitle['tag']; ?>>
+      <!-- .hero-banner__subtitle -->
+
     </div>
+    <!-- .hero-banner__info-box text-center -->
 
     <div class="hero-banner__play-btn">
 

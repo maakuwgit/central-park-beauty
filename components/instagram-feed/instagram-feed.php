@@ -43,7 +43,7 @@ $component_id   = $component_args['id'];
     <div class="row">
       <?php foreach ($component_data['feed'] as $key => $item): ?>
         <?php if ( $key <= $component_data['count'] - 1 ) : ?>
-          <div class="col-sm-1of4">
+          <div class="col-1of4">
             <div class="ll-instagram-feed__img-container">
               <img class="ll-instagram-feed__img" src="<?php echo $item->images->standard_resolution->url ?>" alt="<?php echo $item->caption->text ?>">
             </div>
@@ -61,7 +61,7 @@ $component_id   = $component_args['id'];
 
           <?php if ( $key <= $component_data['count'] - 1 ) : ?>
 
-            <div class="col-sm-1of3">
+            <div class="col-1of3">
               <div class="ll-instagram-feed__img-container">
 
                 <?php if ($ic == 1) : ?>
@@ -81,7 +81,7 @@ $component_id   = $component_args['id'];
           <?php endif; ?>
           <?php $ic++; ?>
         <?php endforeach ?>
-       <!--  <div class="col-sm-1of3 ">
+       <!--  <div class="col-1of3 ">
           <div class="ll-instagram-feed__img-container">
             <div class="ll-instagram-feed__overlay"></div>
           </div>

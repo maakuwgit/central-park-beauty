@@ -20,9 +20,25 @@
       window.userLoggedIn = false;
       window.adminBarHeight = 0;
 
+      //Dev Note: going to move this into the Backgrounder component for reusability
+      //BEOF Backgrounder
+      var vh,vw;
+      //Media Query (match the _variables.scss breakpoints)
+      var breakpoints = {};
+      breakpoints.xxs = 399;
+      breakpoints.xs  = 479;
+      breakpoints.sm  = 767;
+      breakpoints.md  = 991;
+      breakpoints.lg  = 1199;
+      breakpoints.xl  = 1599;
+
       if ( $('#wpadminbar').length > 0 ) {
         window.userLoggedIn = true;
         window.adminBarHeight = '32px';
+      }
+
+      function rem_calc(num) {
+        return num/16;
       }
 
       /**
@@ -38,6 +54,10 @@
       checkAdminBar();
 
       $(function() {
+
+        $(window).on('resize.refactor', refactor);
+        refactor();
+
         $('a[href*="#"]:not(.js-no-scroll):not([href="#"])').click(function() {
           if (location.pathname.replace(/^\//,'') === this.pathname.replace(/^\//,'') && location.hostname === this.hostname) {
             var target = $(this.hash);
@@ -76,36 +96,131 @@
       });
 
       /*
-       * Collapse specificially for the nav. Utilizes .slideToggle()
-       * for sliding animation for a more "out of the box" nice looking
-       * mobile animation. Can easily be removed or altered for
-       * more specific funcitonality.
+       * Collapse specificially for the nav.
        */
       $('[data-nav="collapse"]').on('click', function(e) {
         e.preventDefault();
-        var target = $(this).data('target');
+        var target = $(this).data('target'),
+            btn    = $(this);
+
         $('.primary-nav').not(target).hide();
         $(this).toggleClass('open');
         $('body').toggleClass('locked');
-        // $(target).toggleClass('collapsed');
-        $(target).slideToggle();
+
         $('.navbar .navbar-toggle').not(this).removeClass('active');
-        $.each($('.navbar .navbar-toggle').not(this), function(){
-          var text = $(this).data('target');
-          $(this).css('width', 'auto');
-          // $(this).text(text.replace('#', ''));
-        });
+
         if ($(this).hasClass('active')) {
-          $(this).css('width', 'auto');
-          $(this).removeClass('active');
-          // $(this).text(target.replace('#', ''));
+
+          $('.top-nav .header__top-left ul li:nth-child(2)').removeClass('no-bar');
+          btn.removeClass('active');
+          $(target).velocity('transition.perspectiveDownOut');
+
         } else {
-          var width = $(this).outerWidth();
-          $(this).css('width', width);
-          $(this).addClass('active');
-          // $(this).text('Close');
+          if( btn.attr('data-target') === '#services' || btn.attr('data-target') === '#conditions' ){
+            $('.top-nav .header__top-left ul li:nth-child(2)').addClass('no-bar');
+          }
+          btn.addClass('active');
+          $(target).velocity('transition.perspectiveDownIn');
+
         }
       });
+
+      /*
+       * Convert any element into a giant button
+       */
+      function clickthrough(e) {
+        var target = $(this).find('a:first-of-type');
+        e.preventDefault();
+        if(target && target.length > 0){
+          document.location.href = target.attr('href');
+        }else{
+          document.location.href = $(this).attr('data-clickthrough');
+        }
+      }
+
+      $('[data-clickthrough]').each(function(args){
+        $(this).on('click.clickthrough', clickthrough);
+      });
+
+
+
+      function refactor(e){
+        setSize();
+        var size = getSize();
+        //Dev Note: Create a date attr for the size and only call 'makeBg' oncer per size.
+        makeBg(size);
+      }
+
+      //Dev Note: going to move this into the Backgrounder component for reusability
+      //BEOF Backgrounder
+
+      function setSize(){
+        vw = window.outerWidth;
+        vh = window.outerHeight;
+      }
+
+      /* Dev Note: need an xs, xxs size, as well as new xxl xxxl */
+      function getSize(){
+        var size = 'small';
+        if(vw >= breakpoints.xl){
+          size = 'xl';
+        }else if(vw >= breakpoints.lg && vw < breakpoints.xl) {
+          size = 'lg';
+        }else if(vw > breakpoints.sm && vw < breakpoints.lg) {
+          size = 'md';
+        }
+        return size;
+      }
+
+      //Reads the "featured" image (class based) and sets the target background to whatever image is dynamically loaded then animates it in.
+      function makeBg(size){
+        if(!size){
+          size = getSize();
+        }
+
+        $('[data-backgrounder]').each(function(args){
+
+          var feat    = $(this).find('.feature');
+          var target  = feat;//See if there's a featured image here, if not, just use the parent
+          if(feat.length <= 0) {
+            target = $(this);
+          }
+
+          var img     = false;
+
+          if(feat.length > 0) {
+            img = $(feat).find('img');
+          }else{
+            img = $(this).find('img');
+          }
+
+          if(img.length > 0) {
+            var src = $(img).attr('src');
+            if($(img).attr('data-src-xl') && size === 'xl') {
+              src = $(img).attr('data-src-xl');
+            }
+            if($(img).attr('data-src-lg') && size === 'lg') {
+              src = $(img).attr('data-src-lg');
+            }
+            if($(img).attr('data-src-md') && size === 'md') {
+              src = $(img).attr('data-src-md');
+            }
+            if($(this).attr('style')){
+                if(feat.length > 0) {
+                  $(feat).css('background-color',$(this).css('background-color'));
+                  $(feat).delay(300).fadeOut(300);
+                }
+                $(this).css({'background-image': 'url('+src+')'});
+            }else{
+              $(this).css({'background-image':'url('+src+')', 'background-color':$(this).css('background-color')});
+              if(feat.length > 0) {
+                $(feat).delay(300).fadeOut(300);
+              }
+            }
+          }
+        });
+      }
+      //EOF
 
       $(document).click(function(e) {
           //close all [data-toggle="collapse"] elements if

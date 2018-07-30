@@ -45,13 +45,13 @@ $component_id   = $component_args['id'];
 
   <div class="row">
 
-    <div class="col-sm-5of12">
+    <div class="col-5of12">
       <span class="cp-heading-and-text__left-heading"><?php echo $left_heading; ?></span>
     </div>
 
-    <div class="col-sm-7of12">
-      <<?php echo $heading['tag']; ?>><?php echo $heading['text']; ?></<?php echo $heading['tag']; ?>>
-      <?php echo $content; ?>
+    <div class="col-7of12">
+      <<?php echo $heading['tag']; ?> class="cp-heading-and-text__heading"><?php echo $heading['text']; ?></<?php echo $heading['tag']; ?>>
+      <div class="cp-heading-and-text__caption"><?php echo format_text($content); ?></div>
     </div>
 
   </div>

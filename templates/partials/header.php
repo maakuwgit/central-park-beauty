@@ -34,8 +34,8 @@
         <div class="header__top-left">
           <ul class="top-left">
             <li><a href="<?php echo esc_url(home_url('/')); ?>"><svg class="icon icon-CP-Logo header__logo"><use xlink:href="#icon-CP-Logo"></use></svg></a></li>
-            <li><button type="button" class="navbar-toggle navbar-toggle--stand" data-nav="collapse" data-target="#services"><span>Services</span></button></li>
-            <li><button type="button" class="navbar-toggle navbar-toggle--stand" data-nav="collapse" data-target="#conditions"><span>Conditions</span></button></li>
+            <li><button type="button" class="navbar-toggle navbar-toggle--stand navbar__services" data-nav="collapse" data-target="#services"><span>Services</span></button></li>
+            <li><button type="button" class="navbar-toggle navbar-toggle--stand navbar__conditions" data-nav="collapse" data-target="#conditions"><span>Conditions</span></button></li>
           </ul>
         </div>
 
@@ -126,7 +126,7 @@
       </nav>
 
       <div class="primary-nav services-nav" id="services">
-        <div class="header__menu-box">
+        <div class="header__menu-box row stretch">
           <?php
             foreach ($service_categories as $key => $category) :
               $args_services = [
@@ -161,7 +161,7 @@
       </div>
 
       <div class="primary-nav conditions-nav" id="conditions">
-        <div class="header__menu-box">
+        <div class="header__menu-box row stretch">
           <?php
             foreach ($condition_categories as $key => $category) :
               $args_conditions = [
@@ -231,18 +231,22 @@
       </div>
 
       <div class="primary-nav consultation-nav text-center" id="consultation">
-        <h3 class="hero header__tab-title"><?php echo $consult_tab['title'] ?></h3>
-        <div class="header__tab-btn-area">
-          <a href="<?php echo $consult_tab['button_1']['url']; ?>" class="header__tab-btn"><?php echo $consult_tab['button_1']['title']; ?></a>
-          <a href="<?php echo $consult_tab['button_2']['url']; ?>" class="header__tab-btn"><?php echo $consult_tab['button_2']['title']; ?></a>
+        <div class="row stretch center">
+          <h3 class="hero header__tab-title"><?php echo $consult_tab['title'] ?></h3>
+          <div class="header__tab-btn-area">
+            <a href="<?php echo $consult_tab['button_1']['url']; ?>" class="header__tab-btn"><?php echo $consult_tab['button_1']['title']; ?></a>
+            <a href="<?php echo $consult_tab['button_2']['url']; ?>" class="header__tab-btn"><?php echo $consult_tab['button_2']['title']; ?></a>
+          </div>
         </div>
       </div>
 
       <div class="primary-nav schedule-nav text-center" id="schedule">
-        <h3 class="hero header__tab-title"><?php echo $schedule_tab['title'] ?></h3>
-        <div class="header__tab-btn-area">
-          <a href="<?php echo $schedule_tab['button_1']['url']; ?>" class="header__tab-btn"><?php echo $schedule_tab['button_1']['title']; ?></a>
-          <a href="<?php echo $schedule_tab['button_2']['url']; ?>" class="header__tab-btn"><?php echo $schedule_tab['button_2']['title']; ?></a>
+        <div class="row stretch center">
+          <h3 class="hero header__tab-title"><?php echo $schedule_tab['title'] ?></h3>
+          <div class="header__tab-btn-area">
+            <a href="<?php echo $schedule_tab['button_1']['url']; ?>" class="header__tab-btn"><?php echo $schedule_tab['button_1']['title']; ?></a>
+            <a href="<?php echo $schedule_tab['button_2']['url']; ?>" class="header__tab-btn"><?php echo $schedule_tab['button_2']['title']; ?></a>
+          </div>
         </div>
       </div>
 

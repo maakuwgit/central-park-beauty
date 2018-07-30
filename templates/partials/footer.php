@@ -7,6 +7,7 @@
   $openings = get_field( 'scehma_openings', 'option' );
   $consult_tab = get_field( 'consultation_tab', 'option' );
   $schedule_tab = get_field( 'schedule_tab', 'option' );
+  $form_id = get_field( 'newsletter_form_id', 'option' );
   $menus = get_nav_menu_locations();
   $service_categories = get_terms('service_category') ?: [];
   $condition_categories = get_terms('condition_category') ?: [];
@@ -21,13 +22,26 @@
       <div class="container">
 
 
-        <div class="footer__content">
+        <div class="footer__content row centered center">
 
-          <svg class="icon icon-CP-Logo"><use xlink:href="#icon-CP-Logo"></use></svg>
-          <h3><span class="footer__big-title">Central</span><br>
-          <span class="footer__small-title">Park Beauty</span></h3>
+          <div class="col">
+            <svg class="icon icon-CP-Logo">
+              <use xlink:href="#icon-CP-Logo"></use>
+            </svg>
+          </div>
 
-          <h3>Signup form</h3>
+          <h3 class="col">
+            <span class="footer__big-title block">Central</span>
+            <span class="footer__small-title block">Park Beauty</span>
+          </h3>
+
+          <?php if( is_plugin_active( 'gravityforms/gravityforms.php' ) ) : ?>
+
+          <aside class="col">
+            <?php gravity_form( $form_id, true, false ); ?>
+          </aside>
+
+          <?php endif; ?>
 
         </div>
 
@@ -56,7 +70,7 @@
               <h6 class="header__menu-heading">Locate</h6>
               <p><?php echo $street_address; ?><br>
               <?php echo $city; ?>, <?php echo $state; ?> <?php echo $zip ?><br>
-              <a href="tel:<?php echo strip_phone($phone_number); ?>"><?php echo $phone_number; ?></a></p>
+              <a href="tel:<?php echo strip_phone($phone_number); ?>"><?php echo format_phone($phone_number, false, '.'); ?></a></p>
             </div>
 
 
@@ -67,12 +81,8 @@
 
       <div class="row footer__footer">
         <div class="footer__copyright">
-          &copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>. All Rights Reserved.
+          <?php bloginfo('name'); ?> <?php echo date('Y'); ?>. All Rights Reserved &reg;.
         </div><!-- .footer__copyright -->
-
-        <div class="footer__social">
-          <?php ll_get_social_list(); ?>
-        </div><!-- .footer__social -->
 
         <div class="footer__credits">
           <a href="https://liftedlogic.com/" target="_blank">Web Design in Kansas City</a> by <a href="https://liftedlogic.com/" target="_blank">Lifted Logic</a>

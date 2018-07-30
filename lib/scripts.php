@@ -63,7 +63,11 @@ function roots_scripts() {
   if ( $maps_api ) {
     wp_enqueue_script( 'google-maps', '//maps.googleapis.com/maps/api/js?key=' . $maps_api . '&libraries=places' );
   }
-  wp_enqueue_script('roots_js', get_template_directory_uri() . $assets['js'], array(), null, true);
+
+  wp_enqueue_script('velocity_js', '//cdn.jsdelivr.net/velocity/1.2.1/velocity.min.js', array('jquery'), null, true);
+  wp_enqueue_script('velocity_ui_js', '//cdn.jsdelivr.net/velocity/1.2.1/velocity.ui.min.js', array('jquery', 'velocity_js'), null, true);
+
+  wp_enqueue_script('roots_js', get_template_directory_uri() . $assets['js'], array('velocity_js'), null, true);
 
   wp_localize_script( 'roots_js', 'site_info', array( 'url' => home_url(), 'name' => get_bloginfo('name'), 'address' => array( 'street' => $street_address, 'city' => $city, 'state' => $state, 'zip' => $zip ) ) );
 }
