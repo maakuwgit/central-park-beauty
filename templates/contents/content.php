@@ -1,5 +1,5 @@
 <?php $image = get_the_post_thumbnail(); ?>
-<div class="card-grid__wrapper col col-sm-6of12 col-md-4of12 col-lg-4of12 col-xl-4of12">
+<div class="card__wrapper col col-sm-6of12 col-md-4of12 col-lg-4of12 col-xl-4of12">
 
   <div class="card-grid__card" data-clickthrough>
 
@@ -11,6 +11,13 @@
       <?php echo $image; ?>
 
       </div><!-- .card-grid__feature.feature -->
+
+    </figure>
+  <?php else: ?>
+
+    <figure class="card-grid__feature__wrapper">
+
+      <div class="card-grid__feature feature"></div><!-- .card-grid__feature.feature -->
 
     </figure>
   <?php endif; ?>

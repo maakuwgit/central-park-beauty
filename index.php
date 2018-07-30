@@ -7,9 +7,14 @@
   <?php get_search_form(); ?>
 <?php endif; ?>
 
-<?php while (have_posts()) : the_post(); ?>
-  <?php get_template_part('templates/contents/content'); ?>
-<?php endwhile; ?>
+<section class="card-grid__wrapper row start">
+
+  <?php while (have_posts()) : the_post(); ?>
+    <?php get_template_part('templates/contents/content'); ?>
+  <?php endwhile; ?>
+
+</section>
+<!-- .card-grid -->
 
 <?php if ($wp_query->max_num_pages > 1) : ?>
   <nav class="post-nav">

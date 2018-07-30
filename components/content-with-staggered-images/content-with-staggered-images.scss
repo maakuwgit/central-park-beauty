@@ -8,7 +8,7 @@
 
 .cp-content-with-staggered-images {
   overflow: hidden;
-  margin-bottom: 128px;
+  @extend %section-padding;
 
   .cp-content-with-staggered-images__heading {
     @extend %h5;

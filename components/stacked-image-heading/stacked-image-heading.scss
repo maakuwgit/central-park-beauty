@@ -7,8 +7,15 @@
  */
 
 .cp-stacked-image-heading {
-  padding-top: 16em;
-  padding-bottom: 4em;
+  padding-top: 6em;
+  padding-bottom: 2em;
+  margin-bottom: 32px;
+
+  @include screen-md-up {
+    padding-top: 16em;
+    padding-bottom: 4em;
+    margin-bottom: 55px;
+  }
 
   .container {
     padding-right: 0;

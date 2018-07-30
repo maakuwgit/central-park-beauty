@@ -7,6 +7,7 @@
  */
 
 .cp-cta {
+  @extend %section-padding;
   padding: 3em 0;
 
   .cp-cta__container-bg {

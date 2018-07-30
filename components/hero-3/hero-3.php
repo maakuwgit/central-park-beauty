@@ -27,6 +27,26 @@ $defaults = [
 
 $component_data = ll_parse_args( $component_data, $defaults );
 
+?>
+
+<?php
+/**
+ * Any additional classes to apply to the main component container.
+ *
+ * @var array
+ * @see args['classes']
+ */
+$classes        = $component_args['classes'] ?: array();
+
+/**
+ * ID to apply to the main component container.
+ *
+ * @var array
+ * @see args['id']
+ */
+$component_id   = $component_args['id'];
+
+
 $side_text = $component_data['side_text'];
 $main_text = $component_data['main_text'];
 $sub_text = $component_data['sub_text'];
@@ -54,25 +74,6 @@ if ($background == 'solid') {
 } else {
   $bg = 'background-image: url(' . $bg_image[0] . ')';
 }
-
-?>
-
-<?php
-/**
- * Any additional classes to apply to the main component container.
- *
- * @var array
- * @see args['classes']
- */
-$classes        = $component_args['classes'] ?: array();
-
-/**
- * ID to apply to the main component container.
- *
- * @var array
- * @see args['id']
- */
-$component_id   = $component_args['id'];
 ?>
 
 <?php if ( ll_empty( $component_data ) ) return; ?>

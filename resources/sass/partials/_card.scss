@@ -73,11 +73,17 @@
 }
 
 %card__meta {
-  font-size: 18px;
-  line-height: 30px;
-  line-height: 1.66666666666667;
-  letter-spacing: 4.67px;
+  @include font-size(12);
+  line-height: 15.5px;
+  line-height: 1.28571428571429;
+  letter-spacing: 2px;
   text-transform: uppercase;
+
+  @include screen-md-up {
+    @include font-size(14);
+    line-height: 18px;
+    letter-spacing: 4.67px;
+  }
 }
 
 .card-grid__meta {

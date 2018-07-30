@@ -48,27 +48,11 @@
 }
 
 .cp-blog-hero__main-text {
-  font-family: "Libre Baskerville";
-  font-size: 2.8125em;
-  line-height: 1.22;
-  margin: 2em 0;
-
-  @include screen-sm {
-    font-size: 2em;
-  }
+  @extend %hero__supertitle;
 }
 
 .cp-blog-hero__sub-text {
-  font-family: Montserrat;
-  font-size: 1.215em;
-  font-weight: 500;
-  letter-spacing: 4px;
-  line-height: 1.388;
-  text-transform: uppercase;
-
-  @include screen-sm {
-    font-size: 1em;
-  }
+  @extend %hero__title;
 }
 
 
