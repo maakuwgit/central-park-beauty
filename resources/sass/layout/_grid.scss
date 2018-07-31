@@ -8,7 +8,7 @@
 .container-full {
   @include container-fixed;
 
-  @include screen-lg {
+  @include screen-sm {
     padding-left: 32px;
     padding-right: 32px;
   }

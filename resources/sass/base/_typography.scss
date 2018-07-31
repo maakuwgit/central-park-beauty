@@ -115,7 +115,12 @@ h2,
 }
 
 %h3 {
+  @include font-size(18);
   font-weight: $text-normal;
+  text-transform: uppercase;
+  line-height: 22px;
+  line-height: 1.22222222222222;
+  letter-spacing: 6px;
 }
 
 h3,

@@ -37,7 +37,7 @@ $component_id   = $component_args['id'];
 <?php if ( ll_empty( $component_data ) ) return; ?>
 <div class="cp-before-and-afters <?php echo implode( " ", $classes ); ?>" <?php echo ( $component_id ? 'id="'.$component_id.'"' : '' ) ?> data-component="before-and-afters">
 
-  <div class="container cp-before-and-afters__container">
+  <div class="container-full cp-before-and-afters__container">
       <div class="cp-before-and-afters__heading">
         <h3>Before</h3>
         <h3>After</h3>

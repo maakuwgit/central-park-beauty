@@ -2,9 +2,12 @@
  * Button Styles
  */
 
-.btn {
+%btn {
+  appearance: none;
+  cursor: pointer;
   display: inline-flex;
   border-radius: 0;
+  border: none;
   padding: 1.35714285714286em 3.57142857142857em;
   @extend %sans-serif;
   font-size: 0.875em;
@@ -18,7 +21,8 @@
   }
 }
 
-.btn__dark {
+
+%btn__dark {
   background-color: $black;
   color: $white;
 
@@ -27,9 +31,10 @@
     color: $black;
     border: 1px solid $black;
   }
+
 }
 
-.btn__light {
+%btn__light {
   background-color: $white;
   color: $black;
 
@@ -38,4 +43,17 @@
     color: $white;
     border: 1px solid $white;
   }
+
+}
+
+.btn {
+  @extend %btn;
+}
+
+.btn__dark {
+  @extend %btn__dark;
+}
+
+.btn__light {
+  @extend %btn__light;
 }
