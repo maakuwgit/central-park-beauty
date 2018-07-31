@@ -25,13 +25,6 @@
   .cp-quote__quote {
     padding-top: 51px;
     color: $black;
-    @include font-size(32);
-    line-height: 55px;
-    line-height: 1.71875;
-
-    @include screen-sm {
-      font-size: 1.3em;
-    }
   }
 
   .cp-quote__source {

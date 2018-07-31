@@ -20,7 +20,11 @@ $side_text = $component_data['side_text'];
 $image_one = $component_data['image_one'];
 $image_two = $component_data['image_two'];
 $image_three = $component_data['image_three'];
-$background_color = $component_data['background_color'];
+$bg = $component_data['background_color'];
+
+if ($bg ){
+  $bg = ' ' . $bg;
+}
 
 $image1 = wp_get_attachment_image_src($image_one, 'large');
 $image2 = wp_get_attachment_image_src($image_two, 'large');
@@ -47,7 +51,7 @@ $component_id   = $component_args['id'];
 ?>
 
 <?php if ( ll_empty( $component_data ) ) return; ?>
-<div class="cp-products-hero <?php echo implode( " ", $classes ); ?>" <?php echo ( $component_id ? 'id="'.$component_id.'"' : '' ) ?> data-component="products-hero" style="background-color: <?php echo $background_color; ?>;">
+<div class="cp-products-hero<?php echo $bg . implode( " ", $classes ); ?>" <?php echo ( $component_id ? 'id="'.$component_id.'"' : '' ) ?> data-component="products-hero">
 
 
 

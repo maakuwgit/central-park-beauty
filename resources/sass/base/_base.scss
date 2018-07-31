@@ -42,6 +42,18 @@ body {
   }
 }
 
+blockquote {
+  @extend %serif;
+  font-weight: $text-normal;
+  @include font-size(32);
+  line-height: 55px;
+  line-height: 1.71875;
+
+  @include screen-sm {
+    font-size: 1.3em;
+  }
+}
+
 .main {
   padding-top: 3em;
 }

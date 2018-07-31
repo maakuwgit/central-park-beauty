@@ -35,10 +35,16 @@ $classes        = $component_args['classes'] ?: array();
  * @see args['id']
  */
 $component_id   = $component_args['id'];
+
+$bg = $component_data['box_color'];
+
+if ($bg ){
+  $bg = ' ' . $bg;
+}
 ?>
 
 <?php if ( ll_empty( $component_data ) ) return; ?>
-<div class="cp-how <?php echo implode( " ", $classes ); ?>" <?php echo ( $component_id ? 'id="'.$component_id.'"' : '' ) ?> data-component="how">
+<div class="cp-how<?php echo $bg . implode( " ", $classes ); ?>" <?php echo ( $component_id ? 'id="'.$component_id.'"' : '' ) ?> data-component="how">
   <div class="container">
 <span class="cp-how__h">H</span>
     <div class="row">

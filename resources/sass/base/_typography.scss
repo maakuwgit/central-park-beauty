@@ -13,6 +13,14 @@
   font-family: 'Libre Baskerville', serif;
 }
 
+.sans-serif {
+  @extend %sans-serif;
+}
+
+.serif {
+  @extend %serif;
+}
+
 a {
   color: $link-color;
   text-decoration: $link-hover-decoration;

@@ -63,6 +63,28 @@
             "default_value": "pink",
             "layout": "horizontal",
             "return_format": "value"
+        },
+        {
+            "key": "field_5b5fde3626d9a",
+            "label": "Logo Position",
+            "name": "logo_position",
+            "type": "button_group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "top": "Top",
+                "bottom": "Bottom"
+            },
+            "allow_null": 0,
+            "default_value": "top",
+            "layout": "horizontal",
+            "return_format": "value"
         }
     ],
     "location": [
@@ -82,5 +104,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1532023983
+    "modified": 1533009251
 }

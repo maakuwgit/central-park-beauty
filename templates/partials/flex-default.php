@@ -13,13 +13,15 @@ if( have_rows( 'flex_default' ) ) {
           $quote = get_sub_field('quote');
           $source = get_sub_field('source');
           $bg_color = get_sub_field('background_color');
+          $position = get_sub_field('logo_position');
 
           ll_include_component(
             'quote-block',
             array(
               'quote' => $quote,
               'source' => $source,
-              'bg-color' => $bg_color
+              'bg-color' => $bg_color,
+              'logo-position' => $position
             )
           );
         break;

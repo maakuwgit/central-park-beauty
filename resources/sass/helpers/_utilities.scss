@@ -449,6 +449,12 @@ a, address, dt, dd, h1, h2, h3, h4, h5, h6, li, p, span, small, td, th, time, ul
   &.white {
     color: $white;
   }
+  &.pink {
+    color: $pink;
+  }
+  &.dark-pink {
+    color: $dark-pink;
+  }
   &.peach {
     color: $peach;
   }
@@ -463,6 +469,12 @@ aside, article, main, div, header, footer, section, nav, main, menu, code, hr {
   }
   &.white {
     background-color: $white;
+  }
+  &.pink {
+    background-color: $pink;
+  }
+  &.dark-pink {
+    background-color: $dark-pink;
   }
   &.peach {
     background-color: $peach;

@@ -14,13 +14,14 @@
 $white: white;
 $silver: #979797;
 $peach: #E2A187;
-$pink: lighten($peach, 12.5%);
+$pink: #f7e7e1;
+$dark-pink: #F0D0C3;
 $grey: #646464;
 $med-grey: #4A4A4A;
 $smoke: #646464;
 $black: black;
 $selection: $white;
-$selection-bg: $peach;
+$selection-bg: $dark-pink;
 
 // Official social colors
 $facebook: #3461a1;

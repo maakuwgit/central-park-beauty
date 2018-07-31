@@ -3,6 +3,16 @@
  * the wysiwyg
  */
 @import 'main.min.css';
+@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i|Montserrat:300,300i,400,400i,500');
+
 body {
-  font-size: 14px !important;
+  font-size: 14px;
+  font-size: 0.875rem;
 }
+
+#tinymce {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  padding: 1rem;
+}
+
