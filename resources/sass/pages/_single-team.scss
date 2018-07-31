@@ -1,0 +1,53 @@
+/**
+ * Single Team
+ */
+
+.single-team {
+
+  .single-team__article {
+    @extend  %section-margins;
+    padding-top: 57px;
+    padding-bottom: 57px;
+  }
+
+  .single-team__title {
+    @extend %h0;
+    @extend %serif;
+    margin-top: 77px;
+    margin-bottom: 77px;
+    margin-left: 14%;
+    text-indent: -14%;
+    font-weight: $text-bold;
+    text-transform: initial;
+
+    .rotated {
+      @extend %h2;
+      position: absolute;
+      left: 0;
+      font-weight: $text-normal;
+      transform: rotate(-90deg);
+      transform-origin: bottom right;
+      letter-spacing: initial;
+    }
+
+  }
+
+  .single-team__content {
+    h2, h3, h4, h5, h6 {
+      @extend %h6;
+      @extend %serif;
+      margin-bottom: 32px;
+      text-transform: initial;
+      letter-spacing: initial;
+    }
+  }
+
+  @include screen-md-up {
+
+    .single-team__article {
+      padding-bottom: 115px;
+    }
+
+  }
+
+}
