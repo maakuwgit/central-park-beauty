@@ -22,7 +22,7 @@
     </figure>
   <?php endif; ?>
 
-  <div class="card-grid__body">
+    <div class="card-grid__body">
     <?php
       $positions = get_the_terms(get_the_ID(), 'team_position');
 
@@ -31,7 +31,7 @@
         foreach($positions as $position) :
       ?>
 
-        <span class="card-grid__meta" href="<?php echo get_tag_link($category->term_id); ?>"><?php echo $position->name; ?></span>
+        <span class="card-grid__meta"><?php echo $position->name; ?></span>
         <!-- .card-grid__meta -->
 
           <?php

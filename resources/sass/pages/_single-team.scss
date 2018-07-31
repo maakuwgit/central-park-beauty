@@ -10,23 +10,21 @@
     padding-bottom: 57px;
   }
 
+  .single-team__header {
+    z-index: 1;
+  }
+
   .single-team__title {
     @extend %h0;
     @extend %serif;
-    margin-top: 77px;
-    margin-bottom: 77px;
-    margin-left: 14%;
-    text-indent: -14%;
+    margin-top: 0;
     font-weight: $text-bold;
     text-transform: initial;
 
     .rotated {
+      display: block;
       @extend %h2;
-      position: absolute;
-      left: 0;
       font-weight: $text-normal;
-      transform: rotate(-90deg);
-      transform-origin: bottom right;
       letter-spacing: initial;
     }
 
@@ -40,9 +38,101 @@
       text-transform: initial;
       letter-spacing: initial;
     }
+
+    p, li {
+      color: $black;
+    }
+  }
+
+  .single-team__details {
+    h3, h4, h5, h6 {
+      @extend %btn;
+      padding: 0;
+      margin-top: 32px;
+      margin-bottom: 14px;
+      cursor: initial;
+      color: $black;
+    }
+  }
+
+  .single-team__meta {
+    margin-top: 0;
+    margin-bottom: 0;
+    color: $black;
+  }
+
+  .single-team__quote {
+    margin-top: 50px;
+    @extend %serif;
+    @include font-size(25);
+    color: $black;
+    line-height: 34px;
+    line-height: 1.36;
+
+    &:before {
+      display: block;
+      margin-bottom: 10px;
+      content: '“';
+      @include font-size(48);
+      line-height: 0;
+    }
+
+    p {
+      margin-top: 0;
+      margin-bottom: 0;
+      font-family: inherit;
+      font-size: inherit;
+      color: inherit;
+      line-height: inherit;
+    }
+  }
+
+  .single-team__thumb__image {
+    height: 50vw;
+    max-height: 454px;
+  }
+
+  @include screen-md {
+
+    .single-team__article {
+      padding-left: 57px;
+      padding-right: 57px;
+    }
+
+    .single-team__col2 {
+
+      .single-team__thumb__image {
+        display: none;
+      }
+
+    }
+
   }
 
   @include screen-md-up {
+
+    .single-team__title {
+      margin-top: 77px;
+      margin-bottom: 77px;
+      margin-left: 14%;
+      text-indent: -14%;
+
+      .rotated {
+        position: absolute;
+        left: 8.33333337%;
+        transform: rotate(-90deg);
+        transform-origin: top right;
+      }
+
+    }
+
+    .single-team__col1 {
+
+      .single-team__thumb__image {
+        display: none;
+      }
+
+    }
 
     .single-team__article {
       padding-bottom: 115px;
