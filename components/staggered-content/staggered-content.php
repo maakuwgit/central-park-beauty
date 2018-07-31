@@ -52,7 +52,7 @@ if( $bg ) $bg = ' ' . $bg;
 
   <div class="container">
     <div class="row">
-      <div class="col-2of3">
+      <div class="col col-md-6of12 col-lg-7of12 col-xl-7of12">
 
         <div class="cp-staggered-content__box1">
 
@@ -63,7 +63,7 @@ if( $bg ) $bg = ' ' . $bg;
         <h2 class="cp-staggered-content__title" style="color: <?php echo $title['color']; ?>"><?php echo $title['text']; ?></h2>
 
       </div>
-      <div class="col-1of3">
+      <div class="col col-md-4of12 col-lg-4of12 col-xl-4of12">
         <div class="cp-staggered-content__box2">
 
           <?php
