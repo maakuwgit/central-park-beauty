@@ -43,6 +43,7 @@ body {
 }
 
 blockquote {
+  margin: auto;
   @extend %serif;
   font-weight: $text-normal;
   @include font-size(32);

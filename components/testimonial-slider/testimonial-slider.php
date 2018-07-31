@@ -13,11 +13,6 @@ $defaults = [
 
 $component_data = ll_parse_args( $component_data, $defaults );
 
-$image_id = $component_data['image_id'];
-$testimonials = $component_data['testimonials'];
-
-$image = wp_get_attachment_image_src($image_id, 'large');
-
 ?>
 
 <?php
@@ -36,6 +31,11 @@ $classes        = $component_args['classes'] ?: array();
  * @see args['id']
  */
 $component_id = $component_args['id'];
+
+$image_id = $component_data['image_id'];
+$testimonials = $component_data['testimonials'];
+
+$image = wp_get_attachment_image_src($image_id, 'large');
 ?>
 
 <?php if ( ll_empty( $component_data ) ) return; ?>
@@ -44,9 +44,19 @@ $component_id = $component_args['id'];
     <div class="container-full cp-testimonial-slider__container">
 
       <div class="container cp-testimonial-slider__bg-img" style="background-image: url('<?php echo $image[0]; ?>');">
+
         <div class="cp-testimonial-slider__title-container">
+
           <h2 class="cp-testimonial-slider__title">Client</h2>
-          <span class="cp-testimonial-slider__heart-svg"><svg class="icon icon-Heart"><use xlink:href="#icon-Heart"></use></svg></span>
+
+          <span class="cp-testimonial-slider__heart-svg">
+
+            <svg class="icon icon-heart salmon">
+              <use xlink:href="#icon-heart"></use>
+            </svg>
+
+          </span>
+
         </div>
 
         <?php if ($testimonials): ?>
@@ -69,7 +79,35 @@ $component_id = $component_args['id'];
 
                     <blockquote class="cp-testimonial-slider__blockquote <?php $active_state; ?>"><span class="cp-testimonial-slider__open-quote"></span><?php echo $testimonial['text']; ?></blockquote>
 
-                    <p class="cp-testimonial-slider__name <?php $active_state; ?>">&mdash; <?php echo $testimonial['name']; ?></p>
+                    <p class="cp-testimonial-slider__name row start <?php $active_state; ?>">&mdash; <?php echo $testimonial['name']; ?></p>
+
+                    <ul class="no-bullet cp-testimonial-slider__stars row start">
+                      <li class="iflex">
+                        <svg class="icon icon-star">
+                          <use xlink:href="#icon-star"></use>
+                        </svg>
+                      </li>
+                      <li class="iflex">
+                        <svg class="icon icon-star">
+                          <use xlink:href="#icon-star"></use>
+                        </svg>
+                      </li>
+                      <li class="iflex">
+                        <svg class="icon icon-star">
+                          <use xlink:href="#icon-star"></use>
+                        </svg>
+                      </li>
+                      <li class="iflex">
+                        <svg class="icon icon-star">
+                          <use xlink:href="#icon-star"></use>
+                        </svg>
+                      </li>
+                      <li class="iflex">
+                        <svg class="icon icon-star">
+                          <use xlink:href="#icon-star"></use>
+                        </svg>
+                      </li>
+                    </ul>
 
                   </div>
 
