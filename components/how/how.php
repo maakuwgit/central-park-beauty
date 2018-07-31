@@ -50,9 +50,9 @@ if ($bg ){
 
     <span class="cp-how__h">H</span>
 
-    <div class="row">
+    <div class="row start">
 
-      <div class="col-1of2">
+      <div class="col-md-6of12 col-lg-4of12 col-xl-4of12">
 
         <div class="cp-how__col">
           <?php echo $column_1; ?>
@@ -60,7 +60,7 @@ if ($bg ){
 
       </div>
 
-      <div class="col-1of2">
+      <div class="col-md-6of12 col-offset-lg-2of12 col-lg-4of12 col-offset-lg-2of12 col-xl-4of12">
 
         <div class="cp-how__col">
           <?php echo $column_2; ?>
