@@ -7,85 +7,89 @@
  */
 
 .cp-how {
-  padding: 5em 0;
+  @extend %section-margins;
   position: relative;
-}
 
-.cp-how__col {
-  width: 80%;
+  .cp-how__col {
+    width: 80%;
 
-  @include screen-sm {
-    width: 100%;
+    h1, h2, h3, h4, h5, h6, .text-large, p.text-large {
+      margin-bottom: 25px;
+    }
+
+    p {
+      margin-bottom: 55px;
+    }
   }
-}
 
-.cp-how__h {
-  color: #000000;
-  font-family: Montserrat;
-  font-size: 5.3125em;
-  font-weight: 500;
-  letter-spacing: 10.63px;
-  line-height: 1.211;
-  text-transform: uppercase;
-  position: relative;
-  display: block;
+  .cp-how__h,
+  .cp-how__ow {
+    color: $black;
+    @extend %sans-serif;
+    font-size: 5.3125em;
+    font-weight: 500;
+    letter-spacing: 10.63px;
+    line-height: 1.211;
+    text-transform: uppercase;
+    position: relative;
+    display: block;
 
+    &::before {
+      display: inline-block;
+      content: "";
+      border-top: .08em solid currentColor;
+      width: 2em;
+      position: absolute;
+      top: calc(100% - .6em);
+      max-width: 100%;
+    }
 
-  &::before {
-    display: inline-block;
-    content: "";
-    border-top: .08em solid currentColor;
-    width: 2em;
+  }
+
+  .cp-how__h {
+    margin-bottom: 62px;
+
+    &::before {
+      left: 1.5em;
+    }
+  }
+
+  .cp-how__ow {
+    text-align: right;
+
+    &::before {
+      right: 2.5em;
+    }
+  }
+
+  .cp-how__box {
+    background-color: $pink;
     position: absolute;
-    top: calc(100% - .6em);
-    left: 1.5em;
-    max-width: 100%;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 42%;
+    z-index: -1;
   }
 
   @include screen-md {
-    font-size: 4em;
+
+    .cp-how__h,
+    .cp-how__ow {
+      font-size: 4em;
+    }
+
   }
-}
-
-.cp-how__ow {
-  color: #000000;
-  font-family: Montserrat;
-  font-size: 5.3125em;
-  font-weight: 500;
-  letter-spacing: 10.63px;
-  line-height: 1.211;
-  text-transform: uppercase;
-  position: relative;
-  display: block;
-  text-align: right;
-
-
-  &::before {
-    display: inline-block;
-    content: "";
-    border-top: .08em solid currentColor;
-    width: 2em;
-    position: absolute;
-    top: calc(100% - .6em);
-    right: 2.5em;
-    max-width: 100%;
-  }
-
-  @include screen-md {
-    font-size: 4em;
-  }
-}
-
-.cp-how__box {
-  background-color: rgba(240, 208, 195, 0.5);
-  position: absolute;
-  top: 0;
-  right: 0;
-  height: 100%;
-  width: 42%;
-  z-index: -1;
 
   @include screen-sm {
-    display: none;
+
+    .cp-how__col {
+      width: 100%;
+    }
+
+    .cp-how__box {
+      display: none;
+    }
+
   }
 }

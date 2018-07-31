@@ -78,6 +78,16 @@
   font-weight: $text-normal;
 }
 
+.text-italic,
+.h1.text-italic,
+.h2.text-italic,
+.h3.text-italic,
+.h4.text-italic,
+.h5.text-italic,
+.h6.text-italic {
+  font-style: italic;
+}
+
 .row--full {
   margin: 0;
 }
@@ -407,31 +417,25 @@
   text-transform: uppercase !important;
 }
 
-.large-text {
-  @extend %sans-serif;
-  font-size: 1.125em;
-  line-height: 1.66;
-  color: $text-dark;
-}
-
-.text-size-large {
-  font-size: 1.25em;
-  line-height: 1.7;
-}
-
 .text-large {
-  font-size: 175% !important;
+  @extend %sans-serif;
+  @include font-size(18);
+  line-height: 30px;
+  line-height: 1.66666666666667;
 }
+
 .text-small {
-  font-size: 50% !important;
+  @extend %small;
 }
 
 .text-left {
   text-align: left !important;
 }
+
 .text-center {
   text-align: center !important;
 }
+
 .text-right {
   text-align: right !important;
 }
@@ -443,44 +447,62 @@
 //theme specific colors
 a, address, dt, dd, h1, h2, h3, h4, h5, h6, li, p, span, small, td, th, time, ul,
 .thumbnail h3, .thumbnail h4, .thumbnail h5 {
-  &.black {
-    color: $black;
-  }
   &.white {
     color: $white;
+  }
+  &.silver {
+    color: $silver;
   }
   &.pink {
     color: $pink;
   }
-  &.dark-pink {
-    color: $dark-pink;
+  &.grey {
+    color: $grey;
+  }
+  &.salmon {
+    color: $salmon;
   }
   &.peach {
     color: $peach;
   }
+  &.med-grey {
+    color: $med-grey;
+  }
   &.smoke {
     color: $smoke;
+  }
+  &.black {
+    color: $black;
   }
 }
 
 aside, article, main, div, header, footer, section, nav, main, menu, code, hr {
-  &.black {
-    background-color: $black;
-  }
   &.white {
     background-color: $white;
+  }
+  &.silver {
+    background-color: $silver;
   }
   &.pink {
     background-color: $pink;
   }
-  &.dark-pink {
-    background-color: $dark-pink;
+  &.grey {
+    background-color: $grey;
+  }
+  &.salmon {
+    background-color: $salmon;
   }
   &.peach {
     background-color: $peach;
   }
+  &.med-grey {
+    background-color: $med-grey;
+  }
   &.smoke {
     background-color: $smoke;
+  }
+  &.black {
+    background-color: $black;
   }
 }
 

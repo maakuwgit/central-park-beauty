@@ -4,9 +4,9 @@
     "fields": [
         {
             "key": "field_5b50a3cbf3e02",
-            "label": "Background",
+            "label": "Background Color",
             "name": "background",
-            "type": "group",
+            "type": "button_group",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -15,53 +15,19 @@
                 "class": "",
                 "id": ""
             },
-            "layout": "block",
-            "sub_fields": [
-                {
-                    "key": "field_5b50a2194450a",
-                    "label": "Background Color",
-                    "name": "background_color",
-                    "type": "button_group",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "choices": {
-                        "0, 0, 0": "Black",
-                        "255, 255, 255": "White",
-                        "240, 208, 195": "Dark Pink",
-                        "247, 231, 225": "Pink"
-                    },
-                    "allow_null": 0,
-                    "default_value": "",
-                    "layout": "horizontal",
-                    "return_format": "value"
-                },
-                {
-                    "key": "field_5b50a3eaf3e03",
-                    "label": "Opacity",
-                    "name": "opacity",
-                    "type": "range",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "min": "",
-                    "max": 1,
-                    "step": ".1",
-                    "prepend": "",
-                    "append": ""
-                }
-            ]
+            "choices": {
+                "white": "White",
+                "pink": "Pink",
+                "grey": "Grey",
+                "salmon": "Salmon",
+                "peach": "Peach",
+                "smoke": "Smoke",
+                "black": "Black"
+            },
+            "allow_null": 0,
+            "default_value": "pink",
+            "layout": "horizontal",
+            "return_format": "value"
         },
         {
             "key": "field_5b509dedede73",
@@ -116,7 +82,7 @@
                             "key": "field_5b50a102b7c45",
                             "label": "Color",
                             "name": "color",
-                            "type": "button_group",
+                            "type": "clone",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
@@ -125,16 +91,13 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "choices": {
-                                "#000000": "Black",
-                                "#ffffff": "White",
-                                "#E2A187": "Dark Pink",
-                                "#f7e7e1": "Pink"
-                            },
-                            "allow_null": 0,
-                            "default_value": "#000000",
-                            "layout": "horizontal",
-                            "return_format": "value"
+                            "clone": [
+                                "group_5b607c0ed224b"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
                         }
                     ]
                 },
@@ -196,5 +159,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1532024014
+    "modified": 1533050907
 }

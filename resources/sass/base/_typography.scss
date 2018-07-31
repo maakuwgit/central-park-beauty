@@ -63,6 +63,10 @@ a {
   @extend %sans-serif;
 }
 
+.h2, h2, .h4, h4, .h5, h5, h6, .h6 {
+  @extend %serif;
+}
+
 %h0 {
   @include font-size(85);
   font-weight: $text-bold;
@@ -170,9 +174,12 @@ p, .p {
   @extend %p;
 }
 
-small, .small {
+%small {
   @include font-size(14);
   font-weight: $text-normal;
   line-height: 28px;
   line-height: 2;
+}
+
+small, .small {
 }

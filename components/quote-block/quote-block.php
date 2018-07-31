@@ -40,7 +40,7 @@ $bg = $component_data['bg-color'];
 $position = $component_data['logo-position'];
 
 if ($bg ){
-  $bg = ' ' . $bg;
+  $bg = ' ' . $bg['swatches_bg'];
 }
 ?>
 

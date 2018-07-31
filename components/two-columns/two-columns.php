@@ -7,24 +7,12 @@
 */
 
 $defaults = [
-  'heading' => null,
-  'content' => null,
-  'left_heading' => null
+  'background' => null,
+  'left_content' => null,
+  'right_content' => null
 ];
 
 $component_data = ll_parse_args( $component_data, $defaults );
-
-$background = $component_data['background'];
-$left_content = $component_data['left_content'];
-$right_content = $component_data['right_content'];
-
-$bg_color = $background['background_color'];
-$opacity = $background['opacity'];
-
-$title = $left_content['title']['text'];
-$color = $left_content['title']['color'];
-
-$left_text = $left_content['content'];
 
 ?>
 
@@ -44,17 +32,40 @@ $classes        = $component_args['classes'] ?: array();
  * @see args['id']
  */
 $component_id   = $component_args['id'];
+
+$bg_color = $component_data['background'];
+$left_content = $component_data['left_content'];
+$right_content = $component_data['right_content'];
+
+$title = $left_content['title'];
+$color = false;
+
+if ($title ){
+  $color = ' ' . $title['swatches'];
+}else{
+  $color = ' black';
+}
+
+if( $title ){
+  $title = $title['text'];
+}
+
+$left_text = $left_content['content'];
+
+if ($bg_color ){
+  $bg_color = ' ' . $bg_color;
+}
 ?>
 
 <?php if ( ll_empty( $component_data ) ) return; ?>
-<div class="cp-two-columns <?php echo implode( " ", $classes ); ?>" <?php echo ( $component_id ? 'id="'.$component_id.'"' : '' ) ?> data-component="two-columns" style="background-color: rgba(<?php echo $bg_color; ?>, <?php echo $opacity; ?>);">
+<div class="cp-two-columns<?php echo $bg_color . implode( " ", $classes ); ?>" <?php echo ( $component_id ? 'id="'.$component_id.'"' : '' ) ?> data-component="two-columns">
 
   <div class="container">
 
     <div class="row">
 
       <div class="col-1of2">
-        <span class="cp-two-columns__left-heading" style="color: <?php echo $color; ?>"><?php echo $title; ?></span>
+        <span class="cp-two-columns__left-heading<?php echo $color; ?>"><?php echo $title; ?></span>
         <div class="cp-two-columns__left-text">
           <?php echo $left_text; ?>
         </div>

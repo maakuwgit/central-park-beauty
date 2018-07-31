@@ -54,14 +54,14 @@
     $right_content = get_field('right_content');
     $background = get_field('background');
 
-      ll_include_component(
-        'two-columns',
-        array(
-          'left_content' => $left_content,
-          'right_content' => $right_content,
-          'background' => $background
-        )
-      );
+    ll_include_component(
+      'two-columns',
+      array(
+        'left_content' => $left_content,
+        'right_content' => $right_content,
+        'background' => $background
+      )
+    );
 
     $procedure_time = get_field('procedure_time');
     $recovery_time = get_field('recovery_time');
@@ -82,14 +82,16 @@
       )
     );
 
-    $column_1 = get_field('column_1');
-    $column_2 = get_field('column_2');
+    $column_1  = get_field('column_1');
+    $column_2  = get_field('column_2');
+    $box_color = get_field('box_color');
 
     ll_include_component(
       'how',
       array(
         'column_1' => $column_1,
-        'column_2' => $column_2
+        'column_2' => $column_2,
+        'box_color' => $box_color
       )
     );
 

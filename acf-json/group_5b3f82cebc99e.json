@@ -1,6 +1,6 @@
 {
     "key": "group_5b3f82cebc99e",
-    "title": "Quote Block",
+    "title": "Blockquote",
     "fields": [
         {
             "key": "field_5b3f82d884a5f",
@@ -23,7 +23,7 @@
         },
         {
             "key": "field_5b3f82fad1401",
-            "label": "Source",
+            "label": "Citation",
             "name": "source",
             "type": "text",
             "instructions": "",
@@ -44,25 +44,22 @@
             "key": "field_5b3f8b37d8ecb",
             "label": "Background Color",
             "name": "background_color",
-            "type": "radio",
+            "type": "clone",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
-                "class": "",
+                "class": "color_swatches",
                 "id": ""
             },
-            "choices": {
-                "pink": "Pink",
-                "dark-pink": "Dark Pink"
-            },
-            "allow_null": 0,
-            "other_choice": 0,
-            "save_other_choice": 0,
-            "default_value": "pink",
-            "layout": "horizontal",
-            "return_format": "value"
+            "clone": [
+                "field_5b606ac87f3c8"
+            ],
+            "display": "seamless",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0
         },
         {
             "key": "field_5b5fde3626d9a",
@@ -104,5 +101,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1533009251
+    "modified": 1533045489
 }

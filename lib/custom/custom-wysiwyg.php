@@ -28,58 +28,52 @@ function ll_format_tinymce( $data ) {
           array(
             'title'    => 'Montserrat',
             'classes'  => 'sans-serif',
-            'selector' => 'h1, h2, h3, h4, h5, h6, a, p, span, li',
+            'selector' => 'h1, h2, h3, h4, h5, h6, a, p, span, time, li',
             'wrapper'  => false
           ),
           array(
             'title'    => 'Libre Baskerville',
             'classes'  => 'serif',
-            'selector' => 'h1, h2, h3, h4, h5, h6, a, p, span, li',
+            'selector' => 'h1, h2, h3, h4, h5, h6, a, p, span, time, li',
             'wrapper'  => false
-          ),
-          array(
-            'title'    => 'Gilroy Bold',
-            'classes'  => 'sans-serif-bold',
-            'selector' => 'h1, h2, h3, h4, h5, h6, a, p, span, li',
-            'wrapper'  => false
-          ),
+          )
         ]
       ),
       array(
         'title'     => 'Headings',
         'items'     => [
           array(
-            'title'    => 'Heading 1',
+            'title'    => 'H1',
             'classes'  => 'h1',
             'selector' => 'h1, h2, h3, h4, h5, h6, a, p, span, li',
             'wrapper'  => false
           ),
           array(
-            'title'    => 'Heading 2',
+            'title'    => 'H2',
             'classes'  => 'h2',
             'selector' => 'h1, h2, h3, h4, h5, h6, a, p, span, li',
             'wrapper'  => false
           ),
           array(
-            'title'    => 'Heading 3',
+            'title'    => 'H3',
             'classes'  => 'h3',
             'selector' => 'h1, h2, h3, h4, h5, h6, a, p, span, li',
             'wrapper'  => false
           ),
           array(
-            'title'    => 'Heading 4',
+            'title'    => 'H4',
             'classes'  => 'h4',
             'selector' => 'h1, h2, h3, h4, h5, h6, a, p, span, li',
             'wrapper'  => false
           ),
           array(
-            'title'    => 'Heading 5',
+            'title'    => 'H5',
             'classes'  => 'h5',
             'selector' => 'h1, h2, h3, h4, h5, h6, a, p, span, li',
             'wrapper'  => false
           ),
           array(
-            'title'    => 'Heading 6',
+            'title'    => 'H6',
             'classes'  => 'h6',
             'selector' => 'h1, h2, h3, h4, h5, h6, a, p, span, li',
             'wrapper'  => false
@@ -87,70 +81,157 @@ function ll_format_tinymce( $data ) {
         ]
       ),
       array(
-        'title'     => 'Format',
+        'title' => 'Colors',
+        'items' => array(
+          array(
+            'title'    => 'White',
+            'classes'  => 'white',
+            'selector' => 'h1, h2, h3, h4, h5, h6, p, a, span, li, time, dt, dd, address, code',
+            'wrapper'  => false
+          ),
+          array(
+            'title'    => 'Silver',
+            'classes'  => 'silver',
+            'selector' => 'h1, h2, h3, h4, h5, h6, p, a, span, li, time, dt, dd, address, code',
+            'wrapper'  => false
+          ),
+          array(
+            'title'    => 'Pink',
+            'classes'  => 'pink',
+            'selector' => 'h1, h2, h3, h4, h5, h6, p, a, span, li, time, dt, dd, address, code',
+            'wrapper'  => false
+          ),
+          array(
+            'title'    => 'Grey',
+            'classes'  => 'grey',
+            'selector' => 'h1, h2, h3, h4, h5, h6, p, a, span, li, time, dt, dd, address, code',
+            'wrapper'  => false
+          ),
+          array(
+            'title'    => 'Salmon',
+            'classes'  => 'salmon',
+            'selector' => 'h1, h2, h3, h4, h5, h6, p, a, span, li, time, dt, dd, address, code',
+            'wrapper'  => false
+          ),
+          array(
+            'title'    => 'Peach',
+            'classes'  => 'peach',
+            'selector' => 'h1, h2, h3, h4, h5, h6, p, a, span, li, time, dt, dd, address, code',
+            'wrapper'  => false
+          ),
+          array(
+            'title'    => 'Medium Grey',
+            'classes'  => 'med-grey',
+            'selector' => 'h1, h2, h3, h4, h5, h6, p, a, span, li, time, dt, dd, address, code',
+            'wrapper'  => false
+          ),
+          array(
+            'title'    => 'Smoke',
+            'classes'  => 'smoke',
+            'selector' => 'h1, h2, h3, h4, h5, h6, p, a, span, li, time, dt, dd, address, code',
+            'wrapper'  => false
+          ),
+          array(
+            'title'    => 'Black',
+            'classes'  => 'black',
+            'selector' => 'h1, h2, h3, h4, h5, h6, p, a, span, li, time, dt, dd, address, code',
+            'wrapper'  => false
+          ),
+        )
+      ),
+      array(
+        'title'     => 'Size',
         'items'     => [
           array(
-            'title'    => 'Text Transform: Uppercase',
-            'classes'  => 'text-transform-uppercase',
+            'title'    => 'Large',
+            'classes'  => 'text-large',
             'selector' => 'h1, h2, h3, h4, h5, h6, a, p, span, li',
             'wrapper'  => false
           ),
           array(
-            'title'    => 'Text Transform: Lowercase',
-            'classes'  => 'text-transform-lowercase',
-            'selector' => 'h1, h2, h3, h4, h5, h6, a, p, span, li',
-            'wrapper'  => false
-          ),
-          array(
-            'title'    => 'Text Transform: None',
-            'classes'  => 'text-transform-none',
-            'selector' => 'h1, h2, h3, h4, h5, h6, a, p, span, li',
-            'wrapper'  => false
-          ),
-          array(
-            'title'    => 'Text Size: Large',
-            'classes'  => 'text-size-large',
-            'selector' => 'h1, h2, h3, h4, h5, h6, a, p, span, li',
-            'wrapper'  => false
-          ),
-          array(
-            'title'    => 'Text Size: Default',
+            'title'    => 'Default',
             'classes'  => 'text-size-default',
             'selector' => 'h1, h2, h3, h4, h5, h6, a, p, span, li',
             'wrapper'  => false
           ),
           array(
-            'title'    => 'Text Size: Small',
-            'classes'  => 'text-size-small',
+            'title'    => 'Small',
+            'classes'  => 'text-small',
             'selector' => 'h1, h2, h3, h4, h5, h6, a, p, span, li',
             'wrapper'  => false
           ),
+        ]
+      ),
+      array(
+        'title'     => 'Spacing',
+        'items'     => [
           array(
             'title'    => 'Letter Spacing',
             'classes'  => 'text-letter-spacing',
             'selector' => 'h1, h2, h3, h4, h5, h6, a, p, span, li',
             'wrapper'  => false
           ),
-        ],
+        ]
       ),
       array(
-        'title'     => 'Color',
-        'items'     => [
+        'title'    => 'Weight',
+        'items'  => array(
           array(
-            'title'    => 'Default',
-            'classes'  => 'text-dark',
-            'selector' => 'h1, h2, h3, h4, h5, h6, a, p, span, li',
+            'title'    => 'Unstyled',
+            'classes'  => '',
+            'selector' => 'h1, h2, h3, h4, h5, h6, p, a, span, li, time, dt, dd',
             'wrapper'  => false
           ),
           array(
-            'title'    => 'White',
-            'classes'  => 'text-color-white',
-            'selector' => 'h1, h2, h3, h4, h5, h6, a, p, span, li',
+            'title'    => 'Light',
+            'classes'  => 'text-light',
+            'selector' => 'h1, h2, h3, h4, h5, h6, p, a, span, li, time, dt, dd',
+            'wrapper'  => false
+          ),
+          array(
+            'title'    => 'Normal',
+            'classes'  => 'text-normal',
+            'selector' => 'h1, h2, h3, h4, h5, h6, p, a, span, li, time, dt, dd',
+            'wrapper'  => false
+          ),
+          array(
+            'title'    => 'Semi-bold',
+            'classes'  => 'text-semi',
+            'selector' => 'h1, h2, h3, h4, h5, h6, p, a, span, li, time, dt, dd',
+            'wrapper'  => false
+          ),
+          array(
+            'title'    => 'Bold',
+            'classes'  => 'text-bold',
+            'selector' => 'h1, h2, h3, h4, h5, h6, p, a, span, li, time, dt, dd',
             'wrapper'  => false
           ),
           array(
             'title'    => 'Black',
-            'classes'  => 'primary-color',
+            'classes'  => 'text-black',
+            'selector' => 'h1, h2, h3, h4, h5, h6, p, a, span, li, time, dt, dd',
+            'wrapper'  => false
+          ),
+        ),
+      ),
+      array(
+        'title'     => 'Transform',
+        'items'     => [
+          array(
+            'title'    => 'Uppercase',
+            'classes'  => 'text-uppercase',
+            'selector' => 'h1, h2, h3, h4, h5, h6, a, p, span, li',
+            'wrapper'  => false
+          ),
+          array(
+            'title'    => 'Lowercase',
+            'classes'  => 'text-lowercase',
+            'selector' => 'h1, h2, h3, h4, h5, h6, a, p, span, li',
+            'wrapper'  => false
+          ),
+          array(
+            'title'    => 'Default',
+            'classes'  => 'text-transform-none',
             'selector' => 'h1, h2, h3, h4, h5, h6, a, p, span, li',
             'wrapper'  => false
           ),
@@ -182,6 +263,22 @@ function ll_format_tinymce( $data ) {
     );
 
   $data['style_formats'] = json_encode( $style_formats );
+
+  $custom_colours = '
+        "000000", "Black",
+        "4A4A4A", "Medium Grey",
+        "646464", "Smoke",
+        "646464", "Grey",
+        "979797", "Silver",
+        "E2A187", "Peach",
+        "F0D0C3", "Salmon",
+        "f7e7e1", "Pink",
+        "ffffff", "White"
+    ';
+
+    // build colour grid default+custom colors
+  $data['textcolor_map'] = '['.$custom_colours.']';
+
   return $data;
 }
 

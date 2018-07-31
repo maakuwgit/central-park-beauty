@@ -8,10 +8,10 @@
 
 $defaults = [
   'layout' => null,
-  'text_color' => null,
+  'text_color' => 'grey',
   'heading' => null,
   'bg_image' => null,
-  'overlay_opacity' => null
+  'overlay_opacity' => 0
 ];
 
 $component_data = ll_parse_args( $component_data, $defaults );
@@ -46,10 +46,17 @@ $component_id   = $component_args['id'];
 
 <?php if ( ll_empty( $component_data ) ) return; ?>
 <style>
-  .cp-cta__container-bg {
+  .cp-cta .cp-cta__caption p {
     color: <?php echo $text_color; ?>;
+  }
+
+  .cp-cta .cp-cta__container-bg {
     background-image: url(<?php echo $bg_image[0]; ?>);
     background-color: rgba(226, 161, 135, <?php echo $overlay_opacity; ?>);
+
+    <?php if( $overlay_opacity > 0 ) : ?>
+    background-blend-mode: multiply;
+    <?php endif; ?>
   }
 
   .cp-cta__container-bg:before {

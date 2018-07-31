@@ -39,30 +39,40 @@ $component_id   = $component_args['id'];
 $bg = $component_data['box_color'];
 
 if ($bg ){
-  $bg = ' ' . $bg;
+  $bg = ' ' . $bg['swatches_bg'];
 }
 ?>
 
 <?php if ( ll_empty( $component_data ) ) return; ?>
-<div class="cp-how<?php echo $bg . implode( " ", $classes ); ?>" <?php echo ( $component_id ? 'id="'.$component_id.'"' : '' ) ?> data-component="how">
+<div class="cp-how<?php echo implode( " ", $classes ); ?>" <?php echo ( $component_id ? 'id="'.$component_id.'"' : '' ) ?> data-component="how">
+
   <div class="container">
-<span class="cp-how__h">H</span>
+
+    <span class="cp-how__h">H</span>
+
     <div class="row">
 
       <div class="col-1of2">
-        <div class="cp-how__col">
 
+        <div class="cp-how__col">
           <?php echo $column_1; ?>
         </div>
+
       </div>
-      <div class="col-1of2 ">
+
+      <div class="col-1of2">
+
         <div class="cp-how__col">
           <?php echo $column_2; ?>
           <span class="cp-how__ow">OW</span>
         </div>
+
       </div>
     </div>
-    <div class="cp-how__box"></div>
+
+    <div class="cp-how__box<?php echo $bg; ?>"></div>
+    <!-- .cp-how__box -->
+
   </div>
 
 </div>
