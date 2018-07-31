@@ -64,14 +64,14 @@ if ($bg_color ){
 
     <div class="row">
 
-      <div class="col-1of2">
+      <div class="col-md-6of12 col-lg-6of12 col-xl-6of12">
         <span class="cp-two-columns__left-heading<?php echo $color; ?>"><?php echo $title; ?></span>
         <div class="cp-two-columns__left-text">
           <?php echo $left_text; ?>
         </div>
       </div>
 
-      <div class="col-1of2">
+      <div class="col-md-6of12 col-lg-6of12 col-xl-6of12">
         <div class="cp-two-columns__right-text">
           <?php echo $right_content; ?>
         </div>

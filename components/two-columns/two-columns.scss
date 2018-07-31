@@ -10,12 +10,7 @@
   padding: 4em 0 20em;
 
   .cp-two-columns__left-heading {
-    @extend %sans-serif;
-    font-size: 5.3125em;
-    font-weight: 500;
-    letter-spacing: 10.63px;
-    line-height: 1.211;
-    text-transform: uppercase;
+    @extend %h0;
     position: relative;
     display: block;
     margin: 1em 0 2em 1.5em;
@@ -45,28 +40,11 @@
     }
   }
 
-  .cp-two-columns__left-text {
-    margin-left: auto;
-    padding-right: 1em;
-  }
-
-  .cp-two-columns__right-text {
-    padding-left: 1em;
-  }
-
-  @include screen-md {
-
-    .cp-two-columns__left-text,
-    .cp-two-columns__right-text {
-       width: 100%;
-    }
-
-  }
-
   @include screen-sm {
 
     .cp-two-columns__left-heading {
-      font-size: 2em;
+      margin-top: auto;
+      margin-bottom: 50px;
     }
 
     .cp-two-columns__right-text {
@@ -75,6 +53,7 @@
 
     .cp-two-columns__left-text {
       padding-right: 0;
+      margin-bottom: 50px;
     }
   }
 
@@ -87,6 +66,11 @@
         margin-bottom: 25px;
       }
 
+    }
+
+    .cp-two-columns__left-text {
+      margin-bottom: 89px;
+      margin-left: auto;
     }
 
     .cp-two-columns__left-heading {

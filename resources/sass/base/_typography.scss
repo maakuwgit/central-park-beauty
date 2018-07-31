@@ -76,10 +76,9 @@ a {
   text-transform: uppercase;
 
   @include screen-md {
-    font-size: 3em;
-  }
-  @include screen-sm {
-    font-size: 2em;
+    @include font-size(60);
+    line-height: 72px;
+    line-height: 1.21176470588235;
     letter-spacing: 1px;
   }
 }
