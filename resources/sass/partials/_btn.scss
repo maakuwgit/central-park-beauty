@@ -57,3 +57,10 @@
 .btn__light {
   @extend %btn__light;
 }
+
+.icon-link {
+  @extend %btn;
+  padding: 0;
+  border: none;
+  color: $black;
+}

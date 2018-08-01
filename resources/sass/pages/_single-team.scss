@@ -8,6 +8,11 @@
     @extend  %section-margins;
     padding-top: 57px;
     padding-bottom: 57px;
+
+    .icon-link {
+      margin-left: 8.33333337%;
+    }
+
   }
 
   .single-team__header {
@@ -38,10 +43,6 @@
       text-transform: initial;
       letter-spacing: initial;
     }
-
-    p, li {
-      color: $black;
-    }
   }
 
   .single-team__details {
@@ -59,6 +60,19 @@
     margin-top: 0;
     margin-bottom: 0;
     color: $black;
+  }
+
+  .single-team__testimonial {
+    margin-bottom: 32px;
+    font-weight: $text-semi;
+    color: $black;
+    font-style: italic;
+
+    cite {
+      @extend %sans-serif;
+      font-weight: $text-semi;
+      color: inherit;
+    }
   }
 
   .single-team__quote {
@@ -116,6 +130,7 @@
       margin-bottom: 77px;
       margin-left: 14%;
       text-indent: -14%;
+      letter-spacing: 0;
 
       .rotated {
         position: absolute;

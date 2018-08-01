@@ -120,6 +120,21 @@
         </blockquote>
 
       <?php endif; ?>
+
+      <?php if ($testimonials) : ?>
+
+        <h3>Sweet Mentions</h3>
+
+        <?php foreach ($testimonials as $testimonial) : ?>
+
+        <blockquote class="single-team__testimonial row start" cite="<?php echo $testimonial['member_cite']; ?>">
+          <?php echo format_text($testimonial['blockquote']); ?>
+          <cite>&ndash; <?php echo $testimonial['member_cite']; ?></cite>
+        </blockquote>
+
+        <?php endforeach; ?>
+
+      <?php endif; ?>
       </div>
       <!-- .single-team__details -->
 

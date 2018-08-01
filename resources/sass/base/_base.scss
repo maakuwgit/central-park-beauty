@@ -43,6 +43,8 @@ body {
 }
 
 blockquote {
+  display: flex;
+  width: 100%;
   margin: auto;
   @extend %serif;
   font-weight: $text-normal;
@@ -52,6 +54,20 @@ blockquote {
 
   @include screen-sm {
     font-size: 1.3em;
+  }
+
+  p, cite {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  cite {
+    @extend %p;
+    color: inherit;
+  }
+
+  p {
+    color: inherit;
   }
 }
 
