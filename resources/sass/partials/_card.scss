@@ -17,7 +17,8 @@
 
     .card__meta,
     .post__meta,
-    .team__meta {
+    .team__meta,
+    .service__meta {
       color: $white;
       background-color: $black;
     }
@@ -61,8 +62,10 @@
   @extend %serif;
   margin-top: 25px;
   margin-bottom: 0;
-  font-size: font_size(20);
+  @include font_size(20);
   font-weight: $text-bold;
+  letter-spacing: initial;
+  text-transform: initial;
   color: $black;
   line-height: 26px;
   line-height: 1.27777777777778;

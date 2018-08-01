@@ -24,15 +24,15 @@
 
   <div class="card-grid__body">
     <?php
-      $categories = get_the_category();
+      $treatments = get_the_terms( get_the_ID(), 'service_category');
 
-      if ($categories) :
+      if ($treatments) :
 
-        foreach($categories as $category) :
+        foreach($treatments as $treatment) :
       ?>
 
-        <span class="card-grid__meta"><?php echo $category->name; ?></span>
-        <!-- .entry__meta_category -->
+        <span class="card-grid__meta"><?php echo $treatment->name; ?></span>
+        <!-- .card-grid__meta -->
 
           <?php
         endforeach;
@@ -46,7 +46,7 @@
       <!-- .card-grid__title -->
     </div>
 
-    <?php get_template_part('templates/partials/post-meta'); ?>
+    <?php get_template_part('templates/partials/service-meta'); ?>
 
   </div>
 

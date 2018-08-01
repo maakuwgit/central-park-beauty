@@ -8,34 +8,38 @@
 
 .cp-quote-block {
   margin: 2em 0;
-}
 
-.cp-quote__content {
-  padding: 15em 0;
+  .cp-quote__content {
+    flex-direction: column;
+    padding: 15em 0;
 
-  @include screen-sm {
-    padding: 8em 0;
+    @include screen-sm {
+      padding: 8em 0;
+    }
+
+    .icon {
+      @include font-size(39);
+      fill: $black;
+    }
+
+    .cp-quote__quote {
+      width: auto;
+      padding-top: 51px;
+      color: $black;
+    }
+
+    .cp-quote__source {
+      padding-top: 50px;
+      @extend %sans-serif;
+      @include font-size(14);
+      color: $black;
+      letter-spacing: 4.67px;
+      line-height: 18px;
+      line-height: 1.28571428571429;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
   }
 
-  .icon {
-    @include font-size(39);
-    fill: $black;
-  }
-
-  .cp-quote__quote {
-    padding-top: 51px;
-    color: $black;
-  }
-
-  .cp-quote__source {
-    padding-top: 50px;
-    @extend %sans-serif;
-    @include font-size(14);
-    color: $black;
-    letter-spacing: 4.67px;
-    line-height: 18px;
-    line-height: 1.28571428571429;
-    text-align: center;
-    text-transform: uppercase;
-  }
 }
