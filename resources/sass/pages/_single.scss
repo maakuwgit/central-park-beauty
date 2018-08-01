@@ -1,0 +1,46 @@
+/**
+ * Single
+ */
+
+.single {
+
+  blockquote {
+    width: 80%;
+    margin-top: 32px;
+    margin-bottom: 85px;
+    margin-right: 0;
+    quotes: "\201C""\201D";
+    @extend %h4;
+    @extend %serif;
+    color: $black;
+    line-height: 43px;
+    line-height: 1.72;
+
+    p {
+      font-size: inherit;
+      font-family: inherit;
+      line-height: inherit;
+      letter-spacing: inherit;
+    }
+
+    &::before {
+      position: absolute;
+      @extend %sans-serif;
+      @include font-size(98);
+      font-weight: $text-bold;
+      content: open-quote;
+      margin-top: 10px;
+      margin-left: -20%;
+    }
+
+  }
+
+  @include screen-md-up {
+
+    blockquote {
+      margin-top: 55px;
+      margin-bottom: 100px;
+    }
+
+  }
+}

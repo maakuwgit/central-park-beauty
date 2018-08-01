@@ -4,11 +4,19 @@
  */
 
 .post {
+  padding-bottom: 50px;
 
+  @include screen-md-up {
+    padding-bottom: 100px;
+  }
 }
 
 .post__header {
-
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 75vh;
+  max-height: 702px;
 }
 
 .post__header__title {
@@ -16,7 +24,6 @@
 }
 
 .post__content {
-
 }
 
 .post__footer {

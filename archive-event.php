@@ -11,9 +11,6 @@
   $overlay_opacity = get_field('overlay_opacity', $page_for_events);
   $text_color = get_field('text_color', $page_for_events);
 
-  var_dump($page_for_events);
-
-
   ll_include_component(
     'hero-3',
     array(
@@ -31,6 +28,10 @@
   );
 ?>
 
-<?php while (have_posts()) : the_post(); ?>
-  <?php get_template_part('templates/contents/content', 'single'); ?>
-<?php endwhile; ?>
+<section class="card-grid__wrapper row start">
+
+  <?php while (have_posts()) : the_post(); ?>
+    <?php get_template_part('templates/contents/content', 'single-event'); ?>
+  <?php endwhile; ?>
+
+</section>
