@@ -71,17 +71,17 @@ if ( ! function_exists('register_condition_taxonomies') ) {
 
     // Add new taxonomy, make it hierarchical (like categories)
     $labels = array(
-      'name'                => _x( 'Condition Category', 'taxonomy general name' ),
-      'singular_name'       => _x( 'Condition Category', 'taxonomy singular name' ),
+      'name'                => _x( 'Effected Areas', 'taxonomy general name' ),
+      'singular_name'       => _x( 'Effected Area', 'taxonomy singular name' ),
       'search_items'        => __( 'Search Condition Categories' ),
       'all_items'           => __( 'All Condition Categories' ),
-      'parent_item'         => __( 'Parent Condition Category' ),
-      'parent_item_colon'   => __( 'Parent Condition Category:' ),
-      'edit_item'           => __( 'Edit Condition Category' ),
-      'update_item'         => __( 'Update Condition Category' ),
-      'add_new_item'        => __( 'Add New Condition Category' ),
-      'new_item_name'       => __( 'New Condition Category Name' ),
-      'menu_name'           => __( 'Condition Categories' )
+      'parent_item'         => __( 'Parent Area' ),
+      'parent_item_colon'   => __( 'Parent Area:' ),
+      'edit_item'           => __( 'Edit Area' ),
+      'update_item'         => __( 'Update Effected Area' ),
+      'add_new_item'        => __( 'Add New Area' ),
+      'new_item_name'       => __( 'New Area Name' ),
+      'menu_name'           => __( 'Effected Areas' )
     );
 
     $args = array(
@@ -93,39 +93,7 @@ if ( ! function_exists('register_condition_taxonomies') ) {
       'rewrite'             => array( 'slug' => 'category' )
     );
 
-    register_taxonomy( 'condition_category', array( 'condition' ), $args ); // Must include custom post type name
-
-    // Add new taxonomy, NOT hierarchical (like tags)
-    $labels = array(
-      'name'                         => _x( 'Condition Tags', 'taxonomy general name' ),
-      'singular_name'                => _x( 'Condition Tag', 'taxonomy singular name' ),
-      'search_items'                 => __( 'Search Condition' ),
-      'popular_items'                => __( 'Popular Condition' ),
-      'all_items'                    => __( 'All Condition' ),
-      'parent_item'                  => null,
-      'parent_item_colon'            => null,
-      'edit_item'                    => __( 'Edit Condition' ),
-      'update_item'                  => __( 'Update Condition' ),
-      'add_new_item'                 => __( 'Add New Condition' ),
-      'new_item_name'                => __( 'New Condition Name' ),
-      'separate_items_with_commas'   => __( 'Separate Condition with commas' ),
-      'add_or_remove_items'          => __( 'Add or remove Condition' ),
-      'choose_from_most_used'        => __( 'Choose from the most used Condition' ),
-      'not_found'                    => __( 'No Condition found.' ),
-      'menu_name'                    => __( 'Condition Tags' )
-    );
-
-    $args = array(
-      'hierarchical'            => false,
-      'labels'                  => $labels,
-      'show_ui'                 => true,
-      'show_admin_column'       => true,
-      'update_count_callback'   => '_update_post_term_count',
-      'query_var'               => true,
-      'rewrite'                 => array( 'slug' => 'condition_tag' )
-    );
-
-    register_taxonomy( 'condition_tag', 'condition', $args ); // Must include custom post type name
+    register_taxonomy( 'effected_areas', array( 'condition' ), $args ); // Must include custom post type name
 
   }
 

@@ -140,6 +140,11 @@
         transform: scale(1.2);
       }
 
+      &.icon-smartphone {
+        transform: scale(1.5);
+      }
+
+
       @include screen-md {
         font-size: 2em;
       }
@@ -237,7 +242,7 @@
     list-style-type: none;
 
     li {
-      display: inline-flex;
+      display: flex;
       @extend %sans-serif;
       letter-spacing: 3px;
 

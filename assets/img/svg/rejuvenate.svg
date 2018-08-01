@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="149px" height="426px" viewBox="0 0 149 426" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51 (57462) - http://www.bohemiancoding.com/sketch -->
+    <title>REJUVE-NATE</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="REJUVE-NATE" transform="translate(-23.000000, -5.000000)" fill="#000000">
+            <g id="REJUVe" transform="translate(52.000000, 271.000000) rotate(-90.000000) translate(-52.000000, -271.000000) translate(-116.500000, 219.500000)" font-family="Montserrat-Regular, Montserrat" font-size="85" font-weight="normal">
+                <text id="REJUVE">
+                    <tspan x="0" y="82">REJUVE</tspan>
+                </text>
+            </g>
+            <g id="nate" transform="translate(141.000000, 114.500000) rotate(-90.000000) translate(-141.000000, -114.500000) translate(27.000000, 63.000000)" font-family="Montserrat-Regular, Montserrat" font-size="85" font-weight="normal">
+                <text id="NATE">
+                    <tspan x="0" y="82">NATE</tspan>
+                </text>
+            </g>
+            <rect id="Rectangle-14" fill-rule="nonzero" transform="translate(138.000000, 342.000000) rotate(90.000000) translate(-138.000000, -342.000000) " x="51" y="340" width="174" height="4"></rect>
+        </g>
+    </g>
+</svg>

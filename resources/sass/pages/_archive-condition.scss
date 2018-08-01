@@ -1,0 +1,11 @@
+/**
+ * Condition Archive
+ */
+
+.post-type-archive-condition {
+
+  .condition__meta {
+    @extend %card__nav;
+  }
+
+}

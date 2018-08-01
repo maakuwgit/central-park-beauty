@@ -14,11 +14,12 @@
 
   &:hover {
     box-shadow: 2px 4px 8px 2px rgba($black, 0.11);
-
+/* Dev Note: this isn't really a sustainable solution as we'll have to keep adding here */
     .card__meta,
     .post__meta,
     .team__meta,
-    .service__meta {
+    .service__meta,
+    .condition__meta {
       color: $white;
       background-color: $black;
     }
