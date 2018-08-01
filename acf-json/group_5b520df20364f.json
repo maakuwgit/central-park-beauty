@@ -4,9 +4,9 @@
     "fields": [
         {
             "key": "field_5b520df208e71",
-            "label": "Background",
+            "label": "Background Color",
             "name": "background",
-            "type": "group",
+            "type": "clone",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -15,53 +15,13 @@
                 "class": "",
                 "id": ""
             },
+            "clone": [
+                "field_5b606ac87f3c8"
+            ],
+            "display": "seamless",
             "layout": "block",
-            "sub_fields": [
-                {
-                    "key": "field_5b520df20aa3c",
-                    "label": "Background Color",
-                    "name": "background_color",
-                    "type": "button_group",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "choices": {
-                        "0, 0, 0": "Black",
-                        "255, 255, 255": "White",
-                        "240, 208, 195": "Dark Pink",
-                        "247, 231, 225": "Pink"
-                    },
-                    "allow_null": 0,
-                    "default_value": "",
-                    "layout": "horizontal",
-                    "return_format": "value"
-                },
-                {
-                    "key": "field_5b520df20aaaf",
-                    "label": "Opacity",
-                    "name": "opacity",
-                    "type": "range",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "min": "",
-                    "max": 1,
-                    "step": ".1",
-                    "prepend": "",
-                    "append": ""
-                }
-            ]
+            "prefix_label": 0,
+            "prefix_name": 0
         },
         {
             "key": "field_5b520df208edf",
@@ -116,7 +76,7 @@
                             "key": "field_5b520df212d4a",
                             "label": "Color",
                             "name": "color",
-                            "type": "button_group",
+                            "type": "clone",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
@@ -125,16 +85,13 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "choices": {
-                                "#000000": "Black",
-                                "#ffffff": "White",
-                                "#E2A187": "Dark Pink",
-                                "#f7e7e1": "Pink"
-                            },
-                            "allow_null": 0,
-                            "default_value": "#000000",
-                            "layout": "horizontal",
-                            "return_format": "value"
+                            "clone": [
+                                "field_5b607c0ed7b1c"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
                         }
                     ]
                 },
@@ -196,5 +153,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1532104317
+    "modified": 1533140131
 }

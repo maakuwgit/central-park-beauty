@@ -21,6 +21,16 @@ function format_text( $content ) {
   return $content;
 }
 
+/*
+ * Formats a marked up image using an image array. The output work with the data-background feature
+ * Attributes can be sent through for id and classes, pretty much anything
+ */
+function ll_format_image( $hero, $args=false ) {
+  //Data-Src-[size] attributes are read by the common.js on resize to determine with size to show
+  return '<img' . ($args ? implode(' ', $args) : '') . ' alt="'.$hero['title'].'" src="'.$hero['sizes']['medium'].'"
+  srcset="'.$hero['sizes']['large'].' 2x, '.$hero['url'].' 3x" data-src-md="'.$hero['sizes']['medium'].'" data-src-lg="'.$hero['sizes']['large'].'" data-src-xl="'.$hero['url'].'">';
+}
+
 /**
  * var_dump variable
  * wrap it in a <pre> tag
