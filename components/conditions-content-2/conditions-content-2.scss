@@ -9,6 +9,10 @@
 .cp-conditions-content-2 {
   @extend %section-padding;
 
+  @include screen-md-up {
+    padding-bottom: 22.5vh;
+  }
+
   .cp-conditions-content-2__left-heading {
     @extend %h0;
     @extend %sans-serif;

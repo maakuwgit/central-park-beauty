@@ -1,7 +1,7 @@
 /**
  * Utilites & classes
  */
-
+/*Dev Note: instances of overrides using "body .class" are to allow for overriding of the overrides, plus to prevent crashing when stacked */
 .aligncenter {
   display: block;
   margin: 0 auto;
@@ -91,6 +91,28 @@
 .h6.text-italic {
   font-style: italic;
 }
+
+body .letter-lg-spacing {
+  letter-spacing: 10.63px;
+}
+
+body .letter-md-spacing {
+  letter-spacing: 6px;
+}
+
+body .letter-sm-spacing {
+  letter-spacing: 4px;
+}
+
+body .letter-xs-spacing {
+  letter-spacing: 1px;
+}
+
+body .letter-default-spacing {
+  letter-spacing: initial;
+}
+
+/* Grid */
 
 .row--full {
   margin: 0;
@@ -417,8 +439,12 @@
  * Utility classes for affecting text display
  */
 
-.text-uppercase {
-  text-transform: uppercase !important;
+body .text-uppercase {
+  text-transform: uppercase;
+}
+
+body .text-no-case {
+  text-transform: initial;
 }
 
 .text-large {

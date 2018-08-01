@@ -13,11 +13,11 @@
   font-family: 'Libre Baskerville', serif;
 }
 
-.sans-serif {
+body .sans-serif {
   @extend %sans-serif;
 }
 
-.serif {
+body .serif {
   @extend %serif;
 }
 

@@ -37,22 +37,33 @@ $component_id   = $component_args['id'];
 <?php if ( ll_empty( $component_data ) ) return; ?>
 <div class="cp-info-boxes <?php echo implode( " ", $classes ); ?>" <?php echo ( $component_id ? 'id="'.$component_id.'"' : '' ) ?> data-component="info-boxes">
 
-  <div class="container">
+  <div class="container-full">
 
-    <div class="row">
+    <div class="row centered">
 
       <?php if ($info_boxes): ?>
 
-        <?php foreach ($info_boxes as $key => $info_box): ?>
+        <div class="col-10of12">
 
-          <div class="col-1of3 cp-info-boxes__col">
+          <div class="row start">
 
-            <h3 class="cp-info-boxes__title"><?php echo $info_box['title'] ?></h3>
-            <?php echo $info_box['content']; ?>
+          <?php foreach ($info_boxes as $key => $info_box) : ?>
+
+            <div class="col col-sm-6of12 col-md-6of12 col-lg-4of12 col-xl-4of12 cp-info-boxes__col">
+
+            <?php if( $info_box['title'] ) :?>
+              <h4 class="cp-info-boxes__title"><?php echo $info_box['title'] ?></h4>
+            <?php endif; ?>
+
+              <?php echo format_text($info_box['content']); ?>
+
+            </div>
+
+          <?php endforeach ?>
 
           </div>
 
-        <?php endforeach ?>
+        </div>
 
       <?php endif ?>
 

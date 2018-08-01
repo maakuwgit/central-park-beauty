@@ -1,0 +1,27 @@
+/**
+ * Condition
+ */
+
+.single-condition {
+
+
+  .cp-content-with-staggered-images {
+
+    .container {
+
+      .cp-content-with-staggered-images__heading {
+        @extend %h4;
+      }
+    }
+
+    .container-full {
+
+      .cp-content-with-staggered-images__heading {
+        @extend %h2;
+      }
+
+    }
+
+  }
+
+}

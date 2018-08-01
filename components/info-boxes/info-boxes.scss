@@ -7,23 +7,42 @@
  */
 
 .cp-info-boxes {
-  margin: 5em 0;
+  @extend %section-margins;
+  margin-bottom: auto;
 
-  @include screen-sm {
-    margin: 0;
+  p {
+    color: $grey;
   }
-}
 
-.cp-info-boxes__col {
-  padding: 1em;
-
-  @include screen-sm {
-    padding: 1em 0 0;
+  .h3 {
+    line-height: 30px;
+    color: $grey;
   }
-}
 
-.cp-info-boxes__title {
-  font-family: "Libre Baskerville";
-  font-size: 1.5625;
-  line-height: 1.36;
+  .cp-info-boxes__col {
+    margin-bottom: 32px;
+  }
+
+  @include screen-md-up {
+
+    .cp-info-boxes__col {
+      margin-bottom: 50px;
+
+      &:nth-of-type(n+2) {
+        margin-bottom: auto;
+      }
+    }
+
+  }
+
+  @include screen-sm-up {
+
+    /*Dev Note: since all but the block grid-style layouts don't use padding, just add an exception here*/
+    .row .cp-info-boxes__col[class*="col"] {
+      padding-right: $grid-gutter-width/2;
+      padding-left: $grid-gutter-width/2;
+    }
+
+  }
+
 }

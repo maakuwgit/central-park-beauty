@@ -12,7 +12,9 @@ if( have_rows( 'flex_default' ) ) {
 
           $quote = get_sub_field('quote');
           $source = get_sub_field('source');
-          $bg_color = get_sub_field('background_color');
+          $bg_color = array(
+            'swatches_bg' => get_sub_field('swatches_bg')
+          );
           $position = get_sub_field('logo_position');
 
           ll_include_component(

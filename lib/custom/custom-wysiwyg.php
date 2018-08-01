@@ -166,8 +166,32 @@ function ll_format_tinymce( $data ) {
         'title'     => 'Spacing',
         'items'     => [
           array(
-            'title'    => 'Letter Spacing',
-            'classes'  => 'text-letter-spacing',
+            'title'    => 'Extra Small Letter Space',
+            'classes'  => 'letter-xs-spacing',
+            'selector' => 'h1, h2, h3, h4, h5, h6, a, p, span, li',
+            'wrapper'  => false
+          ),
+          array(
+            'title'    => 'Small Letter Space',
+            'classes'  => 'letter-sm-spacing',
+            'selector' => 'h1, h2, h3, h4, h5, h6, a, p, span, li',
+            'wrapper'  => false
+          ),
+          array(
+            'title'    => 'Medium Letter Space',
+            'classes'  => 'letter-md-spacing',
+            'selector' => 'h1, h2, h3, h4, h5, h6, a, p, span, li',
+            'wrapper'  => false
+          ),
+          array(
+            'title'    => 'Large Letter Space',
+            'classes'  => 'letter-lg-spacing',
+            'selector' => 'h1, h2, h3, h4, h5, h6, a, p, span, li',
+            'wrapper'  => false
+          ),
+          array(
+            'title'    => 'Default Letter Space',
+            'classes'  => 'letter-default-spacing',
             'selector' => 'h1, h2, h3, h4, h5, h6, a, p, span, li',
             'wrapper'  => false
           ),

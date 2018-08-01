@@ -83,8 +83,8 @@ $component_id   = $component_args['id'];
 
       <?php endif ?>
     </div>
-    <div class="cp-link-list__box1"></div>
-    <div class="cp-link-list__box2"></div>
+    <div class="cp-link-list__box1 black"></div>
+    <div class="cp-link-list__box2 pink"></div>
   </div>
 
   </div>

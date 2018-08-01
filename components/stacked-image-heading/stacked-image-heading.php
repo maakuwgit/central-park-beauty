@@ -51,13 +51,18 @@ if( $bg ) $bg = ' ' . $bg;
 ?>
 
 <?php if ( ll_empty( $component_data ) ) return; ?>
+<style>
+  .cp-stacked-image-heading .cp-stacked-image-heading__box1::before {
+    background-color: <?php echo $box_1_color; ?>;
+  }
+</style>
 <div class="cp-stacked-image-heading<?php echo $bg . implode( " ", $classes ); ?>" <?php echo ( $component_id ? 'id="'.$component_id.'"' : '' ) ?> data-component="stacked-image-heading">
 
   <div class="container">
 
     <div class="row cp-stacked-image-heading__row">
 
-      <div class="col-5of12 cp-stacked-image-heading__box1" style="background-color: <?php echo $box_1_color; ?>">
+      <div class="col-5of12 cp-stacked-image-heading__box1">
 
         <div class="cp-stacked-image-heading__img1" style="background-image: url(<?php echo $image1[0]; ?>)"></div>
 
