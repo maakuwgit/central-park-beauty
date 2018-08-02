@@ -26,13 +26,13 @@
   <?php endif; ?>
 
   <?php if ( $details ) : ?>
-    <dt class="event__details__dt">Details</dt>
+    <dt class="event__details__dt event__details__detail">Details</dt>
     <dd class="event__details__dd"><?php echo format_text($details); ?></dd>
   <?php endif; ?>
 
   <?php if ( $contact ) : ?>
-    <dt class="event__details__dt">Main Contact</dt>
-    <dd class="event__details__dd"><?php echo $contact['name']; ?><br><?php echo $contact['phone']; ?></dd>
+    <dt class="event__details__dt event__details__contact">Main Contact</dt>
+    <dd class="event__details__dd"><?php echo $contact['name']; ?><br><?php echo format_phone($contact['phone'], false, '.'); ?></dd>
   <?php endif; ?>
 
 </dl>

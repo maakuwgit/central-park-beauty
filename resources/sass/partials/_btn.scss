@@ -1,6 +1,14 @@
 /**
  * Button Styles
  */
+%btn__text {
+  @extend %sans-serif;
+  @include font-size(14);
+  letter-spacing: 4.67px;
+  text-transform: uppercase;
+  line-height: 18px;
+  line-height: 1.125;
+}
 
 %btn {
   appearance: none;
@@ -9,16 +17,7 @@
   border-radius: 0;
   border: none;
   padding: 1.35714285714286em 3.57142857142857em;
-  @extend %sans-serif;
-  font-size: 0.875em;
-  letter-spacing: 4.67px;
-  text-transform: uppercase;
-  line-height: 18px;
-  line-height: 1.125;
-
-  &:hover, &:active, &:focus {
-
-  }
+  @extend %btn__text;
 }
 
 

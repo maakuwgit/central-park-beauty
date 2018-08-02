@@ -18,9 +18,9 @@
 ?>
 <article <?php post_class(); ?>>
 
-  <div class="container-full">
+  <div class="container">
 
-    <div class="row stretch">
+    <div class="row stretch start">
 
     <?php if( $bg_img ) : ?>
       <figure class="event__feature col col-md-6of12 col-lg-6of12 col-xl-6of12" data-backgrounder>
@@ -31,7 +31,7 @@
 
       </figure>
 
-      <div class="event__details col col-md-6of12 col-offset-lg-1 col-lg-5of12 col-offset-xl-1 col-xl-5of12">
+      <div class="event__details col col-md-6of12 col-offset-lg-1 col-lg-4of12 col-offset-xl-1 col-xl-4of12">
 
         <h1 class="event__details__supertitle">Event</h1>
         <!-- .event__details__supertitle -->

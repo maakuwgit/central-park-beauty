@@ -47,11 +47,9 @@
 
   .single-team__details {
     h3, h4, h5, h6 {
-      @extend %btn;
-      padding: 0;
+      @extend %btn__text;
       margin-top: 32px;
       margin-bottom: 14px;
-      cursor: initial;
       color: $black;
     }
   }

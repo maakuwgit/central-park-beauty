@@ -8,10 +8,50 @@
     min-height: 50vh;
   }
 
+  .event__details__supertitle {
+    margin-top: 47px;
+    margin-bottom: 69px;
+  }
+
+  .event__details__title {}
+
+  .event__details__description {
+
+    p {
+      margin-top: 0;
+    }
+
+  }
+
+  .event__details__dt {
+    @extend %btn__text;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    color: $black;
+  }
+
+  .event__details__dd {
+    @extend %p;
+    margin-bottom: 7px;
+  }
+
+  .event__details__detail {
+    margin-top: 25px;
+  }
+
+  .event__details__contact {
+    margin-top: 50px;
+  }
+
   @include screen-md-up {
 
     .event__feature {
       min-height: 80vh;
+      margin-left: 0;
+    }
+
+    .event__details {
+      margin-right: auto;
     }
 
   }
