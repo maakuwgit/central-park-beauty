@@ -146,7 +146,7 @@
 
 
       @include screen-md {
-        font-size: 2em;
+        @include font-size(20);
       }
     }
 
