@@ -1,0 +1,58 @@
+/**
+ * Form Template
+ */
+
+.page-template-template-form-template {
+
+  .hentry {
+
+    .gform_title,
+    .gform_footer {
+      margin-bottom: 25px;
+      padding-left: 8px;
+      padding-right: 8px;
+    }
+
+    .gform_title {
+      font-weight: $text-bold;
+    }
+
+    .gfield_label {
+      position: initial;
+      top: initial;
+      left: initial;
+      @include font-size(14);
+      line-height: 28px;
+      line-height: 2;
+      letter-spacing: initial;
+      font-weight: $text-normal;
+      text-transform: initial;
+    }
+
+    .gfield {
+      margin-bottom: 4px;
+
+      &.col {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      input[type="tel"],
+      textarea {
+        border: solid 1px $grey;
+        background-color: $white;
+      }
+    }
+
+    input[type="submit"] {
+      width: auto;
+      @include font-size(14);
+      line-height: 18px;
+      line-height: 1.28571428571429;
+      font-weight: $text-semi;
+    }
+
+  }
+}

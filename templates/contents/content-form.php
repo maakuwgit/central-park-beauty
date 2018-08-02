@@ -3,9 +3,11 @@
 ?>
 <article <?php post_class(); ?>>
 
+  <div class="container-full">
 <?php if( is_plugin_active( 'gravityforms/gravityforms.php' ) ) : ?>
 
   <?php gravity_form( $form_id, true, true ); ?>
+  <!-- .form-skin -->
 
 <?php endif; ?>
 
@@ -21,5 +23,7 @@
     $map
   );
 ?>
-<!-- .form-skin -->
+</div>
+<!-- .container -->
+
 </article>
