@@ -23,22 +23,6 @@
   <?php endif; ?>
 
   <div class="card-grid__body">
-    <?php
-      $treatments = get_the_terms( get_the_ID(), 'service_category');
-
-      if ($treatments) :
-
-        foreach($treatments as $treatment) :
-      ?>
-
-        <span class="card-grid__meta"><?php echo $treatment->name; ?></span>
-        <!-- .card-grid__meta -->
-
-          <?php
-        endforeach;
-
-      endif;
-      ?>
       <time class="card-grid__meta published" datetime="<?php echo get_the_time('c'); ?>"><?php echo get_the_date(); ?></time>
 
       <h3 class="card-grid__title">

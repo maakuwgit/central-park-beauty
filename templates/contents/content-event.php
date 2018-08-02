@@ -1,53 +1,92 @@
-<?php $image = get_the_post_thumbnail(); ?>
-<div class="card__wrapper col col-sm-6of12 col-md-4of12 col-lg-4of12 col-xl-4of12">
+<?php
+  $form_id = ( get_field('form_id') ? get_field('form_id') : 1 );
 
-  <div class="card-grid__card" data-clickthrough>
+  $map = array(
+    'map'       => get_field('map'),
+    'address'   => get_field('location_address'),
+    'phone'   => get_field('location_phone')
+  );
 
-  <?php if( $image ) : ?>
-    <figure class="card-grid__feature__wrapper" data-backgrounder>
+  $bg_img = get_post_thumbnail_id();
 
-      <div class="card-grid__feature feature">
+  if( $bg_img ) {
+    $bg_img_full = wp_get_attachment_image_url($bg_img, 'full');
+    $bg_img_lg = wp_get_attachment_image_url($bg_img, 'large');
+    $bg_img_md = wp_get_attachment_image_url($bg_img, 'medium');
+  }
 
-      <?php echo $image; ?>
+?>
+<article <?php post_class(); ?>>
 
-      </div><!-- .card-grid__feature.feature -->
+  <div class="container-full">
 
-    </figure>
-  <?php else: ?>
+    <div class="row stretch">
 
-    <figure class="card-grid__feature__wrapper">
+    <?php if( $bg_img ) : ?>
+      <figure class="event__feature col col-md-6of12 col-lg-6of12 col-xl-6of12" data-backgrounder>
 
-      <div class="card-grid__feature feature"></div><!-- .card-grid__feature.feature -->
+        <div class="feature">
+          <img alt="" src="<?php echo $bg_img_md; ?>" srcset="<?php echo $bg_img_lg; ?> 2x, <?php echo $bg_img_full; ?> 3x" data-src-md="<?php echo $bg_img_md; ?>" data-src-lg="'<?php echo $bg_img_lg; ?>" data-src-xl="<?php echo $bg_img_full; ?>">
+        </div>
 
-    </figure>
-  <?php endif; ?>
+      </figure>
 
-  <div class="card-grid__body">
-    <?php
-      $categories = get_the_category();
+      <div class="event__details col col-md-6of12 col-offset-lg-1 col-lg-5of12 col-offset-xl-1 col-xl-5of12">
+        Other stuff here
+      </div>
+    <?php else : ?>
 
-      if ($categories) :
+      <div class="event__details">
+        Other stuff here too
+      </div>
 
-        foreach($categories as $category) :
-      ?>
-
-        <span class="card-grid__meta"><?php echo $category->name; ?></span>
-        <!-- .entry__meta_category -->
-
-          <?php
-        endforeach;
-
-      endif;
-      ?>
-
-      <h3 class="card-grid__title">
-        <a href="<?php the_permalink(); ?>"><?php echo the_title(); ?></a>
-      </h3>
-      <!-- .card-grid__title -->
+    <?php endif; ?>
     </div>
 
-    <?php get_template_part('templates/partials/post-meta'); ?>
+    <div class="row start">
+  <?php if( is_plugin_active( 'gravityforms/gravityforms.php' ) && $map ) : ?>
 
-  </div>
+      <div class="col col-md-6of12 col-lg-6of12 col-xl-6of12">
 
-</div><!-- .card-grid -->
+        <?php gravity_form( $form_id, true, true ); ?>
+        <!-- .form-skin -->
+
+      </div>
+
+      <div class="col col-md-6of12 col-lg-6of12 col-xl-6of12">
+        <?php
+          ll_include_component(
+            'location-map',
+            $map
+          );
+        ?>
+      </div>
+
+  <?php elseif( is_plugin_active( 'gravityforms/gravityforms.php' ) ) : ?>
+
+      <div class="col">
+
+        <?php gravity_form( $form_id, true, true ); ?>
+        <!-- .form-skin -->
+
+      </div>
+
+  <?php elseif( $map ) : ?>
+
+      <div class="col">
+        <?php
+          ll_include_component(
+            'location-map',
+            $map
+          );
+        ?>
+      </div>
+
+  <?php endif; ?>
+
+    </div>
+
+</div>
+<!-- .container-full -->
+
+</article>

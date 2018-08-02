@@ -1,0 +1,18 @@
+/**
+ * Single Event
+ */
+
+.single-event {
+
+  .event__feature {
+    min-height: 50vh;
+  }
+
+  @include screen-md-up {
+
+    .event__feature {
+      min-height: 80vh;
+    }
+
+  }
+}

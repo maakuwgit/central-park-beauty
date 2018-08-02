@@ -34,8 +34,7 @@ if ( ! function_exists('register_event_custom_post_type') ) {
       'label'               => 'event',
       'description'         => 'Event description',
       'labels'              => $labels,
-      'supports'            => array( 'title', 'page-attributes' ),
-      // 'taxonomies'          => array( 'category', 'post_tag' ),
+      'supports'            => array( 'title', 'thumbnail', 'page-attributes' ),
       'hierarchical'        => true,
       'public'              => true,
       'show_ui'             => true,
@@ -61,81 +60,6 @@ if ( ! function_exists('register_event_custom_post_type') ) {
   add_action( 'init', 'register_event_custom_post_type', 0 );
 
 }
-
-
-/**
- * Custom taxonomies
- */
-if ( ! function_exists('register_event_taxonomies') ) {
-
-  function register_event_taxonomies() {
-
-    // Add new taxonomy, make it hierarchical (like categories)
-    $labels = array(
-      'name'                => _x( 'Event Type', 'taxonomy general name' ),
-      'singular_name'       => _x( 'Event Type', 'taxonomy singular name' ),
-      'search_items'        => __( 'Search Event Types' ),
-      'all_items'           => __( 'All Event Types' ),
-      'parent_item'         => __( 'Parent Event Type' ),
-      'parent_item_colon'   => __( 'Parent Event Type:' ),
-      'edit_item'           => __( 'Edit Event Type' ),
-      'update_item'         => __( 'Update Event Type' ),
-      'add_new_item'        => __( 'Add New Event Type' ),
-      'new_item_name'       => __( 'New Event Type Name' ),
-      'menu_name'           => __( 'Event Types' )
-    );
-
-    $args = array(
-      'hierarchical'        => true,
-      'labels'              => $labels,
-      'show_ui'             => true,
-      'show_admin_column'   => true,
-      'query_var'           => true,
-      'rewrite'             => array( 'slug' => 'position' )
-    );
-
-    register_taxonomy( 'event_position', array( 'event' ), $args ); // Must include custom post type name
-
-    // Add new taxonomy, NOT hierarchical (like tags)
-    $labels = array(
-      'name'                         => _x( 'Event Tags', 'taxonomy general name' ),
-      'singular_name'                => _x( 'Event Tag', 'taxonomy singular name' ),
-      'search_items'                 => __( 'Search Event' ),
-      'popular_items'                => __( 'Popular Event' ),
-      'all_items'                    => __( 'All Event' ),
-      'parent_item'                  => null,
-      'parent_item_colon'            => null,
-      'edit_item'                    => __( 'Edit Event' ),
-      'update_item'                  => __( 'Update Event' ),
-      'add_new_item'                 => __( 'Add New Event' ),
-      'new_item_name'                => __( 'New Event Name' ),
-      'separate_items_with_commas'   => __( 'Separate Event with commas' ),
-      'add_or_remove_items'          => __( 'Add or remove Event' ),
-      'choose_from_most_used'        => __( 'Choose from the most used Event' ),
-      'not_found'                    => __( 'No Event found.' ),
-      'menu_name'                    => __( 'Event Tags' )
-    );
-
-    $args = array(
-      'hierarchical'            => false,
-      'labels'                  => $labels,
-      'show_ui'                 => true,
-      'show_admin_column'       => true,
-      'update_count_callback'   => '_update_post_term_count',
-      'query_var'               => true,
-      'rewrite'                 => array( 'slug' => 'event_tag' )
-    );
-
-    register_taxonomy( 'event_tag', 'event', $args ); // Must include custom post type name
-
-  }
-
-  add_action( 'init', 'register_event_taxonomies', 0 );
-
-}
-
-
-
 
 /**
  * Create ACF setting page under CPT menu
