@@ -4,13 +4,15 @@
 
 .page-template-template-form-template {
 
+  .form-template__feature {
+    min-height: 50vh;
+  }
+
   .hentry {
 
     .gform_title,
     .gform_footer {
       margin-bottom: 25px;
-      padding-left: 8px;
-      padding-right: 8px;
     }
 
     .gform_title {
@@ -52,6 +54,37 @@
       line-height: 18px;
       line-height: 1.28571428571429;
       font-weight: $text-semi;
+    }
+
+  }
+
+  @include screen-md {
+    .hentry {
+
+      .container-full {
+        padding-left: 0;
+        padding-right: 0;
+      }
+
+    }
+
+  }
+
+  @include screen-md-up {
+    .form-template__feature {
+      margin-left: 0;
+      margin-right: 32px;
+    }
+
+    .hentry {
+
+      .gform_title,
+      .gform_footer {
+        margin-bottom: 25px;
+        padding-left: 8px;
+        padding-right: 8px;
+      }
+
     }
 
   }
