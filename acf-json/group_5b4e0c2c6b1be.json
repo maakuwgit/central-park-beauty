@@ -189,8 +189,8 @@
         {
             "key": "field_5b4e283b26ee5",
             "label": "Text Color",
-            "name": "text_color",
-            "type": "radio",
+            "name": "",
+            "type": "clone",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -199,16 +199,13 @@
                 "class": "",
                 "id": ""
             },
-            "choices": {
-                "#ffffff": "White",
-                "#000000": "Black"
-            },
-            "allow_null": 0,
-            "other_choice": 0,
-            "save_other_choice": 0,
-            "default_value": "",
-            "layout": "vertical",
-            "return_format": "value"
+            "clone": [
+                "field_5b607c0ed7b1c"
+            ],
+            "display": "seamless",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0
         },
         {
             "key": "field_5b4e0c77fca1c",
@@ -236,7 +233,7 @@
             "key": "field_5b4e0cd6fca1d",
             "label": "Background Color",
             "name": "background_color",
-            "type": "radio",
+            "type": "clone",
             "instructions": "",
             "required": 0,
             "conditional_logic": [
@@ -253,17 +250,13 @@
                 "class": "",
                 "id": ""
             },
-            "choices": {
-                "#f7e7e1": "Pink",
-                "#F0D0C3": "Dark Pink",
-                "#000000": "Black"
-            },
-            "allow_null": 0,
-            "other_choice": 0,
-            "save_other_choice": 0,
-            "default_value": "#F0D0C3",
-            "layout": "horizontal",
-            "return_format": "value"
+            "clone": [
+                "field_5b606ac87f3c8"
+            ],
+            "display": "seamless",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0
         },
         {
             "key": "field_5b4e0c2c6f6c2",
@@ -396,5 +389,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1533134882
+    "modified": 1533233136
 }

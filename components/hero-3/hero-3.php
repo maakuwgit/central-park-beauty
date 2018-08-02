@@ -62,14 +62,19 @@ $image1 = wp_get_attachment_image_src($image_one, 'large');
 $image2 = wp_get_attachment_image_src($image_two, 'large');
 $bg_image = wp_get_attachment_image_src($background_image, 'large');
 
-if ($background == 'image') {
+
+if ($text_color ) {
+  $text_color = ' ' . $text_color['swatches'];
+}
+
+if ($background === 'image') {
   $background_image = 'background-image';
 } else {
   $background_image = '';
 }
 
-if ($background == 'solid') {
-  $bg = 'background-color: ' . $background_color;
+if ($background === 'solid') {
+  $background_color = ' ' . $background_color['swatches_bg'];
   $overlay_opacity = '0';
 } else {
   $bg = 'background-image: url(' . $bg_image[0] . ')';
@@ -77,7 +82,7 @@ if ($background == 'solid') {
 ?>
 
 <?php if ( ll_empty( $component_data ) ) return; ?>
-<div class="cp-hero-3 <?php echo implode( " ", $classes ); ?>" <?php echo ( $component_id ? 'id="'.$component_id.'"' : '' ) ?> data-component="hero-3" style="<?php echo $bg; ?>">
+<div class="cp-hero-3<?php echo $background_color . implode( " ", $classes ); ?>" <?php echo ( $component_id ? 'id="'.$component_id.'"' : '' ) ?> data-component="hero-3" style="<?php echo $bg; ?>">
 
   <div class="cp-hero-3__overlay" style="background-color: rgba(0,0,0,<?php echo $overlay_opacity; ?>)"></div>
   <div class="cp-hero-3__img-1" style="background-image: url(<?php echo $image1[0]; ?>);"></div>
@@ -96,8 +101,8 @@ if ($background == 'solid') {
 
         <div class="cp-hero-3__text-box">
 
-          <<?php echo $sub_text['tag']; ?> class="cp-hero-3__sub-text" style="color: <?php echo $text_color; ?>"><?php echo $sub_text['text']; ?></<?php $main_text['tag']; ?>>
-          <<?php echo $main_text['tag']; ?> class="cp-hero-3__main-text" style="color: <?php echo $text_color; ?>"><?php echo $main_text['text']; ?></<?php $main_text['tag']; ?>>
+          <<?php echo $sub_text['tag']; ?> class="cp-hero-3__sub-text<?php echo $text_color; ?>"><?php echo $sub_text['text']; ?></<?php $main_text['tag']; ?>>
+          <<?php echo $main_text['tag']; ?> class="cp-hero-3__main-text<?php echo $text_color; ?>"><?php echo $main_text['text']; ?></<?php $main_text['tag']; ?>>
         </div>
 
         <div class="cp-hero-3__img-2" style="background-image: url(<?php echo $image2[0]; ?>);"></div>
