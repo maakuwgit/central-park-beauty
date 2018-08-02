@@ -48,6 +48,13 @@
                 "operator": "==",
                 "value": "templates\/template-form-template.php"
             }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "event"
+            }
         ]
     ],
     "menu_order": 0,
@@ -58,5 +65,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1533225297
+    "modified": 1533238496
 }

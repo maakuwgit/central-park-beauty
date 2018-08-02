@@ -4,7 +4,7 @@
   $map = array(
     'map'       => get_field('map'),
     'address'   => get_field('location_address'),
-    'phone'   => get_field('location_phone')
+    'phone'     => get_field('location_phone')
   );
 
   $bg_img = get_post_thumbnail_id();
@@ -32,12 +32,23 @@
       </figure>
 
       <div class="event__details col col-md-6of12 col-offset-lg-1 col-lg-5of12 col-offset-xl-1 col-xl-5of12">
-        Other stuff here
+
+        <h1 class="event__details__supertitle">Event</h1>
+        <!-- .event__details__supertitle -->
+
+        <h2 class="event__details__title"><?php the_title(); ?></h2>
+        <!-- .event__details__title -->
+
+        <?php get_template_part('templates/partials/event', 'details'); ?>
+
       </div>
+      <!-- .event__detail -->
     <?php else : ?>
 
       <div class="event__details">
-        Other stuff here too
+
+        <?php get_template_part('templates/partials/event', 'details'); ?>
+
       </div>
 
     <?php endif; ?>
