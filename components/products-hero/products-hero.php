@@ -15,21 +15,6 @@ $defaults = [
 ];
 
 $component_data = ll_parse_args( $component_data, $defaults );
-
-$side_text = $component_data['side_text'];
-$image_one = $component_data['image_one'];
-$image_two = $component_data['image_two'];
-$image_three = $component_data['image_three'];
-$bg = $component_data['background_color'];
-
-if ($bg ){
-  $bg = ' ' . $bg;
-}
-
-$image1 = wp_get_attachment_image_src($image_one, 'large');
-$image2 = wp_get_attachment_image_src($image_two, 'large');
-$image3 = wp_get_attachment_image_src($image_three, 'large');
-
 ?>
 
 <?php
@@ -48,6 +33,21 @@ $classes        = $component_args['classes'] ?: array();
  * @see args['id']
  */
 $component_id   = $component_args['id'];
+
+$side_text = $component_data['side_text'];
+$image_one = $component_data['image_one'];
+$image_two = $component_data['image_two'];
+$image_three = $component_data['image_three'];
+$bg = $component_data['background_color'];
+
+if ($bg ){
+  $bg = ' ' . $bg['swatches_bg'];
+}
+
+$image1 = wp_get_attachment_image_src($image_one, 'large');
+$image2 = wp_get_attachment_image_src($image_two, 'large');
+$image3 = wp_get_attachment_image_src($image_three, 'large');
+
 ?>
 
 <?php if ( ll_empty( $component_data ) ) return; ?>

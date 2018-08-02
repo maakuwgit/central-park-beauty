@@ -160,6 +160,13 @@
                 "operator": "==",
                 "value": "condition"
             }
+        ],
+        [
+            {
+                "param": "post_template",
+                "operator": "==",
+                "value": "templates\/template-products.php"
+            }
         ]
     ],
     "menu_order": 7,
@@ -170,5 +177,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1532114876
+    "modified": 1533243630
 }

@@ -44,6 +44,19 @@ if( have_rows( 'flex_default' ) ) {
             )
           );
         break;
+        case 'lr_blocks' :
+
+          $lr_blocks = array(
+            'style'   => get_sub_field('lr_style'),
+            'image'   => get_sub_field('lr_image'),
+            'content'   => get_sub_field('lr_content')
+          );
+
+          ll_include_component(
+            'lr-blocks',
+            $lr_blocks
+          );
+        break;
         case 'split_heading' :
 
           $split_title = get_sub_field('split_title');

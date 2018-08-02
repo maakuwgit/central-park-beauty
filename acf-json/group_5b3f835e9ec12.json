@@ -116,6 +116,56 @@
                     "min": "",
                     "max": ""
                 },
+                "5b6373882d168": {
+                    "key": "5b6373882d168",
+                    "name": "lr_blocks",
+                    "label": "Left \/ Right Blocks",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5b6373882d169",
+                            "label": "Group Label",
+                            "name": "group_label",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "ll-group-label",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_5b6373882d16a",
+                            "label": "Left \/ Right Blocks",
+                            "name": "lr_blocks",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_5b63726c7d745"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
                 "5b43b20caebcd": {
                     "key": "5b43b20caebcd",
                     "name": "split_heading",
@@ -665,6 +715,13 @@
                 "operator": "==",
                 "value": "74"
             }
+        ],
+        [
+            {
+                "param": "post_template",
+                "operator": "==",
+                "value": "templates\/template-products.php"
+            }
         ]
     ],
     "menu_order": 0,
@@ -675,5 +732,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1532104304
+    "modified": 1533244363
 }

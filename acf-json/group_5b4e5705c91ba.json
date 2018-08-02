@@ -71,7 +71,7 @@
             "key": "field_5b4e5705cec32",
             "label": "Background Color",
             "name": "background_color",
-            "type": "radio",
+            "type": "clone",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -80,17 +80,13 @@
                 "class": "",
                 "id": ""
             },
-            "choices": {
-                "#f7e7e1": "Pink",
-                "#F0D0C3": "Dark Pink",
-                "#000000": "Black"
-            },
-            "allow_null": 0,
-            "other_choice": 0,
-            "save_other_choice": 0,
-            "default_value": "pink",
-            "layout": "horizontal",
-            "return_format": "value"
+            "clone": [
+                "field_5b606ac87f3c8"
+            ],
+            "display": "seamless",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0
         },
         {
             "key": "field_5b4e5705cee83",
@@ -182,5 +178,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1531861267
+    "modified": 1533243540
 }
