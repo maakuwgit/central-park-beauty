@@ -46,6 +46,12 @@ body {
   }
 }
 
+address {
+  @extend %p;
+  @extend %sans-serif;
+  font-style: normal;
+}
+
 blockquote {
   display: flex;
   width: 100%;

@@ -18,4 +18,76 @@
     padding-left: 0;
     padding-right: 0;
   }
+
+  .gm-style-iw {
+    width: auto !important;
+    top: auto !important;
+    left: auto !important;
+  }
+
+  .infowindow,
+  .location-map__info {
+    color: $white;
+    background-color: $black;
+    padding: 4vh;
+
+    @include screen-sm {
+      position: relative;
+    }
+
+    .icon {
+      font-size: 6em;
+    }
+    a {
+      color: $white;
+    }
+  }
+
+  .location-map__address,
+  .location-map__phone,
+  .location-map__title,
+  .location-map__icon {
+    color: $white;
+  }
+
+  .location-map__details {
+
+    &:first-of-type {
+      flex: 1 0.4 auto;
+      width: 40%;
+    }
+
+    &:last-of-type {
+      flex: 1 0.6 auto;
+      width: 60%;
+    }
+  }
+
+  .location-map__info {
+    position: absolute;
+    top: calc(50% - 116px);
+    left: 200px;
+    min-height: 238px;
+    min-width: 300px;
+    width: 27vw;
+    background-color: $black;
+    box-shadow: 2px 4px 8px 2px rgba($black,0.11);
+  }
+
+  .infowindow__title,
+  .location-map__title {
+    @extend %p;
+    @extend %serif;
+    letter-spacing: initial;
+    text-transform: initial;
+    margin-bottom: 25px;
+  }
+
+  .location-map__address,
+  .location-map__phone {
+    @include font-size(15);
+    line-height: 28px;
+    line-height: 1.86666666666667;
+    font-weight: $text-normal;
+  }
 }

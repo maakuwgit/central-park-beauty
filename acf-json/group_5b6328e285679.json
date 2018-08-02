@@ -1,0 +1,62 @@
+{
+    "key": "group_5b6328e285679",
+    "title": "Address",
+    "fields": [
+        {
+            "key": "field_5b6328f0ef6e8",
+            "label": "Address",
+            "name": "location_address",
+            "type": "textarea",
+            "instructions": "This is visible on the map overlay, and is strictly cosmetic",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 3,
+            "new_lines": "br"
+        },
+        {
+            "key": "field_5b63291eef6e9",
+            "label": "Phone",
+            "name": "location_phone",
+            "type": "text",
+            "instructions": "Numbers only please, no punctuation",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": 2122462063,
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_template",
+                "operator": "==",
+                "value": "templates\/template-form-template.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1533225297
+}

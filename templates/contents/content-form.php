@@ -12,6 +12,8 @@
 <?php
   $map = array(
     'map'       => get_field('map'),
+    'address'   => get_field('location_address'),
+    'phone'   => get_field('location_phone')
   );
 
   ll_include_component(
