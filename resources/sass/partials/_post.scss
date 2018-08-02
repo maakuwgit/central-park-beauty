@@ -31,9 +31,6 @@
 
 .post__header__title, 
 .post__header__supertitle {
-  margin-left: 8.33333334%;
-  margin-right: 8.33333334%;
-  padding-left: $grid-gutter-width;
   padding-right: $grid-gutter-width;
 }
 
@@ -54,16 +51,6 @@
 .post__content {
 }
 
-@include screen-md-up {
-  .post__header__supertitle {
-    margin-top: 50px;
-  }
-
-  .post__header__title {
-    margin-bottom: 50px;
-  }
-}
-
 .post__footer {
 
 }
@@ -78,4 +65,59 @@
 
 .post__meta {
   @extend %card__nav;
+}
+
+@include screen-md-only {
+
+  .post__header__title, 
+  .post__header__supertitle {
+    padding-left: 0;
+  }
+
+}
+
+
+@include screen-md-up {
+
+  .post__header__supertitle {
+    margin-top: 50px;
+  }
+
+  .post__header__title {
+    margin-bottom: 50px;
+  }
+
+  .post__content.col {
+    padding-left: 0;
+  }
+
+  .post__related_posts.col {
+    padding-right: 0;
+  }
+}
+
+@include screen-lg-up {
+
+  .post__header__title, 
+  .post__header__supertitle {
+    margin-left: 8.33333334%;
+    margin-right: 8.33333334%;
+    padding-left: $grid-gutter-width;
+  }
+  
+}
+
+@include screen-sm {
+
+  .post__header__title, 
+  .post__header__supertitle {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+
+  .post__header {
+    margin-left: -32px;
+    width: calc(100% + 64px);
+  }
+
 }

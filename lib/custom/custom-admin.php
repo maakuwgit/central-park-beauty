@@ -197,3 +197,12 @@ function ll_admin_enqueue_scripts() {
   wp_enqueue_script('admin-js', get_template_directory_uri() . '/assets/js/admin.js', 'jquery', '', true);
 }
 add_action('admin_enqueue_scripts', 'll_admin_enqueue_scripts');
+
+function ll_acf_google_map_api( $api ){
+  $maps_api = get_field( 'global_google_maps_api_key', 'option' );
+  $api['key'] = $maps_api;
+
+  return $api;
+
+}
+add_filter('acf/fields/google_map/api', 'll_acf_google_map_api');

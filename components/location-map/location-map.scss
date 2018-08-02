@@ -1,0 +1,21 @@
+/**
+ * location-map Styles
+ * ----------------------------------------------------------------------------
+ *
+ * About the module
+ *
+ */
+
+.ll-location-map {
+  position: relative;
+  background-color: $smoke;
+  @extend %section-margins;
+
+
+  .location-map__googlemap {
+    height: 60vh;
+    max-height: 465px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
