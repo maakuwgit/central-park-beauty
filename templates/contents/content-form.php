@@ -23,6 +23,14 @@
           <img alt="" src="<?php echo $bg_img_md; ?>" srcset="<?php echo $bg_img_lg; ?> 2x, <?php echo $bg_img_full; ?> 3x" data-src-md="<?php echo $bg_img_md; ?>" data-src-lg="'<?php echo $bg_img_lg; ?>" data-src-xl="<?php echo $bg_img_full; ?>">
         </div>
 
+        <figcaption class="form-template__feature__figcaption">
+
+          <svg class="icon icon-TWO-TONED-CONTACT">
+            <use xlink:href="#icon-TWO-TONED-CONTACT"></use>
+          </svg>
+
+        </figcaption>
+
       </figure>
 
       <div class="col col-md-5of12 col-lg-5of12 col-xl-5of12">

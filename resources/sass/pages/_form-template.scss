@@ -5,7 +5,22 @@
 .page-template-template-form-template {
 
   .form-template__feature {
+    position: relative;
     min-height: 50vh;
+
+    svg {
+      width: 100%;
+      height: auto;
+      margin: auto;
+    }
+  }
+
+  .form-template__feature__figcaption {
+    margin-top: 68px;
+    margin-right: auto;
+    margin-left: auto;
+    height: 103px;
+    width: 484px;
   }
 
   .hentry {
@@ -59,6 +74,11 @@
   }
 
   @include screen-md {
+
+    .form-template__feature__figcaption {
+      display: none;
+    }
+
     .hentry {
 
       .container-full {
@@ -66,17 +86,36 @@
         padding-right: 0;
       }
 
+      /*Dev Note: this is NOT the way I'd have prefered, but with the sass:dist rules we can't nest @extend inside media queries */
+      .gform_title {
+        font-family: 'Libre Baskerville', serif;
+        @include font-size(30);
+        line-height: 1.33;
+        letter-spacing: initial;
+        text-transform: initial;
+      }
+
     }
 
   }
 
   @include screen-md-up {
+
     .form-template__feature {
       margin-left: 0;
       margin-right: 32px;
     }
 
+    .form-template__feature__figcaption {
+      margin-top: 68px;
+      margin-left: calc(100% - 175px);
+    }
+
     .hentry {
+
+      .form-skin {
+        padding-top: 210px;
+      }
 
       .gform_title,
       .gform_footer {
