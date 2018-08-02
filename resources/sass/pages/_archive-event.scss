@@ -1,0 +1,15 @@
+/**
+ * Events Archive
+ */
+
+.post-type-archive-event {
+
+  .event__meta {
+    @extend %card__nav;
+    @include font-size(18);
+    line-height: 30px;
+    line-height: 1.66666666666667;
+    color: $grey;
+  }
+
+}
