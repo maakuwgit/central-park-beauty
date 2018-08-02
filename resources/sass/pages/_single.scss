@@ -35,11 +35,40 @@
 
   }
 
+  .post__header__title {
+    margin-bottom: 0;
+  }
+
+  .post__related_posts,
+  .post__content {
+    margin-top: 32px;
+
+    > :first-child {
+      margin-top: 0;
+    }
+
+  }
+
+  .card-grid__body,
+  .related-post__meta {
+    padding: 25px;
+  }
+
+  .related-post__meta {
+    @extend %card__nav;
+    font-weight: $text-normal;
+  }
+
   @include screen-md-up {
 
     blockquote {
       margin-top: 55px;
       margin-bottom: 100px;
+    }
+
+    .post__related_posts,
+    .post__content {
+      margin-top: 60px;
     }
 
   }

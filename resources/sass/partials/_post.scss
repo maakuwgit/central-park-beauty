@@ -26,6 +26,15 @@
   align-items: flex-end;
   height: 75vh;
   max-height: 702px;
+  min-height: 620px;
+}
+
+.post__header__title, 
+.post__header__supertitle {
+  margin-left: 8.33333334%;
+  margin-right: 8.33333334%;
+  padding-left: $grid-gutter-width;
+  padding-right: $grid-gutter-width;
 }
 
 .post__header__title {
@@ -34,16 +43,12 @@
   letter-spacing: initial;
   text-transform: initial;
   margin-bottom: 32px;
-  margin-left: 8.33333334%;
-  margin-right: 8.33333334%;
 }
 
 .post__header__supertitle {
   @extend %h1;
   display: block;
   margin-top: 32px;
-  margin-left: 8.33333334%;
-  margin-right: 8.33333334%;
 }
 
 .post__content {
