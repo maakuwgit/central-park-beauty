@@ -39,7 +39,7 @@
     margin-bottom: 0;
   }
 
-  .post__related_posts,
+  .post__related_posts > .row,
   .post__content {
     margin-top: 32px;
 
@@ -57,6 +57,7 @@
   .related-post__meta {
     @extend %card__nav;
     font-weight: $text-normal;
+    color: $grey;
   }
 
   @include screen-md-up {
@@ -66,9 +67,14 @@
       margin-bottom: 100px;
     }
 
-    .post__related_posts,
+    .post__related_posts > .row,
     .post__content {
       margin-top: 60px;
+    }
+
+    .card-grid__card {
+      margin-top: 0;
+      margin-bottom: $grid-gutter-width;
     }
 
   }

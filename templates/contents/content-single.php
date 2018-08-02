@@ -43,6 +43,9 @@
       <!-- .post__content.relative.col.col-md-7of12.col-offset-lg-1of12.col-lg-6of12.col-offset-lg-1of12.col-xl-6of12 -->
 
       <div class="post__related_posts card__wrapper col col-offset-md-1of12 col-md-4of12 col-offset-lg-1of12 col-lg-3of12 col-offset-xl-1of12 col-xl-3of12">
+
+        <div class="row">
+
       <?php
         $related = get_field('related_articles');
 
@@ -51,7 +54,7 @@
 
         <?php $image = $post->post_thumbnail; ?>
 
-        <div class="card-grid__card" data-clickthrough>
+        <div class="card-grid__card col col-sm-6of12" data-clickthrough>
 
         <?php if( $image ) : ?>
           <figure class="card-grid__feature__wrapper" data-backgrounder>
@@ -103,6 +106,10 @@
         <!-- .card-grid__card -->
 
       <?php endforeach; ?>
+
+        </div>
+        <!-- .row -->
+
       </div>
       <!-- .post__related_posts card__wrapper.col.col-md-5of12.col-lg-4of12.col-xl-4of12 -->
 
