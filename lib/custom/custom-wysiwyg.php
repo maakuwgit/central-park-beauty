@@ -90,6 +90,12 @@ function ll_format_tinymce( $data ) {
             'wrapper'  => false
           ),
           array(
+            'title'    => 'Ivory',
+            'classes'  => 'ivory',
+            'selector' => 'h1, h2, h3, h4, h5, h6, p, a, span, li, time, dt, dd, address, code',
+            'wrapper'  => false
+          ),
+          array(
             'title'    => 'Silver',
             'classes'  => 'silver',
             'selector' => 'h1, h2, h3, h4, h5, h6, p, a, span, li, time, dt, dd, address, code',
@@ -297,6 +303,7 @@ function ll_format_tinymce( $data ) {
         "E2A187", "Peach",
         "F0D0C3", "Salmon",
         "f7e7e1", "Pink",
+        "D8D8D8", "Ivory",
         "ffffff", "White"
     ';
 

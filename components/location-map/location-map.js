@@ -236,21 +236,8 @@
               map: map,
               icon: icon
             });
-/*
-            var infoContent = '<div class="infowindow"><span class="infowindow__title">Locate</span>'+
-                              '<address>'+site_info.address.street+'<br>'+site_info.address.city+', '+site_info.address.state+' '+site_info.address.zip+'</address>'+
-                              '<a class="primary-hover" href="https://www.google.com/maps/place/'+_this.address+'" target="_blank">Get Directions</a></div>';
-
-            var infowindow = new google.maps.InfoWindow({
-              content: infoContent,
-            });*/
 
           bounds.extend(marker.position);
-
-          marker.addListener('click', function() {
-            console.log(map.lat());
-           // infowindow.open(map, marker);
-          });
 
           });
 

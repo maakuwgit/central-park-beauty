@@ -72,6 +72,10 @@ $phone      = $component_data['phone'];
       <a class="location-map__phone" href="tel:+1<?php echo $phone; ?>"><?php echo format_phone($phone); ?></a>
     <?php endif; ?>
 
+    <?php if( get_post_type() == 'event') : ?>
+      <a class="location-map__directions block" href="https://www.google.com/maps/place/<?php echo $map['address']; ?>" target="_blank">Get Directions</a>
+    <?php endif; ?>
+
     </div>
 
   <?php endif; ?>

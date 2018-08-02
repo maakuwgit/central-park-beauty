@@ -480,6 +480,9 @@ a, address, dt, dd, h1, h2, h3, h4, h5, h6, li, p, span, small, td, th, time, ul
   &.white {
     color: $white;
   }
+  &.ivory {
+    color: $ivory;
+  }
   &.silver {
     color: $silver;
   }
@@ -509,6 +512,9 @@ a, address, dt, dd, h1, h2, h3, h4, h5, h6, li, p, span, small, td, th, time, ul
 aside, article, main, div, header, footer, section, nav, main, menu, code, hr {
   &.white {
     background-color: $white;
+  }
+  &.ivory {
+    background-color: $ivory;
   }
   &.silver {
     background-color: $silver;

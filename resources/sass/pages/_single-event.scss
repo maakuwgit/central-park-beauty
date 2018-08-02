@@ -23,6 +23,45 @@
 
   }
 
+  .ll-location-map {
+
+    .location-map__address,
+    .location-map__phone,
+    .location-map__directions,
+    .location-map__title,
+    .location-map__icon {
+      color: $black;
+    }
+
+    .location-map__info {
+      top: 16.66666667%;
+      left: 16.66666667%;
+      min-width: 254px;
+      width: 50%;
+      background-color: $white;
+    }
+
+    .location-map__directions {
+      @include font-size(15);
+      font-weight: $text-bold;
+      line-height: 19px;
+      line-height: 1.26666666666667;
+      text-decoration: underline;
+    }
+
+    .location-map__details {
+
+      &:first-of-type {
+        display: none;
+      }
+
+      &:last-of-type {
+        width: 100%;
+        flex: 1 1 100%;
+      }
+    }
+  }
+
   .event__details__dt {
     @extend %btn__text;
     margin-top: 7px;
