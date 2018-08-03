@@ -13,6 +13,7 @@
   height: calc( 100vh - 6em );
   margin-bottom: 3em;
   position: relative;
+  overflow: hidden;
 
   @include screen-sm {
     height: calc( 100vh - 3em );

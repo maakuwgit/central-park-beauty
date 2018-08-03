@@ -73,8 +73,11 @@ if ($background === 'image') {
   $background_image = '';
 }
 
-if ($background === 'solid') {
+if( $background_color ){
   $background_color = ' ' . $background_color['swatches_bg'];
+}
+
+if ($background === 'solid') {
   $overlay_opacity = '0';
 } else {
   $bg = 'background-image: url(' . $bg_image[0] . ')';

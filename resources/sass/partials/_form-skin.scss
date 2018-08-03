@@ -24,6 +24,15 @@
 $form-bg: #f4f4f4; //needs to be moved to _variables.scss on merge
 $primary-color-dark: $primary-color;
 
+
+%select_field {
+  border-radius: 0;
+  appearance: none;
+  background-image: url('../img/svg/chevron-down.svg');
+  background-repeat: no-repeat;
+  background-position: 99% center;
+}
+
 .form-skin {
   padding-top: 3em;
   padding-bottom: 3em;
@@ -66,10 +75,7 @@ $primary-color-dark: $primary-color;
    * a background image
    */
   select {
-    appearance: none;
-    background-image: url('../img/svg/chevron-down.svg');
-    background-repeat: no-repeat;
-    background-position: 99% center;
+    @extend %select_field;
   }
 
     //hide default select arrow in IE

@@ -1,5 +1,13 @@
-<?php $image = get_the_post_thumbnail(); ?>
-<div class="card__wrapper col col-sm-6of12 col-md-4of12 col-lg-4of12 col-xl-4of12">
+<?php
+  $image = get_the_post_thumbnail();
+  $terms_list = [];
+  $treatments = get_the_terms( get_the_ID(), 'effected_areas');
+
+  foreach($treatments as $treatment) {
+    $term_list[] = $treatment->slug;
+  }
+?>
+<div class="card__wrapper col col-sm-6of12 col-md-4of12 col-lg-4of12 col-xl-4of12" data-terms="<?php echo implode(' ', $term_list); ?>">
 
   <div class="card-grid__card" data-clickthrough>
 
@@ -24,7 +32,6 @@
 
   <div class="card-grid__body">
     <?php
-      $treatments = get_the_terms( get_the_ID(), 'effected_areas');
 
       if ($treatments) :
 

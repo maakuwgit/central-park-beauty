@@ -1,0 +1,30 @@
+/**
+ * filters Styles
+ * ----------------------------------------------------------------------------
+ *
+ * About the module
+ *
+ */
+
+.ll-filters {
+
+  .card-grid__form {
+    padding-bottom: 40px;
+    padding-top: 20px;
+  }
+
+  .card-grid__select {
+    @extend %select_field;
+    width: 100%;
+    padding: 1em;
+    border: solid 1px black;
+    background-color: $white;
+  }
+
+  .card-grid__select__label {
+    @extend %btn__text;
+    color: $black;
+    margin-bottom: 8px;
+  }
+
+}

@@ -1,5 +1,13 @@
-<?php $image = get_the_post_thumbnail(); ?>
-<div class="card__wrapper col col-sm-6of12 col-md-4of12 col-lg-4of12 col-xl-4of12">
+<?php
+  $image = get_the_post_thumbnail();
+  $cat_list = [];
+  $categories = get_the_category();
+
+  foreach($categories as $category) {
+    $cat_list[] = $category->slug;
+  }
+?>
+<div class="card__wrapper col col-sm-6of12 col-md-4of12 col-lg-4of12 col-xl-4of12" data-terms="<?php echo implode(' ', $cat_list); ?>">
 
   <div class="card-grid__card" data-clickthrough>
 
@@ -24,7 +32,6 @@
 
   <div class="card-grid__body">
     <?php
-      $categories = get_the_category();
 
       if ($categories) :
 

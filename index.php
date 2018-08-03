@@ -7,6 +7,15 @@
   <?php get_search_form(); ?>
 <?php endif; ?>
 
+<?php
+
+  ll_include_component(
+    'filters',
+    array( 'taxonomy' => 'category')
+  );
+
+?>
+
 <section class="card-grid__wrapper row start">
 
   <?php while (have_posts()) : the_post(); ?>
