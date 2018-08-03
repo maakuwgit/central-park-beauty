@@ -45,6 +45,13 @@
     letter-spacing: initial;
   }
 
+  .vac__nav {
+    top: 0;
+    align-content: flex-end;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
   .vac__forms {
     display: flex;
     flex-direction: column;
@@ -53,14 +60,55 @@
     align-items: stretch;
     padding-top: 30px;
     padding-bottom: 30px;
+
+    >.vac__nav {
+      margin-top: 200px;
+
+      &:after {
+        @extend %btn__text;
+        content: 'Switch Sex';
+      }
+
+    }
+  }
+
+  .vac__nav__item {
+    background-color: transparent;
+    color: $salmon;
+    fill: $salmon;
+
+    &.active {
+      fill: $black;
+      color: $black;
+    }
+
+    &.vac__nav__item--flip {
+      @extend %btn;
+      flex-direction: column;
+      text-align: center;
+      color: $black;
+
+      &:before {
+        content: ' -> ';
+        display: block;
+        width: 100%;
+      }
+    }
+
   }
 
   .vac__background {
+    position: relative;
     height: 100%;
+    margin-left: -50%;
 
     &.active {
       display: flex;
       flex-direction: column;
+    }
+
+    >.vac__nav {
+      margin-top: -200px;
     }
 
   }

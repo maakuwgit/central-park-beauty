@@ -1,5 +1,4 @@
 <?php
-  $form_id = false;//( get_field('form_id') ? get_field('form_id') : 1 );
 
   $map = array(
     'map'       => get_field('map'),
@@ -18,7 +17,7 @@
 ?>
 <article <?php post_class(); ?>>
 
-  <div class="container">
+  <div class="container-full">
 
     <div class="row stretch start">
 
@@ -31,7 +30,7 @@
 
       </figure>
 
-      <div class="event__details col col-md-6of12 col-offset-lg-1 col-lg-4of12 col-offset-xl-1 col-xl-4of12">
+      <div class="event__details col col-md-5of12 col-offset-lg-1 col-lg-4of12 col-offset-xl-1 col-xl-4of12">
 
         <h1 class="event__details__supertitle">Event</h1>
         <!-- .event__details__supertitle -->
@@ -54,35 +53,9 @@
     <?php endif; ?>
     </div>
 
+  <?php if( $map ) : ?>
+
     <div class="row start">
-  <?php if( is_plugin_active( 'gravityforms/gravityforms.php' ) && $map ) : ?>
-
-      <div class="col col-md-6of12 col-lg-6of12 col-xl-6of12">
-
-        <?php gravity_form( $form_id, true, true ); ?>
-        <!-- .form-skin -->
-
-      </div>
-
-      <div class="col col-md-6of12 col-lg-6of12 col-xl-6of12">
-        <?php
-          ll_include_component(
-            'location-map',
-            $map
-          );
-        ?>
-      </div>
-
-  <?php elseif( is_plugin_active( 'gravityforms/gravityforms.php' ) ) : ?>
-
-      <div class="col">
-
-        <?php gravity_form( $form_id, true, true ); ?>
-        <!-- .form-skin -->
-
-      </div>
-
-  <?php elseif( $map ) : ?>
 
       <div class="col">
         <?php
@@ -92,10 +65,10 @@
           );
         ?>
       </div>
-
-  <?php endif; ?>
 
     </div>
+
+  <?php endif; ?>
 
 </div>
 <!-- .container-full -->

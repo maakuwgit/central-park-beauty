@@ -2,7 +2,7 @@
  * Single
  */
 
-.single {
+.single:not(.single-team) {
 
   blockquote {
     width: 80%;
