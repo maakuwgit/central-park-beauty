@@ -1,0 +1,76 @@
+/**
+ * Virtual Consultation
+ */
+
+.consultation {
+  min-height: 698px;
+  height: calc(100vh - 48px);
+  border: solid 23px $peach;
+
+  body.admin-bar & {
+    height: calc(100vh - 80px);
+  }
+
+  .container,
+  .vac {
+    height: 100%;
+  }
+
+  .vac,
+  .vac__content__title {
+    &:after {
+      position: initial;
+      transform: initial;
+      width: initial;
+      height: initial;
+      top: initial;
+      left: initial;
+      bottom: initial;
+    }
+  }
+
+  .vac__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+  }
+
+  .vac__content__title {
+    @extend %h2;
+    @extend %serif;
+    margin-bottom: 25px;
+    padding-bottom: 0;
+    text-transform: initial;
+    letter-spacing: initial;
+  }
+
+  .vac__forms {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    align-content: stretch;
+    align-items: stretch;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  .vac__background {
+    height: 100%;
+
+    &.active {
+      display: flex;
+      flex-direction: column;
+    }
+
+  }
+
+  @include screen-md-up {
+
+    .vac__forms {
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
+
+  }
+}
