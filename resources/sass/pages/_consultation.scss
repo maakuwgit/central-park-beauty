@@ -47,6 +47,7 @@
 
   .vac__nav {
     top: 0;
+    z-index: 10;
     align-content: flex-end;
     align-items: center;
     justify-content: flex-end;
@@ -60,6 +61,7 @@
     align-items: stretch;
     padding-top: 30px;
     padding-bottom: 30px;
+    z-index: 10;
 
     >.vac__nav {
       margin-top: 200px;
@@ -99,6 +101,7 @@
 
   .vac__background {
     position: relative;
+    z-index: 0;
     height: 100%;
     margin-left: -50%;
 

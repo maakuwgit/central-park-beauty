@@ -98,7 +98,64 @@
       /*
        * Collapse specificially for the nav.
        */
+
+      $.fn.slideLeft = function(speed) {
+        if (!speed ) {
+          speed = 300;
+        }
+
+        if($(this).hasClass('open')) {
+          $(this).find('.header__menu-box').animate({'opacity':0}, speed);
+          $(this).animate({width:0, paddingLeft: 0, paddingRight: 0}, speed*2, function(){
+            $(this).removeClass('open').removeAttr('style');
+          });
+        }else{
+          $(this).css({display: 'block', paddingLeft: 0, paddingRight: 0, width: 0});
+          $(this).find('.header__menu-box').css('opacity',0);
+          $(this).animate({width:'100%', padding: '5em 10em'}, speed*2, function(){
+            $(this).removeAttr('style').show().addClass('open');
+            $(this).find('.header__menu-box').animate({'opacity':1}, speed);
+          });
+        }
+      };
+
       $('[data-nav="collapse"]').on('click', function(e) {
+        e.preventDefault();
+        var target = $(this).data('target'),
+            btn    = $(this);
+
+        $('.primary-nav').not(target).hide().removeClass('open');
+        $(this).toggleClass('open');
+        $('body').toggleClass('locked');
+
+        switch(target) {
+          case '#menu':
+            $(target).slideLeft();
+          break;
+          default:
+            $(target).slideToggle();
+          break;
+        }
+
+        $('.navbar .navbar-toggle').not(this).removeClass('active');
+
+        if ($(this).hasClass('active')) {
+
+          $('.top-nav .header__top-left ul li:nth-child(2)').removeClass('no-bar');
+          btn.removeClass('active');
+
+        } else {
+
+          var width = $(this).outerWidth();
+
+          if( btn.attr('data-target') === '#services' || btn.attr('data-target') === '#conditions' ){
+            $('.top-nav .header__top-left ul li:nth-child(2)').addClass('no-bar');
+          }
+
+          btn.addClass('active');
+        }
+      });
+      /*$('[data-nav="collapse"]').on('click', function(e) {
         e.preventDefault();
         var target = $(this).data('target'),
             btn    = $(this);
@@ -124,6 +181,7 @@
 
         }
       });
+      */
 
       /*
        * Convert any element into a giant button
