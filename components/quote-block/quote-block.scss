@@ -24,8 +24,16 @@
 
     .cp-quote__quote {
       width: auto;
+      margin-left: auto;
+      margin-right: auto;
       padding-top: 51px;
       color: $black;
+
+      &:before {
+        content: initial;
+        margin: initial;
+        padding: initial;
+      }
     }
 
     .cp-quote__source {

@@ -112,15 +112,22 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    margin: -15em auto 0;
-
-
+    margin: -11em auto 0;
 
     &::before {
       content: '';
       display: block;
       padding-top: 120%;
     }
+  }
+
+
+  @include screen-md-up {
+
+    .cp-stacked-image-heading__img2 {
+      margin-top: -15em;
+    }
+
   }
 
 }
