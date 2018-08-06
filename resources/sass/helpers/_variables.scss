@@ -104,6 +104,6 @@ $container-md:    ($screen-md - $grid-gutter-width);
 $container-lg:    ($screen-lg - $grid-gutter-width);
 
 // Links
-$link-color: darkblue;
-$link-hover-color: blue;
+$link-color: $peach;
+$link-hover-color: $salmon;
 $link-hover-decoration: none;

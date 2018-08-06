@@ -11,7 +11,6 @@
     padding-bottom: 57px;
 
     .icon-link {
-      margin-left: 8.33333337%;
 
       svg {
         width: 69px;
@@ -23,6 +22,10 @@
           transform-origin: center;
         }
 
+      }
+
+      &:hover {
+        color: $peach;
       }
     }
 
@@ -118,10 +121,13 @@
   }
 
   @include screen-md {
+    .icon-link {
+      margin-bottom: $grid-gutter-width*2;
+    }
 
     .single-team__article {
-      padding-left: 57px;
-      padding-right: 57px;
+      padding-left: 0;
+      padding-right: 0;
     }
 
     .single-team__col2 {
@@ -135,6 +141,10 @@
   }
 
   @include screen-md-up {
+
+    .icon-link {
+      margin-left: 8.33333337%;
+    }
 
     .single-team__title {
       margin-top: 77px;
