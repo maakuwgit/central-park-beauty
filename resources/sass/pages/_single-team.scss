@@ -12,6 +12,18 @@
 
     .icon-link {
       margin-left: 8.33333337%;
+
+      svg {
+        width: 69px;
+        height: 24px;
+        margin-right: $grid-gutter-width;
+
+        use {
+          transform: scale(2.4);
+          transform-origin: center;
+        }
+
+      }
     }
 
   }

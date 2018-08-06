@@ -39,6 +39,11 @@
       }
     }
 
+    input[type="email"] {
+      background: transparent url(../img/svg/arrow-right-w.svg) calc(100% - 21px) center no-repeat;
+      background-size: 42px 14.62px;
+    }
+
     .gform_footer {
       display: none;
     }
