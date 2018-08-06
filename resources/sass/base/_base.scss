@@ -89,6 +89,11 @@ dd {
   padding-top: 3em;
 }
 
+.wrap {
+  position: relative;
+  z-index: 1;
+}
+
 ::selection {
   text-shadow: none;
   color: $selection;
