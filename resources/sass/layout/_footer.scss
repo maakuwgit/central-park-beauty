@@ -136,6 +136,14 @@
 
     a {
       color: $white;
+
+      &:hover {
+        color: $pink
+      }
+
+      &:focus {
+        color: $peach;
+      }
     }
   }
 
